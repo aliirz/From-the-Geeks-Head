@@ -12,7 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -33,12 +34,13 @@
         background-color: #fff;
         padding: 20px;
         margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-        -webkit-border-radius: 0 0 6px 6px;
-           -moz-border-radius: 0 0 6px 6px;
-                border-radius: 0 0 6px 6px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
         -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
                 box-shadow: 0 1px 2px rgba(0,0,0,.15);
+
       }
 
       /* Page header tweaks */
@@ -78,9 +80,9 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">aliirz.com</a>
+          <a class="brand" href="/index.html">aliirz.com</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Folio</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -100,9 +102,12 @@
             	{{ content }}
           </div>
           <div class="span4">
-            <!--<h3>Secondary content</h3>-->
+            
 
-
+            <div id="me">
+              
+            </div>
+            <div id="twitter">
             	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 				<script>
 					new TWTR.Widget({
@@ -131,6 +136,7 @@
  	 							}
 					}).render().setUser('aliirz').start();
 				</script>
+    </div>
 
 
 

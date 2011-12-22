@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Hello World
+short: The Phoenix shall rise from its own ashes and engulf the flames...
 ---
 
 h1. {{ page.title }}
 
-p(meta). 21 Dec 2011 - PL
-
-The Phoenix shall rise from its own ashes.
+The Phoenix shall rise from its own ashes and engulf the flames of CMS systems. This is a test post on my new jekyll blog.
+I hope my blog will become amazingly fast with this.
