@@ -6,9 +6,10 @@ title: Geeks shall blog'eth the earth.
 
     {% for post in site.posts %}
       <div id="post">
-      	<h2><a href={{ post.url }}>{{ post.title }}</a></h2>
-      	{{ post.conent}}
+      	<h2 class="droidify"><a href={{ post.url }}>{{ post.title }}</a></h2>
+      	{{ post.content}}
       </div>
+      <blockquote><small>{{ post.date | date_to_string }}</small></blockquote>
       <div class="space_the_final_frontier"></div>
     {% endfor %}
 
