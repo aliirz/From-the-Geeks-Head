@@ -53,7 +53,8 @@ h2 a {
 }
 
 h2 a {
-	
+	-webkit-transition-duration:0.40s;
+	-webkit-transition-duration:color;
 	-moz-transition-duration: 0.40s;
 	-moz-transition-property: color;
 	outline-medium: none;
@@ -96,4 +97,10 @@ h2 a:hover{
 	display: inline;
 	float: right;
 	margin-left: 1.625em;
+}
+
+nav#pagination ol li {
+    float: left;
+    list-style-type: none;
+    margin: 0 5px;
 }
