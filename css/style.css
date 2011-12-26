@@ -61,7 +61,7 @@ h2 a {
 }
 
 h2 a:hover{
-	color: #FF7400;
+	color: #003366;
 	text-decoration: none;
 }
 
@@ -100,7 +100,9 @@ h2 a:hover{
 }
 
 nav#pagination ol li {
+
     float: left;
     list-style-type: none;
     margin: 0 5px;
+
 }

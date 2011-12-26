@@ -7,17 +7,16 @@ title: Geeks shall blog'eth the earth.
 <!-- here add you post markup -->
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
  
-  	<div class="content">
-    		{{ post.content }}
-  	</div>
+  <div class="content">
+    {{ post.content }}
+  </div>
 	<blockquote>{{post.date | date_to_string}}</blockquote>
-	<div class="space_the_final_frontier"></div>
 {% endfor %}
 
 <!-- Pagination links -->
 <div id="post-pagination" class="pagination">
 
-  <!--{% if paginator.previous_page %}
+  {% if paginator.previous_page %}
   <p class="previous">
     {% if paginator.previous_page == 1 %}
     <a href="/">Previous</a>
@@ -29,7 +28,7 @@ title: Geeks shall blog'eth the earth.
   <p class="previous disabled">
     <span>Previous</span>
   </p>
-  {% endif %}-->
+  {% endif %}
 
   <ul class="pages">
     <li class="page">
@@ -51,7 +50,7 @@ title: Geeks shall blog'eth the earth.
     {% endfor %}
   </ul>
 
-  <!--{% if paginator.next_page %}
+  {% if paginator.next_page %}
   <p class="next">
     <a href="/page{{paginator.next_page}}">Next</a>
   </p>
@@ -59,5 +58,6 @@ title: Geeks shall blog'eth the earth.
   <p class="next disabled">
     <span>Next</span>
   </p>
-  {% endif %}-->
+  {% endif %}
+
 </div>
