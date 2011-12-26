@@ -2,6 +2,7 @@
 layout: post
 title: Yet Another Cache Cleaner
 tagline: A cache cleaner for YAF
+category: .Net framework
 ---
 
 We installed <a href="http://www.yetanotherforum.net" target="_blank">yet another forum</a> on one of our private servers the past week. My job was to set it up the theme, smtp and access roles. So everything went well until I came to the most important requirement of them all:

@@ -2,6 +2,7 @@
 layout: post
 title: Inner Voices
 tagline: Choices Choices
+category: Thoughts
 ---
 
 Research proves that people who have lesser choices have the most peace of mind.  On the other hand people who have lots of choices and find themselves confused within them, have more restless minds. However choices choices involved in creating computer software are a seperate story. There are a number of factors which have to be looked into before choosing the framework or language you will start coding in. I am not here to bore you with these factors, I am just trying to make a point about the restless/peaceful mind of the developer.

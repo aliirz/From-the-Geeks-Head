@@ -2,6 +2,7 @@
 layout: post
 title: The Road to Rails
 tagline: ...
+category: Ruby on Rails
 ---
 Ali's Blog
 
