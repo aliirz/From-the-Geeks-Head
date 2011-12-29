@@ -53,16 +53,33 @@ h2 a {
 }
 
 h2 a {
+
 	-webkit-transition-duration:0.40s;
-	-webkit-transition-duration:color;
+	-webkit-transition-property:color;
 	-moz-transition-duration: 0.40s;
 	-moz-transition-property: color;
+	transition-duration: 0.40s;
+	transition-property: color;
 	outline-medium: none;
+
+	-webkit-transiton: width 0.4s linear 0s, background 0.2s ease 0s;
+	-moz-transition: width 043s linear 0s, background 0.2s ease 0s;
+	transition: width 0.4s linear 0s, backround 0.2s ease 0s;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 6px;
+   	padding: 5px 5px 5px 10px;
+    /*width: 285px;*/
+
 }
 
 h2 a:hover{
-	color: #003366;
+	background: none repeat scroll 0 0 rgba(54, 54, 54, 0.7);
+	color: #FFFFFF;
+	width: 600px;
 	text-decoration: none;
+
 }
 
 #twitter_update_list{
@@ -99,10 +116,47 @@ h2 a:hover{
 	margin-left: 1.625em;
 }
 
-nav#pagination ol li {
-
-    float: left;
-    list-style-type: none;
-    margin: 0 5px;
-
+/*******Pager Styles*********/
+.pagerSC {
+    background: none repeat scroll 0 0 #3E3E3E;
+    border: 5px solid #313131;
+    clear: both;
+    font-family: Tahoma,Arial,Helvetica,Sans-serif;
+    font-size: 0.8em;
+    height: 1%;
+    margin: 0 10px;
 }
+.pagerSC a, .pagerSC span {
+    background: none repeat scroll 0 0 #3E3E3E;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin-right: 0.1em;
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+}
+.pagerSC span {
+    color: #868686;
+}
+.pagerSC .currentSC {
+    background: none repeat scroll 0 0 #003366;
+}
+.pagerSC a:hover {
+    background: none repeat scroll 0 0 #EC5210;
+}
+.pagertop {
+    border-top: 0 none;
+}
+.pagerbottomSC {
+    border-bottom: 0 none;
+}
+.pagerSC ul {
+    margin: 0;
+    padding: 0;
+    list-style:	none;
+}
+.pagerSC li {
+    margin: 0;
+    padding: 0;
+}
+

@@ -1,49 +1,50 @@
 ---
 layout: default
-title: Geeks shall blog'eth the earth.
+title: A Ninja Scientist's Web Log
 ---
 
 {% for post in paginator.posts %}
 <!-- here add you post markup -->
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<br />
+<blockquote>Posted on {{post.date | date_to_string}}</blockquote>
   	<div class="content">
     		{{ post.content }}
   	</div>
     <div class="categories">{{ post.categories | category_links }}</div>
-	<blockquote>{{post.date | date_to_string}}</blockquote>
 	<div class="space_the_final_frontier"></div>
 {% endfor %}
 
 <!-- Pagination links -->
-<div id="post-pagination" class="pagination">
+<div class="pagerSC">
 
-  <!--{% if paginator.previous_page %}
-  <p class="previous">
+  {% if paginator.previous_page %}
+  <span class="nextprevSC">
     {% if paginator.previous_page == 1 %}
     <a href="/">Previous</a>
     {% else %}
     <a href="/page{{paginator.previous_page}}">Previous</a>
     {% endif %}
-  </p>
+  </span>
   {% else %}
-  <p class="previous disabled">
-    <span>Previous</span>
-  </p>
-  {% endif %}-->
+  <span class="nextprevSC">
+    Previous
+  </span>
+  {% endif %}
 
-  <ul class="pages">
-    <li class="page">
+  <ul>
+    <li>
       {% if paginator.page == 1 %}
-      <span class="current-page">1</span>
+      <span class="currentSC">1</span>
       {% else %}
       <a href="/">1</a>
       {% endif %}
     </li>
 
     {% for count in (2..paginator.total_pages) %}
-    <li class="page">
+    <li>
       {% if count == paginator.page %}
-      <span class="current-page">{{count}}</span>
+      <span class="currentSC">{{count}}</span>
       {% else %}
       <a href="/page{{count}}">{{count}}</a>
       {% endif %}
@@ -51,13 +52,14 @@ title: Geeks shall blog'eth the earth.
     {% endfor %}
   </ul>
 
-  <!--{% if paginator.next_page %}
-  <p class="next">
+  {% if paginator.next_page %}
+  <span class="nextprevSC">
     <a href="/page{{paginator.next_page}}">Next</a>
-  </p>
+  </span>
   {% else %}
-  <p class="next disabled">
-    <span>Next</span>
-  </p>
-  {% endif %}-->
+  <span class="currentSC">
+    Next
+  </span>
+  {% endif %}
+
 </div>
