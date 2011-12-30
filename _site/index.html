@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>aliirz.com | A Ninja Scientist's Web Log</title>
+    <meta name="description" content="ali's personal blog">
+    <meta name="author" content="Ali Raza">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/tweet/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+      .container {
+        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+      /* Styles you shouldn't keep as they are for displaying this base example only */
+      .content .span10,
+      .content .span4 {
+        min-height: 500px;
+      }
+      /* Give a quick and non-cross-browser friendly divider */
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 19px;
+        border-left: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+
+.topbar-inner,.topbar .fill{background-color:#FFFFFF;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFD1C5));background-image:-moz-linear-gradient(top, #FFFFFF, #CFD1C5);background-image:-ms-linear-gradient(top, #64A8D1, #3D9AD1);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #CFD1C5));background-image:-webkit-linear-gradient(top, #FFFFFF, #CFD1C5);background-image:-o-linear-gradient(top, #FFFFFF, #CFD1C5);background-image:linear-gradient(top, #FFFFFF, #CFD1C5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CFD1C5', GradientType=0);-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);box-shadow:0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);}
+
+.topbar a{
+  color: #003366;
+  text-decoration: none;
+}
+.topbar a{
+        -moz-transition-duration: 0.40s;
+        -moz-transition-property: color;
+        -webkit-transition-duration: 0.40s;
+        -webkit-transition-property: color;
+        transition-duration: 0.40s;
+        transition-property: color;
+        outline-medium: none;
+}
+
+.topbar .brand {
+	color: #003366;
+}
+
+.tweet_list {
+  background-color: #CFD1C5;
+}
+
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"/>
+
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="/tweet/jquery.tweet.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    jQuery(function($){
+        $(".tweet").tweet({
+            join_text: "auto",
+            username: "aliirz",
+            avatar_size: 32,
+            count: 1,
+            loading_text: "Loading Latweet"
+        });
+    });
+</script>
+<!--Google Analytics-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16307998-4']);
+  _gaq.push(['_setDomainName', 'aliirz.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; 
+s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/index.html">aliirz.com</a>
+          <ul class="nav">
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+          <h1>A Ninja Scientist's Web Log <small></small></h1>
+        </div>
+        <div class="row">
+          <div class="span10">
+            <!--<h2>Main content</h2>-->
+            	
+<!-- here add you post markup -->
+<h2><a href="/Thoughts/2011/12/24/Inner-Voices/">Inner Voices</a></h2>
+<br />
+<blockquote>Posted on 24 Dec 2011</blockquote>
+  	<div class="content">
+    		<p>Research proves that people who have lesser choices have the most peace of mind.  On the other hand people who have lots of choices and find themselves confused within them, have more restless minds. However choices choices involved in creating computer software are a seperate story. There are a number of factors which have to be looked into before choosing the framework or language you will start coding in. I am not here to bore you with these factors, I am just trying to make a point about the restless/peaceful mind of the developer.</p>
+<p>Developers who know how to create software using a number of platforms, are usually happy. They are sure that if one thing does not work they can try the other. These devs are jacks of all and masters of none. While devs who know only one platform are sometimes troubled by the limitations it has but it does not mean they are not happy. These people are uber devs in their platform of choice and if required functionality is not provided in it, they build it. Example? Cocoa&#8217;s Async Socket library. Why? Because iOS did not have Socket Programming support by default.</p>
+<p>My point? Doesn&#8217;t matter if you know one or a bazzillion platforms, if you have the motivation and dedication you will make it work somehow. Devs Rule!</p>
+  	</div>
+    <div class="categories"><a href="/categories/Thoughts/">Thoughts</a></div>
+	<div class="space_the_final_frontier"></div>
+
+<!-- here add you post markup -->
+<h2><a href="/Jekyll/2011/12/22/Jekyll/">Jekyll</a></h2>
+<br />
+<blockquote>Posted on 22 Dec 2011</blockquote>
+  	<div class="content">
+    		<p>There was a time when my blog used to run on Wordpress. I love Wordpress, its plugins, its themes and the overall simplicity but my problem is I am like a rolling stone I never settle for one thing, I keep on moving to better and better, no matter how complex things become.</p>
+<p>Being a geek has taught me one thing, do not do what everybody else does. So following this thought i learned about Jekyll from <a href="http://www.destroytoday.com" target="blank">Johnny Hallman&#8217;s Blog</a>. Instantly I knew I had to give this a try. With my new found love for Rails applications, this surely has proven to be a delight. So I am moving my blog from Wordpress <span class="caps">CMS</span> to plain <span class="caps">HTML</span> with the help of Jekyll. The thing is that any framework or tool that gives you complete control over your rendered <span class="caps">HTML</span> is super awesome in my opinion, which is another reason I love working with Asp.net mvc3 and Rails but with Jekyll my blog becomes <span class="caps">HTML</span> hence saving me a lot of time and effort, no complex logic involved. Give <a href="https://github.com/mojombo/jekyll">Jekyll</a> a try, trust me you will not regret it.</p>
+  	</div>
+    <div class="categories"><a href="/categories/Jekyll/">Jekyll</a></div>
+	<div class="space_the_final_frontier"></div>
+
+<!-- here add you post markup -->
+<h2><a href="/Web/2011/12/06/Fully-Linoded/">Fully Linoded</a></h2>
+<br />
+<blockquote>Posted on 06 Dec 2011</blockquote>
+  	<div class="content">
+    		<p>Today I moved this blog to a personal <span class="caps">VPS</span> at linode. I feel a significant performance increase. I have grown very fond of linode, it was I must say it was fun to configure a <span class="caps">LAMP</span> stack, and then moving my blog here from wordpress.com. While I was at it I also installed the Rails framework(which I haven&#8217;t tested yet). <a href="http://www.linode.com"><img class="alignleft" title="linode" src="http://www.linode.com/images/linode_logo_gray.png" alt="" width="288" height="65" /></a>The overall experience has been very knowledgeable. I thought it will be a pain to set everything up but thanks to the extensive documentation and an amazing community it turned out to be a piece of cake. Also its <span class="caps">VPS</span> so does not occupy space meaning cleaner greener environment. I would write more but I am too tired. I am happy and feel like a newly turned vegan so I am gonna leave you with a video I happen to like. Cheers</p>
+<p><iframe src="http://player.vimeo.com/video/32619522?color=E6B112" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/32619522">Be a Vegetarian</a> from <a href="http://vimeo.com/glossyrey"><span class="caps">GLOSSYREY</span></a> on <a href="http://vimeo.com">Vimeo</a>.</p></p>
+  	</div>
+    <div class="categories"><a href="/categories/Web/">Web</a></div>
+	<div class="space_the_final_frontier"></div>
+
+<!-- here add you post markup -->
+<h2><a href="/.Net framework/2011/11/08/Yet-Another-Cache-Cleaner/">Yet Another Cache Cleaner</a></h2>
+<br />
+<blockquote>Posted on 08 Nov 2011</blockquote>
+  	<div class="content">
+    		<p>We installed <a href="http://www.yetanotherforum.net" target="_blank">yet another forum</a> on one of our private servers the past week. My job was to set it up the theme, smtp and access roles. So everything went well until I came to the most important requirement of them all:</p>
+<p>The newly registered users were supposed to be in a very limited access role and once their identities were confirmed, the admin was to move them to full member access. This all was setup, but whenever I moved a user to full member access the account would still retain limited access of the first role assigned. This became annoying! So after a little googling I found out that there is cache inside YAF&#8217;s db; a table called ActiveAccess. When you clear the table manually it resets the cache. There is a Stored Procedure as well &#8220;yaf_activeaccess_reset&#8221; for easier operation.</p>
+<p>So I created a small utility that clears the cache after every four hours. Code Available here:</p>
+<p><a href="https://github.com/aliirz/YAFCacheCleaner" target="_blank">https://github.com/aliirz/YAFCacheCleaner</a></p>
+<p>Its easy shneezy! Please not that this issue of cache not being cleared up is fixed in <span class="caps">YAF</span> version 1.9.6 <span class="caps">BETA</span>. But if you are  using 1.9.5 Stable you will have to do it manually or show patience for it to clear automatically(trust me, takes a while). Otherwise you can also run the utility i mentioned above.</p>
+<p>Hope its helpful :)</p>
+  	</div>
+    <div class="categories"><a href="/categories/.Net framework/">.Net framework</a></div>
+	<div class="space_the_final_frontier"></div>
+
+<!-- here add you post markup -->
+<h2><a href="/Ruby on Rails/2011/09/22/The-Road-to-Rails/">The Road to Rails</a></h2>
+<br />
+<blockquote>Posted on 22 Sep 2011</blockquote>
+  	<div class="content">
+    		<p>Ali&#8217;s Blog</p>
+<p>Stardate [-28]5546.73</p>
+<p><img class="alignleft" title="rails" src="http://www.ajaxline.com/files/rorlogo.png" alt="" width="316" height="402" />After having a few adventures with <span class="caps">PHP</span> and Asp.net <span class="caps">MVC</span> I decided to give the framework known as Ruby on Rails a try. It has gained quite a lot of hype being open source (<a href="https://github.com/rails/rails">github link</a>). I wanted to see whats the big fuss about so I gave it a try. I installed it on my system(s) and played around with it a little and what i saw would seem to be magic to a layman(offcourse if he had an IQ level that could understand how web applications work, which I doubt.).</p>
+<p>The framework was able to generate well structured applications with all the basic functions on the fly. I could run a command and generate a Model(you don&#8217;t know what a model is? Google it). I did not had to write a single piece of <span class="caps">SQL</span> code, my objects were persistant which means all the db level work was already taken care of. At some point I would ask myself &#8220;What sorcery is this?&#8221;. Yes, thats how good everything seemed. Changes I made to the code were reflected instantaneously. I learnt what it meant to be a Model, View and a Controller.</p>
+<p>Upon some further research I learnt that behind Rails is a philosophy. The philosophy has three points:</p>
+<ul>
+	<li>Thou shalt not repeat yourself. <acronym title="dont repeat yourself"><span class="caps">DRY</span></acronym>.</li>
+</ul>
+<ul>
+	<li>Thou shalt believe in convention over configuration.</li>
+</ul>
+<ul>
+	<li>Thou shalt follow the <acronym title="Representational State Transfer"><span class="caps">REST</span></acronym>.</li>
+</ul>
+<p>&nbsp;</p>
+<p>With these three points Rails does what it does. Seeing Rails in action has allowed me to reach only one logical conclusion i.e it was created by the Vulcans. No other race is smart enough.</p>
+<p>If you are looking forward to learn some rails, <a href="http://guides.rubyonrails.org/getting_started.html">this</a> is a good place to start.</p>
+<p>&nbsp;</p>
+<p>Cmndr. Ali Signing out.</p>
+<p>Keep an eye on my blog to see more stuff about rails.</p>
+  	</div>
+    <div class="categories"><a href="/categories/Ruby on Rails/">Ruby on Rails</a></div>
+	<div class="space_the_final_frontier"></div>
+
+
+<!-- Pagination links -->
+<div class="pagerSC">
+
+  
+  <span class="nextprevSC">
+    Previous
+  </span>
+  
+
+  <ul>
+    <li>
+      
+      <span class="currentSC">1</span>
+      
+    </li>
+
+    
+    <li>
+      
+      <a href="/page2">2</a>
+      
+    </li>
+    
+  </ul>
+
+  
+  <span class="nextprevSC">
+    <a href="/page2">Next</a>
+  </span>
+  
+
+</div>
+
+              
+              <!--<div class="row show-grid">
+                <div class="span4"><a href=2>Previous Posts..</a></div>
+                <div class="span4"><a href=>Newer Posts..</a></div>
+              </div>-->
+          </div>
+          <div class="span4">
+          <div class="tweet"></div>
+		<div class="space_the_final_frontier"></div>
+	<a href="https://twitter.com/aliirz" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @aliirz</a>
+	<div>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	<div class="space_the_final_frontier"></div>
+	<div id="klout">
+<iframe src="http://widgets.klout.com/badge/aliirz?size=m" style="border:0" scrolling="no" allowTransparency="true" frameBorder="0" width="160px" height="78px"></iframe> 
+	</div>	
+	
+
+
+          </div>
+        </div>
+
+</div>
+
+      <footer>
+        <p>copyright &copy; Ali Raza 2012. Built with <a 
+href="https://github.com/twitter/bootstrap" 
+target="blank">Bootstrap</a>. 
+Powered 
+by <a 
+href="http://www.linode.com/?r=7ccc576834f187bd194f334bf249544a6ed073be" 
+target="blank">Linode</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
