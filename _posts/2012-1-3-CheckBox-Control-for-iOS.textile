@@ -1,0 +1,14 @@
+---
+layout: post
+title: Checkbox Control for iOS
+tagline: UICheckbox Control
+category: iOS
+---
+
+If you are an iOS developer then you do know that iOS doest not have a 
+checbox control. Yes, you can can use the UISwitch to work out for you 
+but still, we all know how cool checkboxes can be. So here is a little 
+Gist of code to help you implement your own UICheckbox Control. You can 
+use it in your Custom TableView Cells even. Enjoy:
+
+<script src="https://gist.github.com/1167926.js"> </script>
