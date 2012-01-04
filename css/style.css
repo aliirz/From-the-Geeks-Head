@@ -160,3 +160,7 @@ h2 a:hover{
     padding: 0;
 }
 
+.content p{
+	font-size: 15px;
+	line-height: 20px;
+}
