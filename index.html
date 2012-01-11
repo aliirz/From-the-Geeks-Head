@@ -5,10 +5,9 @@ title: A Ninja Scientist's Web Log
 
 {% for post in paginator.posts %}
 <!-- here add you post markup -->
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<br />
+<h2 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 <blockquote>Posted on {{post.date | date_to_string}}</blockquote>
-  	<div class="content">
+  	<div class="postContent">
     		{{ post.content }}
   	</div>
     <div class="categories">{{ post.categories | category_links }}</div>
