@@ -1,63 +1,67 @@
 ---
 layout: default
-title: A Ninja Scientist Dev Blog
+title: A Ninja Scientist's Blog
 ---
 
 {% for post in paginator.posts %}
 <!-- here add you post markup -->
 <h2 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<blockquote>Posted on {{post.date | date_to_string}}</blockquote>
+<blockquote class="postDate">Posted on {{post.date | date_to_string}}</blockquote>
   	<div class="postContent">
     		{{ post.content }}
   	</div>
     <div class="categories">{{ post.categories | category_links }}</div>
+    <div id="space_final_frontier"></div>
+  
 {% endfor %}
 
 <!-- Pagination links -->
-<div class="pagerSC">
-
+<nav class="pagination">
+<ul>
   {% if paginator.previous_page %}
-  <span class="nextprevSC">
+  <li>
     {% if paginator.previous_page == 1 %}
     <a href="/">Previous</a>
     {% else %}
     <a href="/page{{paginator.previous_page}}">Previous</a>
     {% endif %}
-  </span>
+  </li>
   {% else %}
-  <span class="nextprevSC">
+  <li>
     Previous
-  </span>
+  </li>
   {% endif %}
 
-  <ul>
-    <li>
+    <li class="current">
       {% if paginator.page == 1 %}
-      <span class="currentSC">1</span>
+      1
       {% else %}
       <a href="/">1</a>
       {% endif %}
     </li>
 
     {% for count in (2..paginator.total_pages) %}
-    <li>
+  
       {% if count == paginator.page %}
-      <span class="currentSC">{{count}}</span>
+      <li class="current">
+      	{{count}}
+      </li>
       {% else %}
+      <li>
       <a href="/page{{count}}">{{count}}</a>
+      </li>
       {% endif %}
-    </li>
+
     {% endfor %}
-  </ul>
 
   {% if paginator.next_page %}
-  <span class="nextprevSC">
+  <li>
     <a href="/page{{paginator.next_page}}">Next</a>
-  </span>
+  </li>
   {% else %}
-  <span class="currentSC">
+  <li class="current">
     Next
-  </span>
+  </li>
   {% endif %}
-
-</div>
+</ul>
+</nav>

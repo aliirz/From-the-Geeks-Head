@@ -256,6 +256,81 @@ Post Styles
     color: #757575;
 }
 
+.postDate {
+	font 11px 'DroidSansBold',Arial, sans-serif;
+	color: #4099FF;
+	text-align: right;
+	/*float: right;*/
+}
+
+
+/************Pagination Nav *****************/
+
+
+nav.pagination {
+font-family:"Quattrocento",serif;
+font-size:17px;
+color:#474747;
+display:block;
+}
+
+nav.pagination ul {
+margin:0;
+padding:0;
+list-style:none;
+}
+
+nav.pagination ul li {
+display:inline-block;
+}
+
+nav.pagination ul li + li {
+margin-left:3px;
+}
+
+nav.pagination ul li a {
+padding:5px 15px 5px 15px;
+color:inherit;
+text-decoration:none;
+text-shadow:0 1px 0 rgba(255,255,255,1);
+line-height:1;
+background:#F7F7F7;
+background:-webkit-gradient(linear,left top,left bottom,from(#F7F7F7),to(#DEDEDE));
+background:-moz-linear-gradient(top,#F7F7F7,#DEDEDE);
+background:-webkit-linear-gradient(top,#F7F7F7,#DEDEDE);
+background:linear-gradient(top,#F7F7F7,#DEDEDE);
+border:#EDEDED solid 1px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+-moz-box-shadow:
+0 1px 1px rgba(0,0,0,0.5),
+0 1px 0 rgba(255,255,255,1) inset;
+-webkit-box-shadow:
+0 1px 1px rgba(0,0,0,0.5),
+0 1px 0 rgba(255,255,255,1) inset;
+box-shadow:
+0 1px 1px rgba(0,0,0,0.5),
+0 1px 0 rgba(255,255,255,1) inset;
+display:block;
+}
+
+nav.pagination ul li a:active,
+nav.pagination ul li a.current {
+margin-top:3px;
+-moz-box-shadow:
+0 1px 0 rgba(255,255,255,1),
+0 1px 1px rgba(0,0,0,0.3) inset;
+-webkit-box-shadow:
+0 1px 0 rgba(255,255,255,1),
+0 1px 1px rgba(0,0,0,0.3) inset;
+box-shadow:
+0 1px 0 rgba(255,255,255,1),
+0 1px 1px rgba(0,0,0,0.3) inset;
+}
+
+/**********************************/
+
 
 .block {
     border-bottom: 1px solid #D8D8D8;
@@ -302,13 +377,14 @@ Post Styles
     -webkit-box-shadow: 0 1px 0 #FFFFFF;
     -moz-box-shadow: 0 1px 0 #FFFFFF;
     box-shadow: 0 1px 0 #FFFFFF;
+    text-align: center;
    }
 
 .logo a {
-    font: 120px 'DroidSansBold',arial,sans-serif;
+    font: 80px 'DroidSansBold',arial,sans-serif;
     text-shadow: 1px 1px 1px #FFFFFF;
     color: #757575;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -318,6 +394,18 @@ Post Styles
     width: 900px;
     }
 
+footer p{
+	font: 10px 'DroidSansRegular',arial,sans-serif;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	color:#757575;
+	text-align: center;
+}
+
+#space_final_frontier {
+	clear: both;
+	height: 2em;
+	overflow: hidden;
+}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
