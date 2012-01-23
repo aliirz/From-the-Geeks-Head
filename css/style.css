@@ -435,6 +435,43 @@ footer p{
 .social-buttons .stumbleupon { width: 50px; height: 65px; background-position: -295px 0; }
 .social-buttons .socialite-loaded { background: none !important; }
 
+/************************
+ * 
+ * img align classes
+ * 
+ ************************/
+
+.alignleft {
+	float: left;
+}
+
+img.alignleft {
+	display: inline;
+	margin: 0 7px 2px 0;
+	padding: 4px;
+}
+
+.alignright {
+	float: right;
+}
+
+img.alignright {
+	display: inline;
+	margin: 0 0 2px 7px;
+	padding: 4px;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
