@@ -1,0 +1,9 @@
+---
+layout: post
+title: Timehop - Time travel made easy
+category: Web
+---
+!(aligncenter)/images/timehop.PNG!
+I came across "Timehop":http://www.timehop.com a week ago. The idea behind it was so simple and sounded way too fun that i signed up instantly, who would not want to be reminded of the past(except for the embarrasing moments)? Basically it sends you an email of all your social network(s) activity for the same date of the last year. So its like a time machine that reminds you what were you upto last year the very same day. It does not spam you(Thank God), one email a day is not overkill. As a matter of fact I find myself waiting for my morning's dose of Time Travel back to my facebook and twitter feeds from an year ago.
+
+Its a great idea and I would really like to see it grow into Mobile Apps and a manual timeline browser someday. Still reading? go Timehop a little, jog your memory.
