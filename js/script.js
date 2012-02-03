@@ -8,9 +8,6 @@
  			mpq.track("Page Loaded");
  			
  			
- 			$('.postHeading').click(function(){
-				mpq.track("Post Clicked");
-			});
  			
  		});
  		
