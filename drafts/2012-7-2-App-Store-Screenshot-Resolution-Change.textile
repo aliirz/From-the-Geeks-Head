@@ -1,0 +1,5 @@
+---
+layout: post
+title: App Store Screenshots Policy Change
+category: iOS
+---

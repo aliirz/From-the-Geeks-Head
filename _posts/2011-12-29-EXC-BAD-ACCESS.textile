@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EXC_BAD_EXCESS Error...
+title: EXC_BAD_ACCESS Error...
 category: iOS
 ---
 Getting that nasty EXC_BAD_ACCESS Exception and your app crashes? and let me guess you cannot detect the cause behind it? Fear not my ninja developer buddies. This exception occurs when a message is being sent to a deallocated or released object. To find the little culprit all we need is a little NSZombieEnabled Environment Variable. It keeps a copy of the deallocated object.
