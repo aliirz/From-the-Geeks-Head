@@ -3,3 +3,7 @@ layout: post
 title: App Store Screenshots Policy Change
 category: iOS
 ---
+Today as I was about to upload a new version for one of our clients' apps I came to find out that Apple has changed its policy regarding App Screenshot Size. I dont have a problem with the and it's completely understandable that Apple wants higher quality screenshots for the App Store. What burned me was the fact that I could not change the
+description and more importantly could not upload the new version of the App. 
+
+*"When you create or update your Apps in iTunes Connect, you must upload screenshots that are high-resolution. We require your screenshots as high-resolution images so that your app is optimized for the Retina display. The requirements for high-resolution images are 960 x 640, 960 x 600, 640 x 960, or 640 x 920 pixels. Images must be at least 72 dpi, in the RGB color space, and the file must be .jpeg, .jpg, .tif, .tiff, or .png. You can update your screenshot files at any time in iTunes Connect"*
