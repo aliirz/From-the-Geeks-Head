@@ -1,0 +1,45 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/************Header****************/
+
+.myHeader {
+    background: none repeat scroll 0 0 #333333;
+    margin-bottom: 30px;
+    padding: 20px 0 8px;
+}
+
+.myHeader a {
+    color: #FFFFFF;
+    top: 10px;
+    position: relative;
+}
+
+.myHeader h3 {
+    color: #FFFFFF;
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
