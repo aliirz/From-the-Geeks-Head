@@ -263,6 +263,24 @@ Post Styles
 	/*float: right;*/
 }
 
+/*********************************/
+ .headbar {
+	background: none repeat scroll 0 0 #333333;
+	margin-bottom: 30px;
+	margin-top: -50px;
+	padding: 10px 0 8px;
+}
+
+.headbar h3 {
+	color: #FFFFFF;
+}
+
+.headbar a {
+    color: #FFFFFF;
+    position: relative;
+    top: 10px;
+ }
+
 
 /************Pagination Nav *****************/
 
@@ -388,11 +406,6 @@ box-shadow:
     text-decoration: none;
 }
 
-
-#container {
-    margin: 0 auto;
-    width: 900px;
-    }
 
 footer p{
 	font: 10px 'DroidSansRegular',arial,sans-serif;

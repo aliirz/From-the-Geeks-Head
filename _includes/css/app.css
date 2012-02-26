@@ -1,4 +1,3 @@
-/* Foundation v2.2 http://foundation.zurb.com */
 /* Artfully masterminded by ZURB  */
 
 /* -------------------------------------------------- 
@@ -13,7 +12,22 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+/************Header****************/
 
+.myHeader {
+    background: none repeat scroll 0 0 #333333;
+    margin-bottom: 30px;
+    padding: 20px 0 8px;
+}
+
+.myHeader a {
+    color: #FFFFFF;
+    position: relative;
+}
+
+.myHeader h2 {
+    color: #FFFFFF;
+}
 
 
 /* -----------------------------------------

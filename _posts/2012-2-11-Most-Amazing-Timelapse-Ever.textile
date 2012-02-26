@@ -7,6 +7,6 @@ I came across this beautiful timelapse video on vimeo. It has deeply inspired me
 
 Here is the video:
 
-<iframe src="http://player.vimeo.com/video/22439234" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/22439234" width="auto" height="auto" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 All credit goes to the original creator of this video. Enjoy!
