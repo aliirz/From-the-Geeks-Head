@@ -45,21 +45,22 @@
      <div class="container">
        <div class="row">
 	 <div class="nine columns">
-	 <div class="row">
-	   {{content}}
-	 </div>
+	   <div class="row">
+	     {{content}}
+	   </div>
 	 </div>
 	 <div class="three columns">
 	 </div>
-	 <footer class="row">
-	   <div class="five columns">
-	     <p>2012 &copy; Ali Raza</p>
-	   </div>
-	   <div class="four columns">
-	   </div>
-	   <div class="three columns">
-	   </div>
-	 </footer>
+       </div>
+       <footer class="row">
+	 <div class="five columns">
+	   <p>2012 &copy; Ali Raza</p>
+	 </div>
+	 <div class="four columns">
+	 </div>
+	 <div class="three columns">
+	 </div>
+       </footer>
      </div>
      
      <!-- JS Files -->
@@ -73,6 +74,15 @@
 	<script src="/js/libs/jquery.tooltips.js"></script>
 	<!-- End Combine and Compress These JS Files -->
 	<script src="/js/libs/app.js"></script>
-    
-    </body>
+	<script src="/js/libs/socialite-1.0.js"></script>
+	<script src="/js/script.js"></script>
+	
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.mathiasbynens.be/notes/async-analytics-snippet -->
+	<script>
+	  var _gaq=[['_setAccount','UA-16307998-4'],['_trackPageview']];
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>	
+  </body>
 </html>

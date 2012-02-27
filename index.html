@@ -9,12 +9,13 @@ sitemap:
 
 {% for post in paginator.posts %}
 <!-- here add you post markup -->
-<h2 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<blockquote class="postDate">Posted on {{post.date | date_to_string}}</blockquote>
-  	<div class="postContent">
+<div class="row">
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<blockquote>Posted on {{post.date | date_to_string}}</blockquote>
+  	<div>
     		{{ post.content }}
   	</div>
-    <div class="categories">{{ post.categories | category_links }}</div>
+    <div>{{ post.categories | category_links }}</div>
     <ul class="social-buttons cf">
 	<li>
 		<a href="http://twitter.com/share" class="socialite twitter" data-text="{{ post.title }}" data-url="http://aliirz.com{{ post.url }}" data-count="vertical" data-via="aliirz" rel="nofollow" target="_blank"><span>Share on Twitter</span></a>
@@ -29,7 +30,7 @@ sitemap:
 		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aliirz.com{{ post.url }}&amp;title={{ post.title }}" class="socialite linkedin" data-url="http://aliirz.com{{ post.url }}" data-counter="top" rel="nofollow" target="_blank"><span>Share on LinkedIn</span></a>
 	</li>
 </ul>
-    <div id="space_final_frontier"></div>
+</div>
   
 {% endfor %}
 

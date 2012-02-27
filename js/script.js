@@ -4,11 +4,7 @@
 
 	$(document).ready(function() { 
  			
- 			Socialite.load();
- 			mpq.track("Page Loaded");
- 			
- 			
- 			
+ 			Socialite.load(); 			
  		});
  		
 	
