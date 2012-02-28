@@ -6,54 +6,52 @@ sitemap:
   changefreq: weekly
   lastmod: 2011-09-29T18:56:19+02:00
 ---
-
 {% for post in paginator.posts %}
 <!-- here add you post markup -->
 <div class="row">
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<blockquote>Posted on {{post.date | date_to_string}}</blockquote>
-  	<div>
-    		{{ post.content }}
-  	</div>
-    <div>{{ post.categories | category_links }}</div>
+	<p class="right">Posted on {{post.date | date_to_string}}</p>  	
+    <br /q>
+    {{ post.content }}
+    <p>{{ post.categories | category_links }}</p>
     <ul class="social-buttons cf">
-	<li>
-		<a href="http://twitter.com/share" class="socialite twitter" data-text="{{ post.title }}" data-url="http://aliirz.com{{ post.url }}" data-count="vertical" data-via="aliirz" rel="nofollow" target="_blank"><span>Share on Twitter</span></a>
-	</li>
-	<li>
-		<a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=http://aliirz.com{{ post.url }}" class="socialite googleplus" data-size="tall" data-href="http://aliirz.com{{ post.url }}" rel="nofollow" target="_blank"><span>Share on Google+</span></a>
-	</li>
-	<li>
-		<a href="http://www.facebook.com/sharer.php?u=http://aliirz.com{{ post.url }}&amp;t={{ post.title }}" class="socialite facebook" data-href="http://aliirz.com{{ post.url }}" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span>Share on Facebook</span></a>
-	</li>
-	<li>
-		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aliirz.com{{ post.url }}&amp;title={{ post.title }}" class="socialite linkedin" data-url="http://aliirz.com{{ post.url }}" data-counter="top" rel="nofollow" target="_blank"><span>Share on LinkedIn</span></a>
-	</li>
-</ul>
+		<li>
+			<a href="http://twitter.com/share" class="socialite twitter" data-text="{{ post.title }}" data-url="http://aliirz.com{{ post.url }}" data-count="vertical" data-via="aliirz" rel="nofollow" target="_blank"><span>Share on Twitter</span></a>
+		</li>
+		<li>
+			<a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=http://aliirz.com{{ post.url }}" class="socialite googleplus" data-size="tall" data-href="http://aliirz.com{{ post.url }}" rel="nofollow" target="_blank"><span>Share on Google+</span></a>
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer.php?u=http://aliirz.com{{ post.url }}&amp;t={{ post.title }}" class="socialite facebook" data-href="http://aliirz.com{{ post.url }}" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span>Share on Facebook</span></a>
+		</li>
+		<li>
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aliirz.com{{ post.url }}&amp;title={{ post.title }}" class="socialite linkedin" data-url="http://aliirz.com{{ post.url }}" data-counter="top" rel="nofollow" target="_blank"><span>Share on LinkedIn</span></a>
+		</li>
+	</ul>
 </div>
+
   
 {% endfor %}
 
 <!-- Pagination links -->
-<nav class="pagination">
-	<ul>
+	<ul class="pagination">
   		{% if paginator.previous_page %}
   			<li>
     			{% if paginator.previous_page == 1 %}
-    				<a href="/">Previous</a>
+    				<a href="/">&laquo;</a>
     			{% else %}
-    				<a href="/page{{paginator.previous_page}}">Previous</a>
+    				<a href="/page{{paginator.previous_page}}">&laquo;</a>
     			{% endif %}
   			</li>
   		{% else %}
-  			<li>
-    			Previous
+  			<li class="unavailable">
+    			<a href="">&laquo;</a>
   			</li>
   		{% endif %}
 
-    	<li class="current">
+    	<li>
       		{% if paginator.page == 1 %}
-      			1
+      			<a href="">1</a>
       		{% else %}
       			<a href="/">1</a>
       		{% endif %}
@@ -63,7 +61,7 @@ sitemap:
   
       		{% if count == paginator.page %}
       			<li class="current">
-      			{{count}}
+      			<a href=""">{{count}}</a>
       			</li>
       		{% else %}
       			<li>
@@ -75,12 +73,11 @@ sitemap:
 
   	{% if paginator.next_page %}
   		<li>
-    		<a href="/page{{paginator.next_page}}">Next</a>
+    		<a href="/page{{paginator.next_page}}">&raquo;</a>
   		</li>
   	{% else %}
-  		<li class="current">
-    		Next
+  		<li class="unavailable">
+    		<a href="">&raquo;</a>
   		</li>
   	{% endif %}
 </ul>
-</nav>

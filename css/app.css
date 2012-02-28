@@ -37,6 +37,14 @@ body{
     color: #FFFFFF;
 }
 
+/*******************Footer***********/
+.myFooter {
+	/****background: none repeat scroll 0 0 #333333;***/
+	margin-top: 30px;
+	padding: 20px 0 8px;
+	/*color: #FFFFFF;*/
+	}
+
 /*
  * Socialite
  */
