@@ -1,0 +1,14 @@
+---
+layout: post
+title: Blog Redesign...Welcome to the Grid
+description: aliirz.com has been redesigned using the Foundation framework
+keywords: redesign blog aliirz.com
+---
+!(right)/images/yeti.png!
+Phew!!! Finally I am happy with the redesign. Yes, aliirz.com has been going through a major redesign phase from the past few weeks and now finally its complete(I think so). So (clears throat) lets talk about what's new.
+
+The website now uses the "Foundation Framework":http://foundation.zurb.com which has become my most favourite prototyping CSS framework since Startup Weekend Lahore. The most used and favourite feature of mine is the grid(not the one from Tron) as it allows creating a flexible, fully customizable layout in seconds. So bascially you can prototype anything be it a website for the web or mobile devices, foundation has all you need to go in uber prototyping mode. Also foundation has built-in support for creating responsive designs(Something I still need to hook up here).
+
+Some other things I have changed are a new header and footer section utilizing the power of Jekyll includes so I have more control over the HTML. You can see the main page has two columns now so that content is more properly arranged. I have a new "Folio":/Folio section which only lists a handful of my projects at the moment. The post headings have now got a CSS3 transition property to their background. The site background is now white to improve readability and now users can subscribe to RSS Feeds as well.
+
+Do leave your comments and feedback on how things look and what can be improved. I am re-learning the web and I am loving it. Cheers :)

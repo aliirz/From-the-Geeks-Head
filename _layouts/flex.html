@@ -8,6 +8,16 @@
     <meta charset="utf-8"/>
 
     <meta  name="viewport" content="width=device-width"/>
+    <meta name="author" content="Ali Raza" />
+   	{% if page.description %}
+   	<meta name="description" content="{{ page.description }}"/>
+   	{% else %}
+   	<meta name="description" content="{{ page.title }}"/>
+   	{% endif %}
+   	
+   	{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords }}" />
+	{% endif %}
    
     <link href="/css/globals.css" rel="stylesheet"/>
     <link href="/css/mobile.css" rel="stylesheet"/>
