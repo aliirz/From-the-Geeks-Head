@@ -12,6 +12,35 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+
+/******Post Headings********/
+
+.postHeading{
+	-moz-transition: width 0.3s linear 0s, background 0.2s ease 0s;
+	-webkit-transition: width 0.3s linear 0s, background 0.2s ease 0s;
+	 transition: width 0.3s linear 0s, background 0.2s ease 0s;
+}
+
+.postHeading:hover {
+	background: none repeat scroll 0 0 rgba(54, 54, 54, 1);
+	
+}
+/*******code*******/
+code
+{
+	background: none repeat scroll 0 0 #3F3F3F;
+	color:#E3CEAB;
+	display: block;
+	padding: 0.53em;
+}
+
+
+/*********Post Date******/
+.postDate{
+	color: #4099FF;
+}
+
+
 /*************Body***************/
 
 body{
@@ -73,6 +102,9 @@ body{
 .social-buttons .socialite-loaded { background: none !important; }
 
 
+/********Selection*********/
+::-moz-selection { background: #333333; color: #fff; text-shadow: none; }
+::selection { background: #333333; color: #fff; text-shadow: none; }
 
 /* -----------------------------------------
    Page Name 1

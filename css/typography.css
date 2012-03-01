@@ -1,20 +1,49 @@
 /* Artfully Masterminded by ZURB */
 
+/*=======================fonts=======================*/
+
+@font-face {
+    font-family: "TitilliumText22LRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/TitilliumText22L003-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/TitilliumText22L003-webfont.woff") format("woff"), url("../fonts/TitilliumText22L003-webfont.ttf") format("truetype"), url("../fonts/TitilliumText22L003-webfont.svg#TitilliumText22LRegular") format("svg");
+}
+
+@font-face {
+    font-family: "DroidSansRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/DroidSans-webfont.woff") format("woff"), url("../fonts/DroidSans-webfont.ttf") format("truetype"), url("../fonts/DroidSans-webfont.svg#DroidSansRegular") format("svg");
+}
+
+@font-face {
+    font-family: "DroidSansBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/DroidSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/DroidSans-Bold-webfont.woff") format("woff"), url("../fonts/DroidSans-Bold-webfont.ttf") format("truetype"), url("../fonts/DroidSans-Bold-webfont.svg#DroidSansBold") format("svg");
+}
+
 /*	--------------------------------------------------
     :: Typography
 	-------------------------------------------------- */
+	
+	code {
+		/*  */
+		font:13px 'TitilliumText22LRegular',Arial,Sans-Serif;
+	  }
+	
 	h1, h2, h3, h4, h5, h6 { color: #181818; font-weight: bold; line-height: 1.25 }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 46px; font-size: 4.6rem; margin-bottom: 12px;}
-	h2 { font-size: 35px; font-size: 3.5rem; margin-bottom: 9px; }
-	h3 { font-size: 28px; font-size: 2.8rem; margin-bottom: 9px; }
-	h4 { font-size: 21px; font-size: 2.1rem; margin-bottom: 3px; }
-	h5 { font-size: 18px; font-size: 1.8rem; font-weight: normal; margin-bottom: 3px;  }
-	h6 { font-size: 15px; font-size: 1.5rem; font-weight: normal; }
+	h1 { font:46px 'DroidSansBold',Arial,Sans-Serif; margin-bottom: 12px;}
+	h2 { font:35px 'DroidSansBold',Arial,Sans-Serif; margin-bottom: 9px; }
+	h3 { font:28px 'DroidSansBold',Arial,Sans-Serif; margin-bottom: 9px; }
+	h4 { font:21px 'DroidSansBold',Arial,Sans-Serif; margin-bottom: 3px; }
+	h5 { font:18px 'DroidSansBold',Arial,Sans-Serif; font-weight: normal; margin-bottom: 3px;  }
+	h6 { font:15px 'DroidSansBold',Arial,Sans-Serif; font-weight: normal; }
 
 	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
 
-	p { font-size: 13px; font-size: 1.3rem; line-height: 1.25; margin: 0 0 18px; }
+	p { font:13px 'DroidSansRegular',Arial,Sans-Serif; line-height: 1.25; margin: 0 0 18px; }
 	p img { margin: 0; }
 	p.lead { font-size: 18px; font-size: 1.8rem; line-height: 1.5;  }
 	
