@@ -5,6 +5,7 @@ category: iOS
 description: How to use core animation in your iOS apps
 keywords: animation ios core animation splash
 ---
+!(left)/images/core-animation.png!
 I was working on an App for a client, careful planning, proper branding, good color schemes it all was there. What was 
 missing was a little bit of jazz(As our Head of Operations pointed out). So instantly I jumped on the bandwagon to add a splash animation at the app's start. Have worked with Core Animation had been a long time for me, but I remembered the basics so I decided to make a Hello Core Animation post which might be helpful for someone somewhere.
 
@@ -12,6 +13,18 @@ What I am going to do here is explain the different blocks of Core Animation and
 
 First step, begin writing the animation block in the AppDelegate's applicationDidFinishLaunching method or if your animation is a view controller specific add it to the viewDidLoad method:
 
-@[UIView beginAnimations:nil  context:nil]@
+@[UIView beginAnimations:nil  context:nil];	//Begin animations@
 
-Whatever follows after this statement is considerd to be a core animation action. Be it a size transition of a label, color change of a button or a shiny graphic/image you want to fly in from the right of the screen etc. you add it after this statement. In this example however we would be doing something very simple, Lets change the size of
+Whatever follows after this statement is considerd to be a core animation action. Be it a size transition of a label, color change of a button or a shiny graphic/image you want to fly in from the right of the screen etc. you add it after this statement. In this example however we would be doing something very simple, we would just make the view that is being loaded flip from right. So the next thing we do is add a tranisition duration:
+
+@[UIView setAnimationDuration: 0.50];@
+
+Then we add the transition style:
+
+@[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];@
+
+This will make the view that is being pushed on the navigation controller to flip from right like a page instead of the the standard transition. Finally to make it work:
+
+@[UIView commitAnimations];	//Commit animations do the dance.@
+
+This will as the name suggests commit the animations. So whatever you have between these two lines of code will get executed as an animation.
