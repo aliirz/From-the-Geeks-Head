@@ -2,6 +2,7 @@
 layout: post
 title: Startup Weekend Lahore
 category: Events
+keywords: lahore startup weekend
 ---
 !(aligncenter)/images/startup-weekend.png!
 I have never seen so many entrepreneurs under one roof ever in my life. I always wanted to to go to one of them techcrunch's disrupts to meet with others like me and network. I never imagined I would get the chance to attend an even more awesome event in my own country.
