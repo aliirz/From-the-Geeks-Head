@@ -3,6 +3,7 @@ layout: post
 title: HTML5 and CSS3-getting on with it
 tagline: Part 1
 category: Web
+keywords: html5 learning css3 new section doctype nav
 ---
 
 <p style="text-align: center;"><img class="aligncenter" title="html 5" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="" width="473" height="473" /></p>
