@@ -4,7 +4,7 @@ title: Startup Weekend Lahore
 category: Events
 keywords: lahore startup weekend
 ---
-!(aligncenter)/images/startup-weekend.png!
+!(aligncenter)http://aliirzdotcom.appspot.com/images/startup-weekend.png!
 I have never seen so many entrepreneurs under one roof ever in my life. I always wanted to to go to one of them techcrunch's disrupts to meet with others like me and network. I never imagined I would get the chance to attend an even more awesome event in my own country.
 
 It was a last minute decision to attend this amazing event in Lahore. What I hadthought to be a simple participation turned into an energy-filled, nerve wrenching hackathon 54-hours straight. I will be very honest I had never thought of writing so much code in a day and that too in a simple text editor.
