@@ -19,15 +19,8 @@
 	<meta name="keywords" content="{{ page.keywords }}" />
 	{% endif %}
    
-  <link href="http://aliirzdotcom.appspot.com/css/globals.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/mobile.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/ui.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/forms.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/grid.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/orbit.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/reveal.css" rel="stylesheet"/>
-    <link href="/css/typography.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/app.css" rel="stylesheet"/>
+ {% include stylesheets.html %}
+ 
 
 	<title>aliirz.com | {{ page.title }}</title>
     <!--[if lt IE 9]>
@@ -51,19 +44,7 @@
        		</div>
 	</div>
 	  {% include footer.html %}
-      <!-- JS Files -->
-    <script src="http://aliirzdotcom.appspot.com/js/libs/jquery.min.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/modernizr.foundation.js"></script>
-	<!-- Combine and Compress These JS Files -->
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.reveal.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.orbit-1.4.0.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.customforms.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.placeholder.min.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.tooltips.js"></script>
-	<!-- End Combine and Compress These JS Files -->
-	<script src="http://aliirzdotcom.appspot.com/js/libs/app.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/socialite-1.0.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/script.js"></script>
+    {% include javascript.html %}
 	
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>

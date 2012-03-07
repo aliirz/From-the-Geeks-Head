@@ -20,15 +20,7 @@
 	<meta name="keywords" content="{{ page.keywords }}" />
 	{% endif %}
    
-    <link href="http://aliirzdotcom.appspot.com/css/globals.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/mobile.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/ui.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/forms.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/grid.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/orbit.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/reveal.css" rel="stylesheet"/>
-    <link href="/css/typography.css" rel="stylesheet"/>
-    <link href="http://aliirzdotcom.appspot.com/css/app.css" rel="stylesheet"/>
+  	{% include stylesheets.html %}
 
 	<title>aliirz.com | {{ page.title }}</title>
     <!--[if lt IE 9]>
@@ -52,26 +44,14 @@
 	 		<div class="three columns hide-on-phones">
 	 			<div class="row">
 	 					<strong>About Ali</strong>
-	 					<img src="/images/ali_raza.jpg" alt="" />
 	 					<p>Software Developer and Entrepreneur. Dreams big and looks forward to change the world.</p>
+	 					<a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a><a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"></a>
 	 			</div>
 	 		</div>
        </div>
 	</div>
 	 {% include footer.html %}   	
-     <!-- JS Files -->
-    <script src="http://aliirzdotcom.appspot.com/js/libs/jquery.min.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/modernizr.foundation.js"></script>
-	<!-- Combine and Compress These JS Files -->
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.reveal.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.orbit-1.4.0.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.customforms.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.placeholder.min.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/jquery.tooltips.js"></script>
-	<!-- End Combine and Compress These JS Files -->
-	<script src="http://aliirzdotcom.appspot.com/js/libs/app.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/libs/socialite-1.0.js"></script>
-	<script src="http://aliirzdotcom.appspot.com/js/script.js"></script>
+     {% include javascript.html %}
 	
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>
