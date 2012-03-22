@@ -34,14 +34,31 @@
 	color:#FFFFFF;
 }
 /*******code*******/
-code
+/*code
 {
-	background: none repeat scroll 0 0 #3F3F3F;
+	background: none repeat scroll 0 0 rgba(96, 185, 206, 0.7);
 	color:#E3CEAB;
 	display: block;
 	padding: 0.53em;
 }
+*/
+pre {
+    background-color: #FFD073;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 18px;
+    padding: 8.5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
+code, pre {
+    border-radius: 3px 3px 3px 3px;
+    padding: 0 3px 2px;
+}
 
 /*********Post Date******/
 .postDate{

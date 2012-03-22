@@ -8,20 +8,20 @@ This post is for those who are new to the Git System. I am going to show how to 
 
 The first thing, create a new branch based on an existing branch with the following command:
 
-@git checkout - b 'New-Branch'@
+{% highlight bash %}git checkout - b 'New-Branch' {% endhighlight %}
 
 The above command creates and switches to the newly created branch.
 
 Then this is how you push it to the remote repository:
 
-@git push origin New-Branch@
+{% highlight bash %}git push origin New-Branch {% endhighlight %}
 
 All set, the newly created branch has been pushed to the remote repository. Now how will we access it on another System? Thats easy too, the first thing that needs to be done on the other system is:
 
-@git fetch origin@
+{% highlight bash %}git fetch origin {% endhighlight %}
 
 This will update the repo with the changes from remote repo. But wait this will not add the newly created branch yet, note that it has been fetched but is not being tracked yet. To do that we use the following command:
 
-@git checkout --track origin/New-Branch@
+{% highlight bash %}git checkout --track origin/New-Branch {% endhighlight %}
 
 Yes, thats it. Hope this post will help someone. Cheers.

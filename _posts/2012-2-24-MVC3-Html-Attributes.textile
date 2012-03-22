@@ -7,7 +7,7 @@ keywords: mvc3 razor html placeholder attributes
 ---
 For those of you who use or are learning asp.Net MVC3 might know that it introduces some very useful HTML helpers with its razor view engine. Sometimes the need is to customize the rendered out HTML a little bit more with CSS or HTML attributes. So this small post shows how to do that. Imagine you are using a textbox HTML helper in your razor view to render a textbox but you want to use a custom CSS class as well as a placeholder to it so that it looks very very pretty. In order to do just that you need to declare your textbox HTML helper like:
 
-@@HTML.Textbox("Searchbox",null,new { @class = "prettyTextbox", @placeholder = "This is placeholder Text")@
+{% highlight csharp %}@HTML.Textbox("Searchbox",null,new { @class = "prettyTextbox", @placeholder = "This is placeholder Text") {% endhighlight %}
 
 Which will render out a textbox like:
 

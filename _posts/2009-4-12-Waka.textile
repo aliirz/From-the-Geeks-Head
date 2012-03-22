@@ -1,0 +1,27 @@
+---
+layout: post
+title: Meet WAKA http's proposed replacement 
+keywords: protocols protocol waka internet http
+category: Web
+---
+Sometime ago i gave a presentation on WAKA. WAKA is a proposed replacement protocol for HTTP. So here is a little about it:
+
+WAKA is the name given to type of a "Maori Canoe". As it is a data transfer protocol,  the name perfectcly fits in as this canoe is used to travel long distances at the sea. The protocol has lots of neat features, it can be thought of as a improvement to the existing HTTP protocol we use daily. WAKA has no specification or RFC yet all information that is available is on the internet in blog posts &amp; mailing or news archives.
+
+HTTP has the following methods for data transfer:
+<ul>
+	<li>GET</li>
+	<li>POST</li>
+	<li>HEAD</li>
+	<li>PUT</li>
+	<li>DELETE</li>
+</ul>
+All these methods will be included in WAKA and along them will be its own set of cool methods some of which are:
+<ul>
+	<li>MONITOR</li>
+	<li>RENDER</li>
+</ul>
+The method that interests me the most is the Monitor method. It will work as a subscription service that will check the status of a resource and will report it back wihout having to Postback.
+
+Just like HTTP, WAKA is based on REST (Representational State Transfer) Architecture. Lets keep our fingers crossed and see when does the Canoe that changes it all comes out of the pipeline. Eyes are on you Apache :)
+
