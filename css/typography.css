@@ -43,7 +43,7 @@
 
 	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
 
-	p { font:13px 'DroidSansRegular',Arial,Sans-Serif; line-height: 1.25; margin: 0 0 18px; }
+	p { font:16px 'DroidSansRegular',Arial,Sans-Serif; line-height: 1.25; margin: 0 0 18px; }
 	p img { margin: 0; }
 	p.lead { font-size: 18px; font-size: 1.8rem; line-height: 1.5;  }
 	
