@@ -21,7 +21,22 @@ With that done now it was time to upload my files to the cloud server. I created
 
 Then i created a new folder on my system having the same name as my application and copied my css, javascript and image folders inside it. Now the main piece of the puzzle is the app.yaml file without it the AppEngine will never identify your application as it contains all the necessary stuff. So I created an app.yaml file inside the root of the folder. My app.yaml(do mind the indentation) looks like this:
 
-<script src="https://gist.github.com/1984930.js"> </script>
+
+{% highlight bash %}
+application: aliirzdotcom
+version: 1
+runtime: python
+api_version: 1
+handlers:
+- url: /images
+  static_dir: images
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /fonts
+  static_dir: fonts
+ {% endhighlight %}
 
 Basically its telling appengine the following things:
 

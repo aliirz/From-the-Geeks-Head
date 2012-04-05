@@ -6,6 +6,57 @@ category: iOS
 keywords: ios checkbox iphone reusable
 ---
 
-If you are an iOS developer then you do know that iOS doest not have a checbox control. Yes, you can can use the UISwitch to work out for you but still, we all know how cool checkboxes can be. So here is a little Gist of code to help you implement your own UICheckbox Control. You can use it in your Custom TableView Cells even. Enjoy:
+If you are an iOS developer then you do know that iOS doest not have a checbox control. Yes, you can can use the UISwitch to work out for you but still, we all know how cool checkboxes can be. So here is a little Gist of code to help you implement your own UICheckbox Control. You can use it in your Custom TableView Cells even:
 
-<script src="https://gist.github.com/1167926.js"> </script>
+
+{% highlight objc %}
+@interface UICheckBox : UIButton {
+    BOOL checked;
+}
+
+@property (nonatomic, assign) BOOL checked;
+
+-(IBAction)checkBoxClicked;
+
+@end
+
+
+
+@implementation UICheckBox
+@synthesize checked;
+
+
+-(id)initWithFrame:(CGRect)frame{
+    
+    if(self == [super initWithFrame:frame]){
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        
+        [self setImage:[UIImage imageNamed:@"checkbox_not_ticked.png"] forState:UIControlStateNormal];
+        
+        [self addTarget:self action:@selector(checkBoxClicked) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return self;
+        
+}
+
+-(IBAction)checkBoxClicked{
+    
+    if(self.checked == NO)
+    {
+        self.checked = YES;
+        [self setImage:[UIImage imageNamed:@"checkbox_ticked.png"] forState:UIControlStateNormal];
+    }
+    else{
+        self.checked = NO;
+        [self setImage:[UIImage imageNamed:@"checkbox_not_ticked.png"] forState:UIControlStateNormal];
+    }
+    
+}
+
+-(void) dealloc{
+    [super dealloc];
+}
+
+@end
+{% endhighlight %}
