@@ -27,10 +27,10 @@
     :: Typography
 	-------------------------------------------------- */
 	
-	 code {
+/*	 code {
 		
 		font:13px 'TitilliumText22LRegular',Arial,Sans-Serif;
-	  }
+	  }*/
 	
 	h1, h2, h3, h4, h5, h6 { color: #181818; font-weight: bold; line-height: 1.25;}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -43,7 +43,7 @@
 
 	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
 
-	p { font:16px 'DroidSansRegular',Arial,Sans-Serif; line-height: 1.25; margin: 0 0 18px; }
+	p { font:15px 'DroidSansRegular',Arial,Sans-Serif; line-height: 1.25; margin: 0 0 18px; }
 	p img { margin: 0; }
 	p.lead { font-size: 18px; font-size: 1.8rem; line-height: 1.5;  }
 	
