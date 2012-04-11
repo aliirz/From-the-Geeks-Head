@@ -1,0 +1,32 @@
+---
+layout: post
+title: To Windows Phone or Not
+keywords: windows phone mango metro microsoft
+description: An ex windows mobile user thinking to get the new windows phone.
+category: Thoughts
+---
+Many of you do not know that my first smartphone was a Windows Mobile 6.5 based "i-Mate JasJam":http://www.gsmarena.com/i_mate_jasjam-1589.php . I loved that phone it was all one geek could ask for at that time, it had GPS, Google Maps, a powerful browser, a Qwerty keyboard and a stylus(trust me stylus' were cool  back then) I got this phone as a gift from my brother. Boy, Was I happy with it. After an year of usage the whole shashka(awesomeness) of the phone started to die, possibly because Microsoft stopped focusing on their Mobile OS side. So I sold the phone to a friend and bought an N900.
+ 
+Now the N900(I still own it btw) is different. It is actually the coolest phone I've ever come across. Why? Because its a pure hacker's device. !(right)/images/n900.png! Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely "community":http://www.maemo.org driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it. 
+
+!(left)/images/mango.png! But I am looking forward to get something else to use as a secondary phone and you might've guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:
+
+<h3>Metro UI</h3>
+The new metro UI is awe-inspiring and to be honest I am bored by looking at the same UI of iOS and Android phones. So the UI is a welcome change.
+
+<h3>Live Tiles</h3>
+One of the best features are the live tiles, they are like widgets but only better. They work in real-time and show you live information such as messages, GPS location, Email etc. The new UI makes everything very accessible from the Home screen.
+
+<h3>Integrated Social Layer</h3>
+iOS 5 came with an integrated Twitter Layer for apps to utilize. Windows Phone 7.5 does the same, only it does it better. It has a complete social network layer and the people app. This brings your contacts and your social networks at one place. Your contacts' social network profiles are automatically synced with other information you have about them on your phone.
+
+<h3>Not a Battery Muncher</h3>
+Now this is way to good. All current phones running WP7 are not battery munchers like other smartphones. WP7 has a battery-saver function that saves up juice for when needed.
+
+<h3>Office Mobile</h3>
+With office mobile WP7 gives you the complete MS Office experience on your phone, now no other smartphone out there gives you this facility.
+
+<h3>Linked Inboxes</h3>
+No more people have to struggle between multiple inboxes. You can link them into one so that they become easily manageable.
+
+So these are some of the reasons I am considering a Windows Phone. I would really appreciate if you could help me decide. Do leave me a comment. Rock n Roll!
