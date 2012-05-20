@@ -7,10 +7,35 @@ description: My breakdown of MVC4's new features
 ---
 It's been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:
 
-h2. ASP.NET Web API
+h3. ASP.NET Web API
 
 Sounds cool doesn't it. A framework that can create HTTP Services that work on any client, be it mobile or web browser. It also makes it dead simple to write REST Service. Do give this one a try, you will be making web services better than you grandpa ever could. Some of it's features are:
 
 * Modern HTTP Programming Model.
 * Full Support for Routes(Yes works pretty much like Rails now).
-* Content 
+* Content Negotiation(This is smart, the client and server are now able to determine the data type being returned. You can also add your own formats.)
+* Self Host(You can host a  Web API inside your own process or IIS and can still use routes etc.)
+
+Click "here":http://www.asp.net/web-api for more information on the ASP.NET Web API
+
+h3. Single Page Applications
+
+This one is my favourite. You can now create a Single Page Application with rich client functionality using the built-in scaffoldings. You single page application will have a very small footprint yet having all you need. Need a DAL? No Problemo! Thats supported too. Click "here":http://www.asp.net/single-page-application for more information on single page applications.
+
+h3. Enhanced Default Project Templates
+
+Looks like MS finally understands that nobody likes the default project template that comes with MVC3 and Web Forms. So they have shashkafied the default project template(See images below). It not only looks better, it's responsive too. Yes! Out of the box Responsiveness. Progressive Enhancement Extraordinare MS! Bravo!
+
+!http://i1.asp.net/common/www-css/i/mvc4/image001.png!
+!http://i1.asp.net/common/www-css/i/mvc4/image002.png!
+!http://i1.asp.net/common/www-css/i/mvc4/image003.png!
+
+h3. Mobile Project Template
+
+You can now create web apps for mobile using builtin templates too. The Views are based on jQuery Mobile while all the other code(Controllers) is exactly the same as the normal Template. To me this is a much needed feature. I am not a very good designer and often the need arises to create a Mobile Optimized one or two page App to use in my iOS Apps' Web Views. This makes things fast for me.
+
+!http://i1.asp.net/common/www-css/i/mvc4/image004.png!
+
+h3. Final Words
+
+My experience with MVC4 is going great. I play with it a lot in my free time. I am developging an OAuth based Web App on it just to master it and I will share my experience once I am done with it. All I can say for now is that MVC4 makes me feel like a happy developer. There are a lot of other neat features like Recipe's which allow you to generate template based code(Custom or 3rd Party), Browser Overriding, View Switching etc. etc. IF you want to read up a full list of features then please check out the "Release Notes":www.asp.net/whitepapers/mvc4-release-notes . This is all from me for now. Rock on!
