@@ -1,0 +1,52 @@
+---
+layout: post
+title: My nephews and their HotWheels Collection
+keywords: family hotwheels toys kids
+description: My nephews show off their hotwheels collection.
+category: Family
+---
+Today was my nephew Hassan Raza's Birthday. The young man was quite happy as he got six hotwheels as a gift just like he had wished. Which resulted in making his collection reach twenty cars. Hassan and his brother Momin Raza share and play with these hotwheels for hours but today they asked me a very creative thing. They've always wanted to show their collection to their friends but have never really got the chance so they asked me to make a photo gallery of their hotwheels, so here it is to you too my nephews. A little image slider showing off your hotwheels collection so that you may share it with your friends:
+<div class="row">
+	<div id="featured">
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_013.jpg" data-caption="#caption_1" alt="Ford F-150 1997"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_014.jpg" data-caption="#caption_1" alt="Ford F-150 1997"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_017.jpg" data-caption="#caption_2" alt="Jeep Chrysler"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_021.jpg" data-caption="#caption_2" alt="Jeep Chrysler"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_022.jpg" data-caption="#caption_3" alt="Split Decision"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_023.jpg" data-caption="#caption_3" alt="Split Decision"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_024.jpg" data-caption="#caption_4" alt="Trika"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_025.jpg" data-caption="#caption_4" alt="Trika"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_026.jpg" data-caption="#caption_5" alt="Fast Gassin"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_027.jpg" data-caption="#caption_5" alt="Fast Gassin"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_028.jpg" data-caption="#caption_6" alt="Pro Stock Firebird"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_029.jpg" data-caption="#caption_6" alt="Pro Stock Firebird"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_030.jpg" data-caption="#caption_7" alt="Nerve Hammer"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_032.jpg" data-caption="#caption_7" alt="Nerve Hammer"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_033.jpg" data-caption="#caption_8" alt="Qombee"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_034.jpg" alt="Qombee" data-caption="#caption_8"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_035.jpg" alt="Nitro Scorcher" data-caption="#caption_9"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_036.jpg" alt="Nitro Scorcher"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_037.jpg" data-caption="#caption_10" alt="Moto Crossed"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_038.jpg" data-caption="#caption_10" alt="Moto Crossed"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_039.jpg" data-caption="#caption_11" alt="Porsche Carrera GT"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_040.jpg" data-caption="#caption_11" alt="Porsche Carrera GT"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_041.jpg" data-caption="#caption_12" alt="Synkro"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_042.jpg" data-caption="#caption_12" alt="Synkro"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_043.jpg" data-caption="#caption_13" alt="Ford Mustang GT 2010"/>
+		<img src="http://dl.dropbox.com/u/8351860/momin%20hassan%20hotwheels/20120428_043.jpg" data-caption="#caption_13" alt="Ford Mustang GT 2010"/>
+		
+	</div>
+		<div id="caption_1" class="orbit-caption">Ford F-150 1997</div>
+		<div id="caption_2" class="orbit-caption">Chrysler - Jeep</div>
+		<div id="caption_3" class="orbit-caption">Split Decision</div>
+		<div id="caption_4" class="orbit-caption">Trike</div>
+		<div id="caption_5" class="orbit-caption">Fast Gassin</div>
+		<div id="caption_6" class="orbit-caption">Pro Stock Firebird</div>
+		<div id="caption_7" class="orbit-caption">Nerve Hammer</div>
+		<div id="caption_8" class="orbit-caption">Qombee</div>
+		<div id="caption_9" class="orbit-caption">Nitro Scorcher</div>
+		<div id="caption_10" class="orbit-caption">Moto Crossed</div>
+		<div id="caption_11" class="orbit-caption">Porsche Carrera GT</div>
+		<div id="caption_12" class="orbit-caption">Synkro</div>
+		<div id="caption_13" class="orbit-caption">Ford Mustang GT 2010</div>
+</div>
