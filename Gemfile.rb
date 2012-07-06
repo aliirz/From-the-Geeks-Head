@@ -1,1 +1,0 @@
-#gemfile for my Blog
