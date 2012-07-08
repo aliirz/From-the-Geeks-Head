@@ -4,6 +4,8 @@ title: Whats new in MVC4
 keywords: MVC asp.net microsoft .net framework mvc mvc3 mvc4 visual studio 11
 category: .NET
 description: My breakdown of MVC4's new features
+excerpt: It's been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4...
+img: http://i1.asp.net/common/www-css/i/mvc4/image002.png
 ---
 It's been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:
 

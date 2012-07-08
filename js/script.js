@@ -6,9 +6,9 @@
  			Socialite.load(); 			
  		});
 	$(window).load(function() {
-         $('#featured').orbit({
-         	captions: true
-         });
+         // $('#featured').orbit({
+         // 	captions: true
+         // });
      });
  		
 	
