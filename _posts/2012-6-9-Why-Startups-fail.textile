@@ -3,7 +3,7 @@ layout: post
 category: startups
 title: Why Startups Fail?
 keywords: startups fail
-description: A very nice infographic showing why startups fail
-excerpt: A very nice infographic showing why startups fail
+description: A very nice infographic showing why startups fail.
+class: post41
 ---
 <div class='visually_embed' data-category='Business' rel='infographic' ><img class='visually_embed_infographic' src='http://visually.visually.netdna-cdn.com/WhyStartupsFail_4e5ee27335d34_w587.png' rel='http://visually.visually.netdna-cdn.com/WhyStartupsFail_4e5ee27335d34.png' /><div class='visually_embed_bar' ><span>by </span> <a target='_blank'  href='http://www.visual.ly'>visually</a>. <span class='visually_embed_cycle'>Browse more <a href='http://visual.ly'>infographics</a>.</span></div><a id='visually_embed_view_more' target='_blank' href='http://visual.ly/why-startups-fail'></a><link rel='stylesheet' type='text/css' href='http://visual.ly/embeder/style.css' />		<script type='text/javascript' src='http://visual.ly/embeder/embed.js' > </script></div> 

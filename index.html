@@ -6,30 +6,26 @@ sitemap:
   changefreq: weekly
   lastmod: 2011-09-29T18:56:19+02:00
 ---
-{% for post in paginator.posts %}
-<!-- here add you post markup -->
-<div class="panel">
-  <h2 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<!-- <span class="green label radius right">Posted on {{post.date | date_to_string}}</span>  	 -->
-    <br />
-    {% if post.excerpt %}
-      <p>{{ post.excerpt}}</p>
-      <a class="button radius" href="{{ post.url }}">Read More >> </a>
-      <br />
-      <br />
-    {% else %}
-      {{ post.content }}
-    {% endif %}
-    <!--   <p>{{ post.categories | category_links }}</p>  -->
-    {% include postsocial.html %}
+<div class="row">
+  {% for post in paginator.posts %}
+  <!-- here add you post markup -->
+  <div class="four columns">
+    <div class="post {{ post.class }}">
+      <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <h6>{{ post.description }}</h6>
+      <!--   <p>{{ post.categories | category_links }}</p>  -->
+      <!-- {% include postsocial.html %} -->
+    </div>
+  <a class="button small radius" href="{{ post.url }}">Read More >> </a>
+  <br /><br />
+  <span class="label radius">Posted on {{post.date | date_to_string}}</span>
  </div>
-
-
-  
 {% endfor %}
-
+</div>
+<div class="row">
+  <div class="twelve columns">
 <!-- Pagination links -->
-	<ul class="pagination">
+  	<ul class="pagination">
   		{% if paginator.previous_page %}
   			<li>
     			{% if paginator.previous_page == 1 %}
@@ -56,7 +52,7 @@ sitemap:
   
       		{% if count == paginator.page %}
       			<li class="current">
-      			<a href=""">{{count}}</a>
+      			<a href="">{{count}}</a>
       			</li>
       		{% else %}
       			<li>
@@ -76,3 +72,5 @@ sitemap:
   		</li>
   	{% endif %}
 </ul>
+</div>
+</div>

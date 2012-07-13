@@ -2,7 +2,8 @@
 layout: post
 title: Customer Service that makes you Smile
 category: Thoughts
-excerpt: Its been an year since i Switched from Wordpress to jekyll. I registered this domain name while I was using wordpress by using the wordpress upgrades and paid $10 for it. After switching to jekyll I pointed the aliirz.com to name servers at Linode. Two days ago I got an email from Wordpress Customer services that my domain registration is about to expire and I need renew it. As soon as I saw the email I signed into my wordpress dashboard to make the payment....
+description: My Encounter with Wordpress Customer Service.
+class: post39
 ---
 Its been an year since i Switched from Wordpress to jekyll. I registered this domain name while I was using wordpress by using the wordpress upgrades and paid $10 for it. After switching to jekyll I pointed the aliirz.com to name servers at Linode. Two days ago I got an email from Wordpress Customer services that my domain registration is about to expire and I need renew it. As soon as I saw the email I signed into my wordpress dashboard to make the payment. To my surprise I got the following error message when I tried to make the payment:
 
