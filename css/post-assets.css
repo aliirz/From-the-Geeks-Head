@@ -17,6 +17,11 @@
 {
 	background: url("/images/wordpress-logo-c.png") no-repeat scroll center #FFFFFF;
 }
+
+.postdefault{
+	background: none no-repeat scroll center #74adfe;
+}
+
 .post
 {
 	width: 200px;
