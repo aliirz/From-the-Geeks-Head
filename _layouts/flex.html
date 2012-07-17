@@ -34,21 +34,17 @@
  </head>
 <body>
 {% include header.html %}
-    <div class="container">
 		<div class="row">
-	 		<div class=" nine columns">
-	   			<div class="row">
+	 		<div class="nine columns">
 	   				<div class="panel">
 	     				{{content}}
-	     			</div>
-	   			</div>
+	     			</div> 
 	 		</div>
 	 	<div class="three columns">		
 	 				{% include ads.html %}
 	 				{% include latest-posts.html %}
 	 		</div>
        	</div>
-	</div>
 	  {% include footer.html %}
     {% include javascript.html %}
 	
