@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drop Down List XML hack in MVC
-category: .Net framework
+category: .NET
 description: A quick hack to populate Drop Down lists using a XML file in Asp.Net MVC3
 keywords: dropdown list mvc razor asp.net xml
 ---
