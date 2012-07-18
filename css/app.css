@@ -16,22 +16,27 @@
 /******Post Headings********/
 
 .postHeading{
-	-moz-transition: width 0.3s linear 0s, background 0.2s ease 0s;
-	-webkit-transition: width 0.3s linear 0s, background 0.2s ease 0s;
-	 transition: width 0.3s linear 0s, background 0.2s ease 0s;
-	 width: 630px;
-	 padding-top: 5px;
-	 text-shadow: 1px 1px 1px #363636; 
+
+	text-shadow: 1px 1px 1px #FFFFFF; 
 }
 
 .postHeading:hover {
-	background: none repeat scroll 0 0 rgba(54, 54, 54, 0.5);
-	width: 640px;
+	/*color: #FFFFFF;*/
+}
+
+.postHeading a{
+    -webkit-transition-duration: 0.35s;
+    -webkit-transition-property: color;
+    -moz-transition-duration: 0.35s;
+    -moz-transition-property: color;
+    -webkit-transition-property: color;
+    transtion-duration: 0.35s;
+    transition-property: color;
 }
 
 .postHeading a:hover
 {
-	color:#FFFFFF;
+	color:#333333;
 }
 /*******code*******/
 /*code
@@ -43,7 +48,7 @@
 }
 */
 pre {
-    background-color: #FFD073;
+    background-color: #272822;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 3px 3px 3px 3px;
     display: block;
@@ -68,26 +73,26 @@ code, pre {
 
 /*************Body***************/
 
-/*body{
-    background: url("/images/bg.jpg") repeat scroll 0 0 #FFFFFF;
-}*/
+body{
+    /*background: url("/images/bg.jpg") repeat scroll 0 0 #FFFFFF;*/
+}
 
 /************Header****************/
 
 .myHeader {
-    background: none repeat scroll 0 0 #333333;
+    background: none repeat scroll 0 0 #4D4D4D;
     margin-bottom: 30px;
     padding: 20px 0 8px;
 }
-
-.myHeader a {
+/*.myHeader a {
     color: #FFFFFF;
     top: 10px;
     position: relative;
-}
+}*/
 
 .myHeader h3 {
-    color: #FFFFFF;
+    color: #2BA6CB;
+    text-shadow: 1px 1px 1px #FFFFFF;
 }
 
 /*******************Footer***********/
@@ -98,32 +103,38 @@ code, pre {
 	/*color: #FFFFFF;*/
 	}
 
+.panel ul {
+    list-style: none outside none;
+}
+
 /*
  * Socialite
  */
 
-.socialite-button { display: none; opacity: 0; }
+/*.socialite-button { display: none; opacity: 0; }
 .socialite-loaded .socialite-button { display: block; opacity: 1; }
 .socialite-button iframe { max-width: 100%; max-height: 100%; }
-
+*/
 /*
  * Socialite Look-a-like defaults
  */
 
-.social-buttons { display: block; list-style: none; padding: 0; margin: 20px; }
+./*social-buttons { display: block; list-style: none; padding: 0; margin: 20px; }
 .social-buttons > li { display: block; margin: 0; padding: 10px; float: left; }
 .social-buttons .socialite,
 .social-buttons .socialised
 { display: block; position: relative; background: url('/images/social-sprite.png') 0 0 no-repeat; }
 /* visually hidden from HTML5 Boilerplate */
-.social-buttons .socialite span { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/*.social-buttons .socialite span { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }*/
 /* fallback for default and non-loaded instances */
-.social-buttons .twitter { width: 55px; height: 65px; background-position: 0 0; }
+/*.social-buttons .twitter { width: 55px; height: 65px; background-position: 0 0; }
 .social-buttons .googleplus { width: 50px; height: 65px; background-position: -75px 0; }
 .social-buttons .facebook { width: 50px; height: 65px; background-position: -145px 0; }
 .social-buttons .linkedin { width: 60px; height: 65px; background-position: -215px 0; }
 .social-buttons .stumbleupon { width: 50px; height: 65px; background-position: -295px 0; }
 .social-buttons .socialite-loaded { background: none !important; }
+*/
+
 
 
 /********Selection*********/
@@ -131,9 +142,19 @@ code, pre {
 ::selection { background: #333333; color: #fff; text-shadow: none; }
 
 /* -----------------------------------------
-   Page Name 1
+   About Me
 ----------------------------------------- */
-
+.circular {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(http://link-to-your/image.jpg) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    }
 
 
 

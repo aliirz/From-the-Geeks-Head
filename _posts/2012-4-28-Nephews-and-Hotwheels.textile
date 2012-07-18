@@ -1,0 +1,10 @@
+---
+layout: post
+title: My nephews and their HotWheels Collection
+category: Family
+description: My nephews show off their hotwheels collection.
+keywords: hotwheels
+---
+Today was my nephew Hassan Raza's Birthday. The young man was quite happy as he got six hotwheels as a gift just like he had wished. Which resulted in making his collection reach twenty cars. Hassan and his brother Momin Raza share and play with these hotwheels for hours but today they asked me a very creative thing. They've always wanted to show their collection to their friends but have never really got the chance so they asked me to make a photo gallery of their hotwheels, so here it is to you too my nephews. A little image slider showing off your hotwheels collection so that you may share it with your friends:
+<br />
+<object width="640" height="480"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to="></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to=" width="400" height="300"></embed></object>

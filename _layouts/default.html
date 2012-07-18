@@ -3,7 +3,8 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]--><html class="no-js">
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<html class="no-js">
   <head>
     <meta charset="utf-8"/>
 
@@ -21,6 +22,7 @@
 	{% endif %}
    
   	{% include stylesheets.html %}
+  	
 	
 	<title>aliirz.com | {{ page.title }}</title>
     <!--[if lt IE 9]>
@@ -34,42 +36,38 @@
  </head>
 <body>
 {% include header.html %}
-    <div class="container">
+    <!-- <div class="container"> -->
 		<div class="row">
 	 		<div class="nine columns">
-	   			<div class="row">
-	     			{{content}}
-	   			</div>
+	   		<!-- 	<div class="row"> -->
+	   				<!-- <div class="panel"> -->
+	     				{{content}}
+	     			<!-- </div> -->
+	   			<!-- </div> -->
 	 		</div>
-	 		<div class="three columns hide-on-phones">
-	 			<div class="row">
+	 		<div class="three columns">
+	 			
 	 				<div class="panel" id="twitter">
 	 					<h4>Twitter Chatter</h4>
 	 					<ul id="twitter_update_list"><li>&nbsp;</li></ul>
 	 					<a href="http://twitter.com/aliirz"><img alt="Follow Me on Twitter" src="/images/6.png" /></a>
-	 				</div>
-	 			</div>
-	 			<div class="row">
+	 				</div> 			
 	 				{% include latest-posts.html %}
-	 			</div>
-	 			<div class="row">
 	 				<div class="panel">
 	 					<h4>RSS</h4>
 	 					<a href="http://feedburner.google.com/fb/a/mailverify?uri=FromTheGeeksHead&amp;loc=en_US">Subscribe by Email</a>
-	 					<br/>
+	 					<br/> 
 	 					<a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a><a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"></a>
-	 					</div>
-	 			</div>
+	 				</div>
+	 			
 	 		</div>
        </div>
-	</div>
+<!-- 	</div> -->
 	 {% include footer.html %}
 	      <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/aliirz.json?callback=twitterCallback2&count=1">
 </script>   	
-     {% include javascript.html %}
-
-	
+     {% include javascript.html %}	
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>
 	  var _gaq=[['_setAccount','UA-16307998-4'],['_trackPageview']];
