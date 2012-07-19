@@ -45,6 +45,6 @@ Pretty simple stuff I am just loading the XML file inside a XDocument, using Lin
 {% highlight csharp %}
                     @Html.DropDownListFor(model => model.Country, (IEnumerable<SelectListItem>)ViewBag.countries)
                     @Html.ValidationMessageFor(model => model.Country)
-{% endhiglight %}                
+{% endhighlight %}                
 
 Thats it, a super simple quick hack to populate your dropdowns. Rock On!
