@@ -13,22 +13,19 @@ sitemap:
     {% if post.class != null %}
     <div class="post {{ post.class }}">
       <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <h6>{{ post.description }}</h6>
-      <!--   <p>{{ post.categories | category_links }}</p>  -->
-      <!-- {% include postsocial.html %} -->
+      <h6>{{ post.description }}</h6>
     </div>
     {% else %}
-            <div class="post postdefault">
-      <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <h6>{{ post.description }}</h6>
-      <!--   <p>{{ post.categories | category_links }}</p>  -->
-      <!-- {% include postsocial.html %} -->
-    </div>
+      <div class="post postdefault">
+        <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <h6>{{ post.description }}</h6>
+      </div>
     {% endif %}
   <br />
+   <a class="small round secondary button" href="{{ post.url }}">Read it</a>
+   <br /><br />
   <span class="label radius">Posted on {{post.date | date_to_string}}</span>
  </div>
- <br />
 {% endfor %}
 </div>
 <br />
