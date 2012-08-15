@@ -2,7 +2,7 @@
 layout: post
 title: The Road to Rails
 tagline: ...
-category: Ruby on Rails
+category: Rails
 keywords: ruby rails
 ---
 Ali's Blog
