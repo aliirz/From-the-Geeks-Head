@@ -3,12 +3,13 @@
 */
 
 	$(document).ready(function() { 
- 			Socialite.load(); 			
+ 			Socialite.load();
+
  		});
 	$(window).load(function() {
-         // $('#featured').orbit({
-         // 	captions: true
-         // });
+       $('#featured').orbit({ 
+       	fluid: '16x9'
+       	 });
      });
  		
 	
