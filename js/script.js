@@ -6,11 +6,11 @@
  			Socialite.load();
 
  		});
-	$(window).load(function() {
-       $('#featured').orbit({ 
-       	fluid: '16x9'
-       	 });
-     });
+	// $(window).load(function() {
+ //       $('#featured').orbit({ 
+ //       	fluid: '16x9'
+ //       	 });
+ //     });
  		
 	
 	
