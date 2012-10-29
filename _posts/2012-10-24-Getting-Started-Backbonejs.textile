@@ -20,7 +20,7 @@ h3.Models
 
 As the name implies, models here are the data and all the operations like validations, computations etc. we apply on them. In backbone.js a model is defined like this:
 
-{% highlight javascript}    Person = Backbone.Model.extend({
+{% highlight javascript %}    Person = Backbone.Model.extend({
         initialize: function(){
             alert("Welcome to this world");
         }
