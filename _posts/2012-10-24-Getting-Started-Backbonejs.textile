@@ -76,4 +76,4 @@ Here are some resources I found useful in getting started with backbone.js:
 # "Backbone.js Example":http://css.dzone.com/articles/backbonejs-example-part-1
 # "Simple backbone.js model binding example":http://jsfiddle.net/derickbailey/Cpn3g/4/
 
-I hope those of you who are starting with client side MVC/MV* or are already working on it find this post useful. This is all for now. Rock on!
+I hope those of you who are starting with client side MVC/MV* or are already working on it find this post useful. This is all for now. Rock on!!
