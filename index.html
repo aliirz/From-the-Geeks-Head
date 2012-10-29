@@ -22,6 +22,7 @@ sitemap:
       </div>
     {% endif %}
   <br />
+   <div class="categories">Posted under {{ post.categories | category_links }}</div>
    <a class="small round secondary button" href="{{ post.url }}">Read it</a>
    <br /><br />
   <span class="label radius">Posted on {{post.date | date_to_string}}</span>

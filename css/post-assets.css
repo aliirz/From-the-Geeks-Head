@@ -1,5 +1,8 @@
-body {background: url("/images/bg.jpg") repeat scroll 0 0 #FFFFFF;  margin: 0; font-size: 1em; line-height: 1.4; }
+body {background: url("/images/bedge_grunge.png") repeat scroll 0 0 #FFFFFF;  margin: 0; font-size: 1em; line-height: 1.4; }
 
+.post46{
+	background :url("/images/backbone.png") no-repeat scroll center center #FFFFFF;
+}
 .post45
 {
 	background: url("/images/plan9balloon.PNG") no-repeat scroll center center #FFFFFF;
