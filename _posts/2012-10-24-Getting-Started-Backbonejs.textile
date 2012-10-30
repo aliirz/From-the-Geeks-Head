@@ -6,7 +6,7 @@ description: Get started with a client side MV* framework like Backbonejs
 category: Javascript
 class: post46
 ---
-!(right)/images/backbone-logo.png!When I first heard the term client-side MVC I got a vague picture of some sharply written framework in javascript whose job will be to improve the user experience. Being a dev who has been working with MVC frameworks from quite some time(Rails, Cocoa and Asp) I failed to imagine and apply the advantages of MVC based approach on the client side. It was not until one fine summer afternoon when I stumbled upon "Backbone.js":http://www.backbonejs.org on Github, I was finally able to comprehend the level of awesomeness client side MVC offered. I was working on a project called "Kronos":http://kronos.appointmentor.com which relied heavily on javascript and needless to say all the DOM code for jQuery quickly became spaghetti and difficult to maintain. That's when I finally realized the main objective of client side MVC or MV* frameworks, to keep your code maintainable.
+!(right)/images/backbone-logo.PNG!When I first heard the term client-side MVC I got a vague picture of some sharply written framework in javascript whose job will be to improve the user experience. Being a dev who has been working with MVC frameworks from quite some time(Rails, Cocoa and Asp) I failed to imagine and apply the advantages of MVC based approach on the client side. It was not until one fine summer afternoon when I stumbled upon "Backbone.js":http://www.backbonejs.org on Github, I was finally able to comprehend the level of awesomeness client side MVC offered. I was working on a project called "Kronos":http://kronos.appointmentor.com which relied heavily on javascript and needless to say all the DOM code for jQuery quickly became spaghetti and difficult to maintain. That's when I finally realized the main objective of client side MVC or MV* frameworks, to keep your code maintainable.
 
 Now allow me to elaborate this a little from my experience. If you are the kind of developer who just writes a few lines of javascript code(possible jQuery) to animate a box or fetch a json Feed, an MV* framework is not for you. If you are however a javascript ninja and have to write hundreds of lines of code, to perform CRUD, provide a neat UX and/or keep your code readable, go with a MV* framework like "Backbone.js":http://www.backbonejs.org and be a happy camper for the rest of your dev life. 
 
@@ -16,7 +16,7 @@ Backbone.js like ever other MV* or MVC framework is based on the simple principl
 
 In Backbone.js' case the main components are as follows:
 
-h3.Models
+h3. Models
 
 As the name implies, models here are the data and all the operations like validations, computations etc. we apply on them. In backbone.js a model is defined like this:
 
