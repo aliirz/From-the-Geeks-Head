@@ -1,5 +1,9 @@
 body {background: url("/images/bedge_grunge.png") repeat scroll 0 0 #FFFFFF;  margin: 0; font-size: 1em; line-height: 1.4; }
 
+.post48{
+	background: url("/images/post48.png") no-repeat scroll center center #FFFFFF;
+}
+
 .post47{
 	background: url("/images/post47.png") no-repeat scroll center center #FFFFFF ;
 }
