@@ -2,3 +2,4 @@ _site
 us.stackdump
 Rakefile
 drafts
+.DS_Store
