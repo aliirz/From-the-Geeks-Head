@@ -1,80 +1,209 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<html class="no-js">
-  <head>
-    <meta charset="utf-8"/>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Ali Raza - From the Geek's Head</title>
 
-    <meta  name="viewport" content="width=device-width"/>
-   	
-   	<meta name="author" content="Ali Raza" />
-   	{% if page.description %}
-   	<meta name="description" content="{{ page.description }}"/>
-   	{% else %}
-   	<meta name="description" content="{{ page.title }}"/>
-   	{% endif %}
-   	
-   	{% if page.keywords %}
-	<meta name="keywords" content="{{ page.keywords }}" />
-	{% endif %}
-   
-  	{% include stylesheets.html %}
-  	
-	
-	<title>aliirz.com | {{ page.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One%7CPT+Serif%7COpen+Sans:400,300' rel='stylesheet' type='text/css'>
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="/css/socialicons.css" rel="stylesheet">
+	<link href="/css/glyphicons.css" rel="stylesheet">
+	<link href="/css/halflings.css" rel="stylesheet">
+	<link href="/css/template.css" rel="stylesheet">
+	<!-- 	<link href="/css/colors/color-classic.css" rel="stylesheet" id="colorcss"> -->
+
+	<!-- todo: remove for package -->
+<!-- 	<link href="/css/wisewords-demo.css" rel="stylesheet">
+-->
+<script src="/js/modernizr.js"></script>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-		<link rel="stylesheet" href="/css/ie.css">
-	<![endif]-->
+      <script src="/bower_components/html5shiv/src/html5shiv.js"></script>
+      <![endif]-->
 
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
- </head>
-<body>
-{% include header.html %}
-    <!-- <div class="container"> -->
-		<div class="row">
-	 		<div class="nine columns">
-	   		<!-- 	<div class="row"> -->
-	   				<!-- <div class="panel"> -->
-	     				{{content}}
-	     			<!-- </div> -->
-	   			<!-- </div> -->
-	 		</div>
-	 		<div class="three columns">
-		 			{% include aboutme.html %}
-<!-- 	 				<div class="panel" id="twitter">
-	 					<h4>Twitter Chatter</h4>
-	 					<ul id="twitter_update_list"><li>&nbsp;</li></ul>
-	 					<a href="http://twitter.com/aliirz"><img alt="Follow Me on Twitter" src="/images/6.png" /></a>
-	 				</div> -->
-	 				{% include categories.html %}	
-	 				{% include latest-posts.html %}
-	 				<div class="panel">
-	 					<h4>RSS</h4>
-	 					<a href="http://feedburner.google.com/fb/a/mailverify?uri=FromTheGeeksHead&amp;loc=en_US">Subscribe by Email</a>
-	 					<br/> 
-	 					<a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a><a href="http://feeds.feedburner.com/FromTheGeeksHead" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"></a>
-	 				</div>
-	 			
-	 		</div>
-       </div>
-<!-- 	</div> -->
-	 {% include footer.html %}
-	     <!-- <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/aliirz.json?callback=twitterCallback2&count=1">
-</script>  --> 	
-     {% include javascript.html %}	
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.mathiasbynens.be/notes/async-analytics-snippet -->
+  </head>
+  <body>
+
+  	<div class="container">
+
+  		<div class="masthead clearfix">
+  			<a href="index.html"><img id="logo" src="/images/wwlogo@2x.png" alt="Wise Words"></a>
+  			<ul id="nav" class="nav ww-nav pull-right hidden-phone">
+  				<li class="active"><a href="blog.html">Blog</a></li>
+  				<li class="dropdown"><a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
+  					<ul class="dropdown-menu">
+  						<li><a href="typography.html">Typography</a></li>
+  						<li><a href="elements.html">Elements</a></li>
+  						<li><a href="icons.html">Icons</a></li>
+  						<li><a href="404.html">404</a></li>
+  						<li><a href="colors.html">Colors</a></li>
+  					</ul>					
+  				</li>
+
+  				<li class="dropdown"><a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">Layouts</a>
+  					<ul class="dropdown-menu">
+  						<li><a href="layout-left.html">Left Column</a></li>
+  						<li><a href="blog-single.html">Right Column</a></li>
+  						<li><a href="layout-full.html">Full Width</a></li>
+  						<li><a href="index.html">Centered Content</a></li>
+  					</ul>					
+  				</li>
+  				<li><a href="contact.html">Contact</a></li>
+  			</ul>
+
+
+  		</div>
+
+  		<hr>
+  		
+  		<div class="row main-content">
+  			<div class="offset1 span6 zone-content">
+  				{{ content }}
+  			</div>
+
+  			<aside id="aside-right" class="aside-column offset1 span3">
+  				<article class="widget-search-form widget">
+  					<header>
+  						<h1>Search</h1>
+  					</header>
+  					<form action="#" class="search-form" method="get">    
+  						<fieldset>
+  							<input id="q" name="q" type="text" value="">
+  							<!-- <button type="submit" class="button-icon"><i class="glyphicons-icon search white"></i></button> -->
+  							<button type="submit">Go</button>
+  						</fieldset>
+  					</form>
+  				</article>
+
+  				<article class="widget-tag-cloud widget">
+  					<header>
+  						<h1>Tag Cloud</h1>
+  					</header>
+  					<ul class="tagcloud">
+  						<li class="tagCloud-tag tagCloud-1">
+  							<a href="blog.html#">London</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-5">
+  							<a href="blog.html#">Edinburgh</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-3">
+  							<a href="blog.html#">Hamburg</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-4">
+  							<a href="blog.html#">Krakow</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-2">
+  							<a href="blog.html#">Fortaleza</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-1">
+  							<a href="blog.html#">Winterthur</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-2">
+  							<a href="blog.html#">St.Gallen</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-1">
+  							<a href="blog.html#">Jakarta</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-5">
+  							<a href="blog.html#">Bangkok</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-3">
+  							<a href="blog.html#">Belgrad</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-4">
+  							<a href="blog.html#">Vienna</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-4">
+  							<a href="blog.html#">Marrakech</a>
+  						</li>
+  						<li class="tagCloud-tag tagCloud-2">
+  							<a href="blog.html#">Miami</a>
+  						</li>
+  					</ul>
+  				</article>
+  				
+  				<article class="widget-triple-first widget-html-widget widget">
+  					<header>
+  						<h1>Random</h1>
+  					</header>
+  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+  				</article>
+  			</aside>
+  		</div>
+
+  		<hr>
+
+  		<div class="row triple-row">
+  			<div id="triple-first" class="span4 triple">
+  				<div class="zone zone-triple-first">
+  					<article class="widget-triple-first widget-html-widget widget">
+  						<header>
+  							<h1>First Triple</h1>
+  						</header>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+  					</article>
+  				</div>
+  			</div>
+
+  			<div id="triple-second" class="span4 triple">
+  				<div class="zone zone-triple-second">
+  					<article class="widget-triple-second widget-html-widget widget">
+  						<header>
+  							<h1>Second Triple</h1>
+  						</header>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+  					</article>
+  				</div>
+  			</div>
+
+  			<div id="triple-third" class="span4 triple">
+  				<div class="zone zone-triple-third">
+  					<article class="widget-triple-third widget-html-widget widget">
+  						<header>
+  							<h1>Share &amp; Connect</h1>
+  						</header>
+  						<p>
+  							<a href="blog.html#"><i class="smicon-rss"></i></a>
+  							<a href="blog.html#"><i class="smicon-twitter"></i></a>
+  							<a href="blog.html#"><i class="smicon-google"></i></a>
+  							<a href="blog.html#"><i class="smicon-github"></i></a>
+  							<a href="blog.html#"><i class="smicon-reddit"></i></a>
+  						</p>
+  					</article>
+  				</div>
+  			</div>
+  		</div>
+  		
+  		<hr>
+  		<div class="row">
+
+  			<div class="copyright span12">Copyright 2013 - Made in Switzerland</div>	
+  		</div>
+
+  	</div>  <!-- End Container -->
+
+
+<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/js/jquery-1.9.1.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/tinynav.js"></script>
+	<script src="/js/template.js"></script>
+
+	<!-- Todo: remove for download version -->
+	<!-- <script src="js/colorswitcher.js"></script> -->
+
 	<script>
-	  var _gaq=[['_setAccount','UA-16307998-4'],['_trackPageview']];
-	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	  s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
-  </body>
+
+</body>
 </html>

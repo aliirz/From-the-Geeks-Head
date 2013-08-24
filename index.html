@@ -2,83 +2,78 @@
 layout: default
 title: From The Geek's Head
 sitemap:
-  priority: 0.7
-  changefreq: weekly
-  lastmod: 2011-09-29T18:56:19+02:00
+priority: 0.7
+changefreq: weekly
+lastmod: 2011-09-29T18:56:19+02:00
 ---
-<div class="row">
+<ul class="blog-posts">
   {% for post in paginator.posts %}
-  <!-- here add you post markup -->
-  <div class="four columns">
-    {% if post.class != null %}
-    <div class="post {{ post.class }}">
-      <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-      <h6>{{ post.description }}</h6>
-    </div>
-    {% else %}
-      <div class="post postdefault">
-        <h4 class="postHeading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-        <h6>{{ post.description }}</h6>
+  <li>
+    <article class="blog-post">
+      <div class="published">
+        {{post.date | date_to_string}}
       </div>
-    {% endif %}
+      <h1>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <p>
+        {{ post.description }}... <a class="btn" href="{{ post.url }}">Read it</a>
+      </p>
+      <p class="tags">
+        Posted under {{ post.categories | category_links }}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
   <br />
-   <div class="categories">Posted under {{ post.categories | category_links }}</div>
-   <a class="small round secondary button" href="{{ post.url }}">Read it</a>
-   <br /><br />
-  <span class="label radius">Posted on {{post.date | date_to_string}}</span>
- </div>
-{% endfor %}
-</div>
-<br />
-<div class="row">
-  <div class="twelve columns">
-<!-- Pagination links -->
-  	<ul class="pagination">
-  		{% if paginator.previous_page %}
-  			<li>
-    			{% if paginator.previous_page == 1 %}
-    				<a href="/">&laquo;</a>
-    			{% else %}
-    				<a href="/page{{paginator.previous_page}}">&laquo;</a>
-    			{% endif %}
-  			</li>
-  		{% else %}
-  			<li class="unavailable">
-    			<a href="">&laquo;</a>
-  			</li>
-  		{% endif %}
+  <div class="row">
+    <div class="twelve columns">
+      <!-- Pagination links -->
+      <ul class="pagination">
+        {% if paginator.previous_page %}
+        <li>
+         {% if paginator.previous_page == 1 %}
+         <a href="/">&laquo;</a>
+         {% else %}
+         <a href="/page{{paginator.previous_page}}">&laquo;</a>
+         {% endif %}
+       </li>
+       {% else %}
+       <li class="unavailable">
+         <a href="">&laquo;</a>
+       </li>
+       {% endif %}
 
-    	<li>
-      		{% if paginator.page == 1 %}
-      			<a href="">1</a>
-      		{% else %}
-      			<a href="/">1</a>
-      		{% endif %}
-   		</li>
+       <li>
+        {% if paginator.page == 1 %}
+        <a href="">1</a>
+        {% else %}
+        <a href="/">1</a>
+        {% endif %}
+      </li>
 
-    {% for count in (2..paginator.total_pages) %}
-  
-      		{% if count == paginator.page %}
-      			<li class="current">
-      			<a href="">{{count}}</a>
-      			</li>
-      		{% else %}
-      			<li>
-      				<a href="/page{{count}}">{{count}}</a>
-      			</li>
-      		{% endif %}
+      {% for count in (2..paginator.total_pages) %}
+      
+      {% if count == paginator.page %}
+      <li class="current">
+       <a href="">{{count}}</a>
+     </li>
+     {% else %}
+     <li>
+      <a href="/page{{count}}">{{count}}</a>
+    </li>
+    {% endif %}
 
-    	{% endfor %}
+    {% endfor %}
 
-  	{% if paginator.next_page %}
-  		<li>
-    		<a href="/page{{paginator.next_page}}">&raquo;</a>
-  		</li>
-  	{% else %}
-  		<li class="unavailable">
-    		<a href="">&raquo;</a>
-  		</li>
-  	{% endif %}
-</ul>
-</div>
+    {% if paginator.next_page %}
+    <li>
+      <a href="/page{{paginator.next_page}}">&raquo;</a>
+    </li>
+    {% else %}
+    <li class="unavailable">
+      <a href="">&raquo;</a>
+    </li>
+    {% endif %}
+  </div>
 </div>
