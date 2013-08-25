@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: From The Geek's Head
 sitemap:
 priority: 0.7
@@ -8,72 +8,37 @@ lastmod: 2011-09-29T18:56:19+02:00
 ---
 <ul class="blog-posts">
   {% for post in paginator.posts %}
-  <li>
-    <article class="blog-post">
-      <div class="published">
-        {{post.date | date_to_string}}
-      </div>
-      <h1>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </h1>
-      <p>
-        {{ post.description }}... <a class="btn" href="{{ post.url }}">Read it</a>
-      </p>
-      <p class="tags">
-        Posted under {{ post.categories | category_links }}
-      </p>
+    <li>
+      <article class="blog-post">
+        <div class="published">
+          {{post.date | date_to_string}}
+        </div>
+        <h1>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h1>
+        <p>
+          {{ post.description }}<br> <a class="button-link" href="{{ post.url }}">Read it</a>
+        </p>
+        <p class="tags">
+          Posted under {{ post.categories | category_links }}
+        </p>
+      </article>
     </li>
     {% endfor %}
   </ul>
-  <br />
-  <div class="row">
-    <div class="twelve columns">
-      <!-- Pagination links -->
-      <ul class="pagination">
-        {% if paginator.previous_page %}
-        <li>
-         {% if paginator.previous_page == 1 %}
-         <a href="/">&laquo;</a>
-         {% else %}
-         <a href="/page{{paginator.previous_page}}">&laquo;</a>
-         {% endif %}
-       </li>
-       {% else %}
-       <li class="unavailable">
-         <a href="">&laquo;</a>
-       </li>
-       {% endif %}
-
-       <li>
-        {% if paginator.page == 1 %}
-        <a href="">1</a>
-        {% else %}
-        <a href="/">1</a>
-        {% endif %}
-      </li>
-
-      {% for count in (2..paginator.total_pages) %}
-      
-      {% if count == paginator.page %}
-      <li class="current">
-       <a href="">{{count}}</a>
-     </li>
-     {% else %}
-     <li>
-      <a href="/page{{count}}">{{count}}</a>
-    </li>
-    {% endif %}
-
-    {% endfor %}
-
-    {% if paginator.next_page %}
-    <li>
-      <a href="/page{{paginator.next_page}}">&raquo;</a>
-    </li>
-    {% else %}
-    <li class="unavailable">
-      <a href="">&raquo;</a>
-    </li>
-    {% endif %}
+  <div class="blog-pagination">
+    <div class="newer">
+      {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="/">« Newer posts</a>
+      {% else %}
+      <a href="/page{{ paginator.previous_page }}/" >« Newer posts</a>
+      {% endif %}
+      {% endif %}
+    </div>
+    <div class="older">
+      {% if paginator.next_page %} 
+      <a href="/page{{ paginator.next_page }}/">Older posts »</a>
+      {% endif %} 
+    </div>
   </div>
-</div>

@@ -45,10 +45,10 @@ a:hover, a:focus {
 }
 
 body{
-	/*background-color:#eeeee6;*/
-	font-family: 'PT Serif', serif;
-	font-size:18px;
-	line-height: 30px;
+  /*background-color:#eeeee6;*/
+  font-family: 'PT Serif', serif;
+  font-size:18px;
+  line-height: 30px;
 }
 
 blockquote {
@@ -69,13 +69,13 @@ code {
 }
 
 h1 {
-	/*color:#9b7188;*/
-	font-family: 'Open Sans', sans-serif;
-	font-size: 34px;
-	font-weight: 300;
-	margin-bottom: 30px;
-	text-align: center;
-	text-transform: uppercase;
+  /*color:#9b7188;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h1 a, h1 a:hover, h1 a:focus {
@@ -87,9 +87,9 @@ h4 {
 }
 
 hr {
-	margin-top:12px;
-	border-top:none;
-	/*border-bottom:1px solid #b2b8c1;*/
+  margin-top:12px;
+  border-top:none;
+  /*border-bottom:1px solid #b2b8c1;*/
 }
 
 li {
@@ -113,8 +113,8 @@ p {
 /***** 2. Layout *****/
 
 body {
-	padding-top: 60px;
-	padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* Landscape phones and down */
@@ -128,7 +128,7 @@ body {
 }
 
 .main-content {
-	margin-top:90px;
+  margin-top:90px;
   margin-bottom:70px;
 }
 
@@ -142,7 +142,7 @@ body {
 
 
 .seperator {
-  background-image:url('/images/threedots.png'); 
+  background-image:url('../img/threedots.png'); 
   height:6px;
     margin:100px auto; /*top  bottom left right*/
   width:35px;
@@ -173,16 +173,16 @@ body {
 
 .dropdown-menu > li
 {
-	margin-top:5px;
-	margin-bottom:5px;
+  margin-top:5px;
+  margin-bottom:5px;
 }
 
 .dropdown-menu > li > a
 {
   font-size: 16px;
   font-weight: 300;
-	text-align: center;
-  text-transform: none;	
+  text-align: center;
+  text-transform: none; 
 }
 
 .dropdown-menu > li > a:hover,
@@ -214,7 +214,7 @@ body {
 
 .nav > li > a:hover, 
 .nav > li > a:focus{
-	background-color:inherit;
+  background-color:inherit;
 }
 
 .nav > li.dropdown.open.active > a:hover,
@@ -225,29 +225,29 @@ body {
 }
 
 .ww-nav {
-	padding-top:6px;
+  padding-top:6px;
 }
 
 .ww-nav a {
-	/*color:#494e55;*/
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	font-weight:300;
-	line-height: 14px;
-	margin-left: 0px;
-	margin-right: 2px;
-	padding-right: 0px;
-	text-transform: uppercase;
-	text-decoration: none;
+  /*color:#494e55;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight:300;
+  line-height: 14px;
+  margin-left: 0px;
+  margin-right: 2px;
+  padding-right: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .ww-nav a:hover {
-	/*color:#9b7188;*/
+  /*color:#9b7188;*/
 }
 
 .ww-nav > li {
-	float:left;
-	margin-left:15px;
+  float:left;
+  margin-left:15px;
 }
 
 .ww-nav > li > a {
@@ -294,25 +294,25 @@ body {
 
 button
 {
-	/*background-color: #9b7188;*/
-	border:none;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	/*color:#eeeee6;*/
-	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
+  /*background-color: #9b7188;*/
+  border:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*color:#eeeee6;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
   height:55px;
   margin-top:15px;
   padding-left:30px;
   padding-right:30px;
-	text-transform: uppercase;
+  text-transform: uppercase;
     
 }
 
 button:hover
 {
-	/* background-color: #83536d; */
+  /* background-color: #83536d; */
 }
 
 button.button-icon{
@@ -325,23 +325,23 @@ button.button-icon{
 }
 
 input.text, input[type=text], input[type=password] {
-	height:35px;
-	width:100%;
+  height:35px;
+  width:100%;
 }
 
 label {
-	font-size:18px;
-	margin-bottom:20px;
-	margin-top:35px;
-	text-align: left;
+  font-size:18px;
+  margin-bottom:20px;
+  margin-top:35px;
+  text-align: left;
 }
 
 legend {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 textarea {
-	width:100%;
+  width:100%;
 }
 
 fieldset {
@@ -482,8 +482,8 @@ a.button-link.foricon{
 /***** 6.a General *****/
 
 .copyright {
-	font-size:12px;
-	text-align: left;
+  font-size:12px;
+  text-align: left;
 }
 
 h1.page-title {
@@ -522,8 +522,8 @@ h1.page-title {
 }
 
 .published {
-	font-size:16px; 
-	text-align: center;
+  font-size:16px; 
+  text-align: center;
 }
 
 ul.blog-posts {
@@ -589,20 +589,20 @@ ul.blog-posts li.last {
 /***** 6.d Search *****/
 
 .widget .search-form {
-	text-align: center;
+  text-align: center;
 }
 
 .widget .search-form input#q {
-	height:35px;
-	margin-bottom:0px;
-	width:155px;
+  height:35px;
+  margin-bottom:0px;
+  width:155px;
 }
 
 .widget .search-form button {
-	height:45px;
+  height:45px;
     margin-top:0px;
     padding:0px;
-	width: 45px;
+  width: 45px;
 }
 
 /* Large desktop */
@@ -618,23 +618,23 @@ ul.blog-posts li.last {
 /***** 6.e Tags *****/
 
 ul.tagcloud {
-	list-style: none;
-	overflow:auto; /*for clearing the float */
+  list-style: none;
+  overflow:auto; /*for clearing the float */
 }
 
 ul.tagcloud li {
-	float:left;
-	height:36px;
-	margin-right:5px;
+  float:left;
+  height:36px;
+  margin-right:5px;
 }
 
 ul.tagcloud a {
-	color:inherit;
-	text-decoration: none;
+  color:inherit;
+  text-decoration: none;
 }
 
 ul.tagcloud a:hover {
-	/*color:#9b7188*/
+  /*color:#9b7188*/
 }
 
 li.tagCloud-1{font-size:12px;}
@@ -681,13 +681,13 @@ fieldset.login-form {
 
 .comment a 
 {
-	color:inherit;
-	text-decoration: none;
+  color:inherit;
+  text-decoration: none;
 }
 
 article.comment h4 {
-	font-weight: normal;
-	margin-bottom:15px;
+  font-weight: normal;
+  margin-bottom:15px;
 
 }
 
@@ -700,29 +700,29 @@ article.comment h4 {
 }
 
 #comments article {
-	margin-top:100px;
+  margin-top:100px;
 }
 
 #comments .text
 {
-	font-size: 16px;
-	line-height: 30px;
-	text-align: left;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
 }
 
 #comments .when
 {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .comments {
-	text-align: center;
+  text-align: center;
 }
 
 
 ul.comments {
-	list-style: none;
-	margin-left:0;
+  list-style: none;
+  margin-left:0;
 }
 
 
@@ -731,8 +731,8 @@ ul.comments {
 /***** 6.g.ii Form *****/
 
 .comment-form {
-	margin-top:125px;
-	margin-bottom: 125px;
+  margin-top:125px;
+  margin-bottom: 125px;
 }
 
 .comment-form button.primaryAction {
@@ -743,24 +743,24 @@ ul.comments {
  }
 
 @media (max-width: 767px) { 
-	.comment-form button.primaryAction
-	{
-		width:200px;
-	}
+  .comment-form button.primaryAction
+  {
+    width:200px;
+  }
  }
 
 .comment-form legend#add-comment, h2.comment-count {
-	/*color:#9b7188;*/
-	font-family: 'Open Sans', sans-serif;
-	font-size: 30px;
-	font-weight: 300;
-	margin-bottom: 30px;
-	text-align: center;
-	text-transform: uppercase;	
+  /*color:#9b7188;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;  
 }
 
 fieldset.what {
-	text-align: center;
+  text-align: center;
 }
 
 
@@ -770,39 +770,39 @@ fieldset.what {
 
 
 aside.aside-column article.widget {
-	/*border-top:1px solid #b2b8c1;*/
-	margin-bottom:50px;
-	padding-top:30px;
+  /*border-top:1px solid #b2b8c1;*/
+  margin-bottom:50px;
+  padding-top:30px;
 }
 
 aside.aside-column article.widget:first-child {
-	border-top: none;
-	padding-top: 0;
+  border-top: none;
+  padding-top: 0;
 }
 
 aside.aside-column article.widget header h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 30px;
-	font-weight:300;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight:300;
 }
 
 .triple article.widget header h1,
 .quad article.widget header h1 {
-	font-family: 'Open Sans', sans-serif;	 /* Condensed */
-	font-size: 21px;
-	margin-bottom:13px;
-	text-transform: none;
+  font-family: 'Open Sans', sans-serif;  /* Condensed */
+  font-size: 21px;
+  margin-bottom:13px;
+  text-transform: none;
 }
 
 .triple article.widget,
 .quad article.widget {
-	font-size:16px;
-	margin-top:0;
-	text-align: center;
+  font-size:16px;
+  margin-top:0;
+  text-align: center;
 }
 
 .triple-row {
-	margin-bottom:30px;
+  margin-bottom:30px;
 }
 
 
@@ -813,11 +813,11 @@ aside.aside-column article.widget header h1 {
 /***** 7. Misc *****/
 
 .glyphicons-icon {
-  background-image: url("/images/glyphicons/glyphicons-darkgrey.svg");
+  background-image: url("../img/glyphicons/glyphicons-darkgrey.svg");
 }
 
 .halflings-icon {
-  background-image: url("/images/glyphicons/glyphicons_halflings-darkgrey.svg");
+  background-image: url("../img/glyphicons/glyphicons_halflings-darkgrey.svg");
 }
 
 #logo {
