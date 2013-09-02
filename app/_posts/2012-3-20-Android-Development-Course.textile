@@ -1,0 +1,28 @@
+---
+layout: post
+title: Android Development Training Course
+category: Android
+keywords: android development course
+---
+!(right)/images/android.png!
+Triple-I international is offering an Android development course starting from 31st March to 22nd April in Islamabad. I recommend all to take advantage of this great opportunity.
+
+Register "here":http://www.kophes.com/android-training and for more information please contact:
+
+<ul class="vcard">
+	<li class="fn">
+		Arifa Gulzar
+	</li>
+	<li class="org">
+		Triple I International
+	</li>
+	<li class="tel">
+		<a href="tel:+92-051-5493264">+92-051-5493264</a>
+	</li>
+	<li class="url">
+		<a href="mailto:arifa@kophes.com">arifa@kophes.com</a>
+	</li>
+	<li class="url">
+		<a href="http://www.kophes.com/">http://www.kophes.com/</a>
+	</li>
+</ul>

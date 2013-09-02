@@ -1,0 +1,10 @@
+---
+layout: post
+title: Fully Linoded
+tagline: Blog moved to linode
+category: Web
+keywords: linode shift jekyll
+---
+Today I moved this blog to a personal VPS at linode. I feel a significant performance increase. I have grown very fond of linode, it was I must say it was fun to configure a LAMP stack, and then moving my blog here from wordpress.com. While I was at it I also installed the Rails framework(which I haven't tested yet). <a href="http://www.linode.com"><img class="left" title="linode" src="http://www.linode.com/images/linode_logo_gray.png" alt="" width="288" height="65" /></a>The overall experience has been very knowledgeable. I thought it will be a pain to set everything up but thanks to the extensive documentation and an amazing community it turned out to be a piece of cake. Also its VPS so does not occupy space meaning cleaner greener environment. I would write more but I am too tired. I am happy and feel like a newly turned vegan so I am gonna leave you with a video I happen to like. Cheers
+
+<iframe src="http://player.vimeo.com/video/32619522?color=E6B112" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/32619522">Be a Vegetarian</a> from <a href="http://vimeo.com/glossyrey">GLOSSYREY</a> on <a href="http://vimeo.com">Vimeo</a>.</p>

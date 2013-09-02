@@ -1,0 +1,15 @@
+---
+layout: post
+title: Couponific
+categories: Rails
+keywords: rails ruby newrelic actionmailer mailer 
+description: Send and receive digital coupons.
+class: post43
+---
+I have been working with MVC3 for over two months now and I needed a distraction. I have noticed that I get bored with one technology stack when I reach some considerable level of experience on it and that is exactly what I am feeling towards .net these days.  
+
+So this weekend out of boredom I decided to create something in rails, just for fun and some learning experience. I came up with this little web app that creates and sends Digital Coupons. Its a pretty basic actionmailer based app but I plan to add some more features over the coming weekend.
+
+Its a fun way to tell your friends, you care or give them a free pass on something. Give it shot: "Couponific":http://www.couponificapp.com Let me know what you think. Rock On!
+
+

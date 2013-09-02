@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="col-md-3">
+	{% if page.previous.url %}
+	<a id="leftChev" class="pull-left" href="{{page.previous.url}}" title="Previous Post:
+	{{page.previous.title}}"><span class="icon icon-4x icon-chevron-left"></span></a>
+	{% endif %}
+</div>
+<div class="col-md-6 zone-content">
+	<article>
+		<h1 class="animated bounceInUp">{{ page.title }}</h1>
+		<p><small class="centreThis">{% if page.previous.url %}<a href="{{page.previous.url}}" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>{% endif %}  {{page.date | date_to_string}}  {% if page.next.url %}<a href="{{page.next.url}}" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a>{% endif %}</small></p>
+		{{ content }}
+	</article>
+	<div class="row" id="disqus_thread"></div>
+	<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'aliirz'; // required: replace example with your forum shortname
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+  	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  	dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+<div class="col-md-3">
+	{% if page.next.url %}
+	<a id="rightChev" class="pull-right" href="{{page.next.url}}" title="next Post:
+	{{page.next.title}}"><span class="icon icon-4x icon-chevron-right"></span></a>
+	{% endif %}
+</div>
+

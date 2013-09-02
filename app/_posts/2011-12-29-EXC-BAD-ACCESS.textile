@@ -1,0 +1,17 @@
+---
+layout: post
+title: EXC_BAD_ACCESS Error...
+category: iOS
+---
+Getting that nasty EXC_BAD_ACCESS Exception and your app crashes? and let me guess you cannot detect the cause behind it? Fear not my ninja developer buddies. This exception occurs when a message is being sent to a deallocated or released object. To find the little culprit all we need is a little NSZombieEnabled Environment Variable. It keeps a copy of the deallocated object.
+
+To make this work you need to do the following:
+
+* In Xcode go to Project>Edit Active Executible <Your Project Name>
+* Select Arguments.
+* Now add a Environment Variable called NSZombieEnabled as shown in the screenshot. 
+* Now run your project and analyse it in the Console.
+
+You should now see whats causing the problem(you can check the stack trace if needed). Once you have discovered and fixed it make sure you uncheck this Environment Variable. So there you have i,t a very simple yet Ninja Level tip for making sure your app does not crash due to EXC_BAD_ACCESS Exception.
+
+Hope it proves helpful.

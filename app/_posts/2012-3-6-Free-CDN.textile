@@ -1,0 +1,68 @@
+---
+layout: post
+title: Free CDN - Put your static resources in the cloud
+keywords: free cdn content delivery network networks cloud appengine google css javascript 
+description: How to create a free content delivery network to speed up your website
+category: Web
+---
+Recently I noticed that CSS and Javascript files in my website were creating a massive overhead. I did a little research about hosting content on CDN to improve page load times and ultimately made my own free little CDN using "Google AppEngine":https://appengine.google.com/ under an hour. So all my CSS, Image and Javascript files are now loaded from the cloud hence the website loads faster than ever. Diagramatically it all looks something like this(click for larger size):
+
+!(right)http://aliirzdotcom.appspot.com/images/free-cdn.png!:http://aliirzdotcom.appspot.com/images/free-cdn.png
+
+CDN's are not something new but I was surprised to see that there are not many tutorials to make one if the need arises, so I am sharing my experience and steps to create a free CDN with Google's AppEngine.
+
+First thing's first, you need to download and install Google App Engine's SDK from "here":http://code.google.com/appengine/downloads.html I am using a Linux based system so I downloaded the python SDK for Linux. It did not require any installation I just extracted the contents into a Folder inside my Home Folder. Make sure you have python installed on your system, the SDK requires python in order to function(You can use Java or Go SDKs if you wish). Then  I added the google app engine folder in my path so that I could easily access the commands:
+
+{% highlight bash %} export PATH=$PATH:/home/ali/appEngine/google_appengine/ {% endhighlight %}
+
+With that done now it was time to upload my files to the cloud server. I created a new application from my Google AppEngine Dashboard:
+
+!(left)http://aliirzdotcom.appspot.com/images/appengine-apps.png!
+
+Then i created a new folder on my system having the same name as my application and copied my css, javascript and image folders inside it. Now the main piece of the puzzle is the app.yaml file without it the AppEngine will never identify your application as it contains all the necessary stuff. So I created an app.yaml file inside the root of the folder. My app.yaml(do mind the indentation) looks like this:
+
+
+{% highlight bash %}
+application: aliirzdotcom
+version: 1
+runtime: python
+api_version: 1
+handlers:
+- url: /images
+  static_dir: images
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /fonts
+  static_dir: fonts
+ {% endhighlight %}
+
+Basically its telling appengine the following things:
+
+* The name of the application.
+* The version of the application
+* Application runtime i.e Python
+* The AppEngine API version
+* Url handlers to the folders i.e mapping urls to specific folders that contain the resources.
+
+Once the app.yaml file is in place then its time to launch. Since I added the appengine SDK to my path I can access the commands and files of the SDK without having to type long and awkward paths in the Terminal. So with all my static content in place and the app.yaml as well, I type the following command to upload the app to AppEngine in the cloud:
+
+{% highlight bash %} appcfg.py update apps/aliirzdotcom/ _{% endhighlight %}
+
+If ran the first time it will ask your email and password to access the AppEngine. It will deploy all your files and give you a success message. The output might look something like this:
+
+{% highlight bash %}
+	Checking if deployment succeeded.
+	Deployment successful.
+	Checking if updated app version is serving.
+	Will check again in 1 seconds.
+	Checking if updated app version is serving.
+	Completed update of app: aliirzdotcom, version: 1
+{% endhighlight %}
+
+In case you wish to debug before you deploy you can use the following command:
+
+{%highlight bash %}dev_appserver.py apps/aliirzdotcom/ {% endhighlight %}
+
+Boom! your resources are now in the cloud and can be accessed via the url of the appenengine app in my case it is aliirzdotcom.appspot.com. So all thats left to do is to load your resources from the url. I replaced all the script sources, css and image references to be loaded from the url and whoala! Instant Content Delivery Network in the cloud, making the website faster than ever.  

@@ -1,0 +1,22 @@
+---
+layout: post
+title: The Road to Rails
+tagline: ...
+category: Rails
+keywords: ruby rails
+---
+Ali's Blog
+
+Stardate [-28]5546.73
+
+After having a few adventures with PHP and Asp.net MVC I decided to give the framework known as Ruby on Rails a try. It has gained quite a lot of hype being open source (<a href="https://github.com/rails/rails">github link</a>). I wanted to see whats the big fuss about so I gave it a try. I installed it on my system(s) and played around with it a little and what i saw would seem to be magic to a layman(offcourse if he had an IQ level that could understand how web applications work, which I doubt.).The framework was able to generate well structured applications with all the basic functions on the fly. !(right)http://rubyonrailsdevelopment.pl/wp-content/uploads/2010/06/rails-300x2313.png! I could run a command and generate a Model(you don't know what a model is? Google it). I did not had to write a single piece of SQL code, my objects were persistant which means all the db level work was already taken care of. At some point I would ask myself "What sorcery is this?". Yes, thats how good everything seemed. Changes I made to the code were reflected instantaneously. I learnt what it meant to be a Model, View and a Controller. Upon some further research I learnt that behind Rails is a philosophy. The philosophy has three points:
+
+* Thou shalt not repeat yourself. DRY(dont repeat yourself).
+* Thou shalt believe in convention over configuration.
+* Thou shalt follow the REST(Representational State Transfer).
+
+With these three points Rails does what it does. Seeing Rails in action has allowed me to reach only one logical conclusion i.e it was created by the Vulcans. No other race is smart enough. If you are looking forward to learn some rails, <a href="http://guides.rubyonrails.org/getting_started.html">this</a> is a good place to start.
+
+Cmndr. Ali Signing out.
+
+Keep an eye on my blog to see more stuff about rails.

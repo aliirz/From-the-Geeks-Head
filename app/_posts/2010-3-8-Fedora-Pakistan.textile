@@ -1,0 +1,15 @@
+---
+layout: post
+title: Fedora Pakistan - The Revolution
+keywords: redhat fedora pakistan ambassador
+category: Thoughts
+---
+I have been a Fedora Project ambassador now for almost an year... Fedora is an open source operating system based on the Linux Kernel.  Its developed and maintained by volunteers like me from all over the world. The project's activity in Pakistan has been very low, only 11 ambassadors<a href="http://dejavu87.files.wordpress.com/2010/03/logo_fedoralogo.png"><img class="alignright size-medium wp-image-141" title="Fedora  Logo" src="http://dejavu87.files.wordpress.com/2010/03/logo_fedoralogo.png?w=300" alt="" width="300" height="91" /></a>, not many developers, just some geeks who know its true power and use it in their homes or some ISPs who use it for hosting purposes.
+
+But all this is about to change now,  and we are the ones who are going be the catalysts in this change. Fedora Pakistan is now more organized than ever, we have active members and a stronger web presence. I have a really good feeling about this, plus my fellow ambassadors are great people specially Mustufa and Aamir.
+
+Its not only the Fedora Project, numerous other open source projects are gaining momentum in Pakistan such as <a title="LinuxUrduCBTs" href="http://www.linuxurducbts.com" target="_blank">LinuxUrduCBTs</a>, <a title="wbitt.com" href="http://www.wbitt.com" target="_blank">WBITT </a> which come under the flag of Pakistan Open Source Foundation. they are like us, we all are one and we are ready to change Pakistan's future. If you feel like being part of this movement join us today. help us Fedorize Pakistan to a better, powerful and efficient IT infrastructure.
+
+You can follow our activities on <a href="http://twitter.com/FedoraPakistan" target="_blank">Twitter</a> and <a href="http://www.facebook.com/pages/Fedora-Pakistan/329228907438" target="_blank">Facebook </a>
+
+Long live Fedora, long live Pakistan - amen
