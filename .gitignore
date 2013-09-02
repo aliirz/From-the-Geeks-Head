@@ -3,3 +3,5 @@ us.stackdump
 Rakefile
 drafts
 .DS_Store
+.jekyll
+dist
