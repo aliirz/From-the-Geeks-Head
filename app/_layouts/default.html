@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="UTF-8">
-  <title>From the Geek{{page.title}}</title>
+  <title>{{page.title}}</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta name="author" content="Ali Raza" />
@@ -14,7 +14,9 @@
   {% endif %}
 
   {% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords }}" />
+  <meta name="keywords" content="geek blog head technology  {{ page.keywords }}" />
+  {% else %}
+  <meta name="keywords" content="geek blog head technology rails google microsoft nokia samsung apple iphone ipad retina bower yo grunt yeoman jekyll plugins wordpress thoughts android"/>
   {% endif %}
   <link href='http://fonts.googleapis.com/css?family=Poiret+One%7CPT+Serif%7COpen+Sans:400,300' rel='stylesheet' type='text/css'>
 
@@ -31,7 +33,7 @@
 
     </head>
     <body>
-      <nav class="navbar-fixed-top clearfix animated bounceInLeft">
+      <nav class="navbar-fixed-top clearfix">
         <ul class="clearfix">
           <li><a href="/">Blog</a></li>
           <li><a href="/aboutme">About</a></li>
@@ -43,10 +45,19 @@
         <a href="#" id="pull">Menu</a>
       </nav>
       <div class="container">
+<!--         <div class="row clearfix">
+          <div class="col-md-3">
+            <img src="/images/logo-without-text.png" width="150px" height="150px" class="img-responsive"/>
+          </div>
+          <div class="col-md-6">
+            <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
+          </div>
+        </div> -->
         <div class="masthead clearfix">
-          <h1 class="logo animated bounceInDown">
-            From the <span class="geek">Geek's</span> <span class="head">Head</span>
-          </h1>
+<!--           <a id="logoimg" href="/">
+            <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+          </a> -->
+          <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
         </div>
         <hr> 
 
@@ -61,9 +72,9 @@
           <div class="zone zone-triple-first">
            <article class="widget-triple-first widget-html-widget widget">
             <header>
-             <h1>First Triple</h1>
+          
            </header>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+           <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
          </article>
        </div>
      </div>
@@ -72,9 +83,9 @@
       <div class="zone zone-triple-second">
        <article class="widget-triple-second widget-html-widget widget">
         <header>
-         <h1>GitHub</h1>
+            <h1>From the Geek's Head</h1>
        </header>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+           <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
      </article>
    </div>
  </div>
@@ -85,11 +96,10 @@
     <header>
      <h1>Get Connected</h1>
    </header>
-   <p>
-     <a href="blog.html#"><i class="smicon-rss"></i></a>
-     <a href="http://twitter.com/aliirz"><i class="smicon-twitter"></i></a>
-     <a href="http://plus.google.com/aliirz"><i class="smicon-google"></i></a>
-     <a href="http://github.com/aliirz"><i class="smicon-github"></i></a>
+   <p id="social">
+     <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
+     <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
+     <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
    </p>
  </article>
 </div>

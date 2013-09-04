@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>From The Geek's Head</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="author" content="Ali Raza" />
+  
+
+  
+  <meta name="keywords" content="geek blog head technology rails google microsoft nokia samsung apple iphone ipad retina bower yo grunt yeoman jekyll plugins wordpress thoughts android"/>
+  
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One%7CPT+Serif%7COpen+Sans:400,300' rel='stylesheet' type='text/css'>
+
+      <!-- build:css(app) /css/main.css -->
+    <link href="/_bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/socialicons.css" rel="stylesheet">
+    <link href="/css/template.css" rel="stylesheet">
+    <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss">
+    <link href="/css/geekshead.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <!-- endbuild -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.js"></script>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/_bower_components/html5shiv/src/html5shiv.js"></script>
+      <![endif]-->
+
+    </head>
+    <body>
+      <nav class="navbar-fixed-top clearfix">
+        <ul class="clearfix">
+          <li><a href="/">Blog</a></li>
+          <li><a href="/aboutme">About</a></li>
+          <li><a href="/folio">Work</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="/contactme">Contact</a></li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+      </nav>
+      <div class="container">
+<!--         <div class="row clearfix">
+          <div class="col-md-3">
+            <img src="/images/logo-without-text.png" width="150px" height="150px" class="img-responsive"/>
+          </div>
+          <div class="col-md-6">
+            <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
+          </div>
+        </div> -->
+        <div class="masthead clearfix">
+<!--           <a id="logoimg" href="/">
+            <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+          </a> -->
+          <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
+        </div>
+        <hr> 
+
+        <div class="row main-content">
+          <div class="col-md-9">
+	<ul class="blog-posts">
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				12 Aug 2012
+			</div>
+			<h1>
+				<a href="/rails/2012/08/12/Couponific/">Couponific</a>
+			</h1>
+			<p>
+				<p>I have been working with MVC3 for over two months now and I needed a distraction. I have noticed that I get bored with one technology stack when I reach some considerable level of experience on it and that is exactly what I am feeling towards .net these days.</p>
+<p>So this weekend out of boredom I decided to create something in rails, just for fun and some learning experience. I came up with this little web app that creates and sends Digital Coupons. Its a pretty basic actionmailer based app but I plan to add some more features over the coming weekend.</p>
+<p>Its a fun way to tell your friends, you care or give them a free pass on something. Give it shot: <a href="http://www.couponificapp.com">Couponific</a> Let me know what you think. Rock On!</p>
+				
+					Send and receive digital coupons.<br> <a class="button-link" href="/rails/2012/08/12/Couponific/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/rails/">rails</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				16 Jul 2012
+			</div>
+			<h1>
+				<a href="/.net/2012/07/16/Quick-xml-hack-drop-down-list/">Drop Down List XML hack in MVC</a>
+			</h1>
+			<p>
+				<p>Today I ran into a situation where I had to populate a drop down list inside a razor view with some data. I did not want to get the data from the database, I wanted a simpler approach so I decided to use an <span class="caps">XML</span> file to populate my dropdown list. Here&#8217;s how I did it:</p>
+<p>First I created an <span class="caps">XML</span> file:</p>
+<div class="highlight"><pre><code class="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<span class="nt">&lt;Countries&gt;</span>
+  <span class="nt">&lt;Country</span> <span class="na">name=</span><span class="s">&quot;Pakistan&quot;</span> <span class="na">value=</span><span class="s">&quot;PK&quot;</span><span class="nt">&gt;&lt;/Country&gt;</span>
+  <span class="nt">&lt;Country</span> <span class="na">name=</span><span class="s">&quot;America&quot;</span> <span class="na">value=</span><span class="s">&quot;USA&quot;</span><span class="nt">&gt;&lt;/Country&gt;</span>
+  <span class="nt">&lt;Country</span> <span class="na">name=</span><span class="s">&quot;England&quot;</span> <span class="na">value=</span><span class="s">&quot;UK&quot;</span><span class="nt">&gt;&lt;/Country&gt;</span>
+<span class="nt">&lt;/Countries&gt;</span>
+</code></pre></div><p>Then after doing a barrell roll, I proceeded to write some code inside my controller to take the data from this <span class="caps">XML</span> file and put it inside the magical ViewBag:</p>
+<div class="highlight"><pre><code class="csharp"><span class="kt">string</span> <span class="n">path</span> <span class="p">=</span> <span class="s">&quot;~/Countries.xml&quot;</span><span class="p">;</span>
+            <span class="n">XDocument</span> <span class="n">xdoc</span> <span class="p">=</span> <span class="n">XDocument</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="n">path</span><span class="p">));</span>
+            <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">XElement</span><span class="p">&gt;</span> <span class="n">result</span> <span class="p">=</span> <span class="k">from</span> <span class="n">c</span> <span class="k">in</span> <span class="n">xdoc</span><span class="p">.</span><span class="n">Elements</span><span class="p">(</span><span class="s">&quot;Countries&quot;</span><span class="p">).</span><span class="n">Elements</span><span class="p">(</span><span class="s">&quot;Country&quot;</span><span class="p">)</span>
+                                           <span class="k">select</span> <span class="n">c</span><span class="p">;</span>
+
+            <span class="kt">var</span> <span class="n">listItems</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">SelectListItem</span><span class="p">&gt;();</span>
+
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">xElement</span> <span class="k">in</span> <span class="n">result</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">listItems</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">SelectListItem</span>
+                <span class="p">{</span>
+                    <span class="n">Text</span> <span class="p">=</span> <span class="n">xElement</span><span class="p">.</span><span class="n">Attribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">,</span>
+                    <span class="n">Value</span> <span class="p">=</span> <span class="n">xElement</span><span class="p">.</span><span class="n">Attribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">,</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+            <span class="n">SelectList</span> <span class="n">selectList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SelectList</span><span class="p">(</span><span class="n">listItems</span><span class="p">,</span> <span class="s">&quot;Value&quot;</span><span class="p">,</span> <span class="s">&quot;Text&quot;</span><span class="p">);</span>
+            <span class="n">ViewBag</span><span class="p">.</span><span class="n">countries</span> <span class="p">=</span> <span class="n">selectList</span><span class="p">;</span>
+</code></pre></div><p>Pretty simple stuff I am just loading the <span class="caps">XML</span> file inside a XDocument, using Linq to traverse and create an IEnumerable to hold all the countries in. Aftewards I create a SelecList(So that I can use the data inside a DropDownList) and pass it on to the super awesome dynamic ViewBag. The last piece of the puzzle is offcourse the razor view where I show this data from the <span class="caps">XML</span> file inside a dd, here is how that is implemented:</p>
+
+<i>  @Html.DropDownListFor(model =&gt; model.Country, (IEnumerable<SelectListItem>)ViewBag.countries) </i><br /><br />
+<p>Thats it, a super simple quick hack to populate your dropdowns. Rock On!</p>
+				
+					A quick hack to populate Drop Down lists using a XML file in Asp.Net MVC3<br> <a class="button-link" href="/.net/2012/07/16/Quick-xml-hack-drop-down-list/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/.net/">.net</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				06 Jul 2012
+			</div>
+			<h1>
+				<a href="/thoughts/2012/07/06/The-Journey-that-is-life/">The Journey that is life</a>
+			</h1>
+			<p>
+				<p><img src="http://fuuu.us/389.png" class="right" alt="" /> There was a time some 3-4 years back when I never blogged about tech. That was a time I just blogged whatever went through my head. This blog post is kind sorta typa(I know one of the readers who will say &#8220;There is no such word as typa&#8221;) like that. I see we live in strange times where humor is found in Internet Memes or TV Shows which have laugh tracks to tell us when to explode into laughter. Today you may have a thousand friends on Facebook but none in real life, today you know where your friends check-in to eat, but you forget where they used to live. Today its easy to hold a grudge and extremely difficult to forgive(I prefer the later though).</p>
+<p>I have seen things and people change in front of my eyes, for better and for worse. The ones you mostly expect to have your back are usually the ones who stab you first and vice versa. But thats not my point. Imagine you fall upon a time machine that allows you to go back in time to the one cherished memory you have that seems to give you hope all the time. Some would prefer to use it to take revenge, while some like me would prefer to spend a few moments with our parents back in time. Now thats the problem! We dont see life as a journey we think of it as a phase, a collection of memories and a never-ending fear of uncertainity. Wake up people life is just a journey, things and people are suppose to change, move on and if possible dont ever change(for worse) beacause its you who will make a difference in the end for yourself. Rock on!</p>
+				
+					A totally non-geek blog post from the geek's head.<br> <a class="button-link" href="/thoughts/2012/07/06/The-Journey-that-is-life/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/thoughts/">thoughts</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				17 May 2012
+			</div>
+			<h1>
+				<a href="/.net/2012/05/17/Whats-new-in-MVC4/">Whats new in MVC4</a>
+			</h1>
+			<p>
+				<p>It&#8217;s been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:</p>
+<h3><span class="caps">ASP</span>.<span class="caps">NET</span> Web <span class="caps">API</span></h3>
+<p>Sounds cool doesn&#8217;t it. A framework that can create <span class="caps">HTTP</span> Services that work on any client, be it mobile or web browser. It also makes it dead simple to write <span class="caps">REST</span> Service. Do give this one a try, you will be making web services better than you grandpa ever could. Some of it&#8217;s features are:</p>
+<ul>
+	<li>Modern <span class="caps">HTTP</span> Programming Model.</li>
+	<li>Full Support for Routes(Yes works pretty much like Rails now).</li>
+	<li>Content Negotiation(This is smart, the client and server are now able to determine the data type being returned. You can also add your own formats.)</li>
+	<li>Self Host(You can host a  Web <span class="caps">API</span> inside your own process or <span class="caps">IIS</span> and can still use routes etc.)</li>
+</ul>
+<p>Click <a href="http://www.asp.net/web-api">here</a> for more information on the <span class="caps">ASP</span>.<span class="caps">NET</span> Web <span class="caps">API</span></p>
+<h3>Single Page Applications</h3>
+<p>This one is my favourite. You can now create a Single Page Application with rich client functionality using the built-in scaffoldings. You single page application will have a very small footprint yet having all you need. Need a <span class="caps">DAL</span>? No Problemo! Thats supported too. Click <a href="http://www.asp.net/single-page-application">here</a> for more information on single page applications.</p>
+<h3>Enhanced Default Project Templates</h3>
+<p>Looks like MS finally understands that nobody likes the default project template that comes with MVC3 and Web Forms. So they have shashkafied the default project template(See images below). It not only looks better, it&#8217;s responsive too. Yes! Out of the box Responsiveness. Progressive Enhancement Extraordinare MS! Bravo!</p>
+<p><img src="http://i1.asp.net/common/www-css/i/mvc4/image001.png" alt="" /><br />
+<img src="http://i1.asp.net/common/www-css/i/mvc4/image002.png" alt="" /><br />
+<img src="http://i1.asp.net/common/www-css/i/mvc4/image003.png" alt="" /></p>
+<h3>Mobile Project Template</h3>
+<p>You can now create web apps for mobile using builtin templates too. The Views are based on jQuery Mobile while all the other code(Controllers) is exactly the same as the normal Template. To me this is a much needed feature. I am not a very good designer and often the need arises to create a Mobile Optimized one or two page App to use in my iOS Apps&#8217; Web Views. This makes things fast for me.</p>
+<p><img src="http://i1.asp.net/common/www-css/i/mvc4/image004.png" alt="" /></p>
+<h3>Final Words</h3>
+<p>My experience with MVC4 is going great. I am developging an OAuth based Web App just to master it and I will share my experience once I am done. All I can say for now is that MVC4 makes me feel like a happy developer. There are a lot of other neat features like Recipe&#8217;s which allow you to generate template based code(Custom or 3rd Party), Browser Overriding, View Switching etc. etc. IF you want to read up a full list of features then please check out the <a href="www.asp.net/whitepapers/mvc4-release-notes">Release Notes</a> . This is all from me for now. Rock on!</p>
+				
+					My breakdown of MVC4's new features<br> <a class="button-link" href="/.net/2012/05/17/Whats-new-in-MVC4/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/.net/">.net</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				03 May 2012
+			</div>
+			<h1>
+				<a href="/thoughts/2012/05/03/Customer-Service/">Customer Service that makes you Smile</a>
+			</h1>
+			<p>
+				<p>Its been an year since i Switched from Wordpress to jekyll. I registered this domain name while I was using wordpress by using the wordpress upgrades and paid $10 for it. After switching to jekyll I pointed the aliirz.com to name servers at Linode. Two days ago I got an email from Wordpress Customer services that my domain registration is about to expire and I need renew it. As soon as I saw the email I signed into my wordpress dashboard to make the payment. To my surprise I got the following error message when I tried to make the payment:</p>
+<div class="alert-box error">
+<p>This credit card was issued from an unsupported country.</p>
+</div>
+<p>Now this make me a little angry and disappointed. So I emailed back the customer service:</p>
+<blockquote>
+<p>Hello</p>
+<p>I am trying to upgrade my domain manually and I am getting the following <br />
+error:</p>
+<p>This credit card was issued from an unsupported country.</p>
+<p>This is quite disappointing as I used the same card to purchase and map <br />
+my domain on WordPress an year ago. Can you please help?</p>
+<p>Regards</p>
+</blockquote>
+<p>I was expecting a reply that would say something like &#8220;I am sorry we no longer accept credit cards from your country as per our new policy. Happy Wordpressing&#8221;. If it had been this kind a reply I would&#8217;ve gone all nuclear on wordpress but to my surprise instead this is that they replied back with today:</p>
+<blockquote>
+<p>Hi Ali,</p>
+<p>Sorry for the delay in getting back to you!</p>
+<p>This is known issue, our credit card processor recently changed the counties that they accept cards from.  We are currently investigation alternatives, but in the mean time I have added a full year to the domain registration and domain mapping for you.</p>
+<p>If there is anything else I can help with just let me know.</p>
+<p>Ray<br />
+WordPress.com | Automattic</p>
+</blockquote>
+<p>Folks! Thats the kind of customer service that makes you smile. I love you wordpress! :)</p>
+				
+					My Encounter with Wordpress Customer Service.<br> <a class="button-link" href="/thoughts/2012/05/03/Customer-Service/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/thoughts/">thoughts</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				28 Apr 2012
+			</div>
+			<h1>
+				<a href="/family/2012/04/28/Nephews-and-Hotwheels/">My nephews and their HotWheels Collection</a>
+			</h1>
+			<p>
+				<p>Today was my nephew Hassan Raza&#8217;s Birthday. The young man was quite happy as he got six hotwheels as a gift just like he had wished. Which resulted in making his collection reach twenty cars. Hassan and his brother Momin Raza share and play with these hotwheels for hours but today they asked me a very creative thing. They&#8217;ve always wanted to show their collection to their friends but have never really got the chance so they asked me to make a photo gallery of their hotwheels, so here it is to you too my nephews. A little image slider showing off your hotwheels collection so that you may share it with your friends:<br />
+<br />
+<object width="640" height="480"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to="></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to=" width="400" height="300"></embed></object></p>
+				
+					My nephews show off their hotwheels collection.<br> <a class="button-link" href="/family/2012/04/28/Nephews-and-Hotwheels/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/family/">family</a>
+			</p>
+		</article>
+	</li>
+	
+</ul>
+<div class="blog-pagination">
+	<div class="newer">
+		
+		
+		<a href="/">« Newer posts</a>
+		
+		
+	</div>
+	<div class="older">
+		 
+		<a href="/page3/">Older posts »</a>
+		 
+	</div>
+</div>
+</div>
+<aside class="col-md-3">
+	<div class="well">
+		<img src="/images/ali.jpg" class="img-circle img-responsive centreThis"/>
+		<h2>Ali Raza</h2>
+		<p>
+			Tech. Entrepreneur <br/>Loves to Develop All things Ruby, MVC, Obj-C and Javascript<br/>
+			<a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a>
+		</p>
+	</div>
+</aside>
+
+
+        </div>
+
+        <hr>
+
+        <div class="row triple-row">
+         <div id="triple-first" class="col-md-4 triple">
+          <div class="zone zone-triple-first">
+           <article class="widget-triple-first widget-html-widget widget">
+            <header>
+          
+           </header>
+           <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+         </article>
+       </div>
+     </div>
+
+     <div id="triple-second" class="col-md-4 triple">
+      <div class="zone zone-triple-second">
+       <article class="widget-triple-second widget-html-widget widget">
+        <header>
+            <h1>From the Geek's Head</h1>
+       </header>
+           <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+     </article>
+   </div>
+ </div>
+
+ <div id="triple-third" class="col-md-4 triple">
+  <div class="zone zone-triple-third">
+   <article class="widget-triple-third widget-html-widget widget">
+    <header>
+     <h1>Get Connected</h1>
+   </header>
+   <p id="social">
+     <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
+     <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
+     <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
+   </p>
+ </article>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="copyright col-md-12">Copyright 2013 - <a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a></div>
+</div>
+
+</div>  <!-- End Container -->
+
+
+<!-- build:js(app) /js/script.js -->
+<script src="/_bower_components/jquery/jquery.js"></script>
+<script src="/_bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</script src="/js/geekshead.js"></script>
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "fromthegeekshead",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman / Grunt workflow for FromTheGeeksHead",
   "dependencies": {},
   "devDependencies": {
@@ -23,6 +23,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-svgmin": "~0.1.0",
     "grunt-usemin": "~0.1.12",
+    "grunt-sftp-deploy": "~0.0.9",
     "connect-livereload": "~0.2",
     "matchdep": "~0.1.1"
   },

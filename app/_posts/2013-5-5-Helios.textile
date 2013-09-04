@@ -8,6 +8,8 @@ category: Rails
 ---
 I have been working on one of the client apps enabling it to support push notifications. The huge question was what should I use as a suitable backend to serve as my APN Provider? After a lot of digging I settled for apn_on_rails a great gem, has been around from a long time and it seems a lot of people are using it. However, after stumbling upon "Helios":http://helios.io I completely changed my mind. Helios is a wonderful little framework written by "Matt Thompson":https://github.com/mattt which provides out of the box push notification, passbook, in-app purchase and remote data synchronization. This means that the developer's job got a whole lot less as most of the heavy-lifting backend technology is already crafted into this wonderful little solution. 
 
+<!--break-->
+
 I would totally advise to anyone struggling with Backends for their iOS Apps to give Helios a try. It can very easily be integrated with a Rack/Sinatra or Rails app. The few things to keep in mind is to install the edge version of the gem. A very special thanks to "Greg":https://github.com/gregplumbly for pointing this out. I struggled a lot with this issue at first. The push message feature of the current gem is broken so in your Gemfile specify the Helios gem like this:
 
 {% highlight ruby %}
