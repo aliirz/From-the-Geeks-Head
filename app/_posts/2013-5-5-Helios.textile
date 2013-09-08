@@ -1,0 +1,20 @@
+---
+layout: post
+title: Helios
+description: For all your app backend needs(almost).
+class: post48
+keywords: rails apn apn_on_rails ruby ror ios helios iphone cocoa objective-c orbiter
+category: Rails
+---
+!(img-responsive centreThis)/images/helios-img.png!
+I have been working on one of the client apps enabling it to support push notifications. The huge question was what should I use as a suitable backend to serve as my APN Provider? After a lot of digging I settled for apn_on_rails a great gem, has been around from a long time and it seems a lot of people are using it. However, after stumbling upon "Helios":http://helios.io I completely changed my mind. Helios is a wonderful little framework written by "Matt Thompson":https://github.com/mattt which provides out of the box push notification, passbook, in-app purchase and remote data synchronization. This means that the developer's job got a whole lot less as most of the heavy-lifting backend technology is already crafted into this wonderful little solution. 
+
+<!--break-->
+
+I would totally advise to anyone struggling with Backends for their iOS Apps to give Helios a try. It can very easily be integrated with a Rack/Sinatra or Rails app. The few things to keep in mind is to install the edge version of the gem. A very special thanks to "Greg":https://github.com/gregplumbly for pointing this out. I struggled a lot with this issue at first. The push message feature of the current gem is broken so in your Gemfile specify the Helios gem like this:
+
+{% highlight ruby %}
+gem "helios", :git => "https://github.com/helios-framework/helios.git"
+{% endhighlight %}
+
+To send push messages you currently have to do a HTTP POST to /message of whatever your url is. I am pretty sure a built in compose section is on its way too(why not submit a pull request?). Anyways if you encounter any problems do checkout the "source":https://github.com/helios-framework/helios , go through the ReadMe its very easy to setup and use. Helios is created from many other opensource components like RackPushNotfication and Houston. It not only solves the issue of device registration and maintanenace via the Orbiter library but also provides backend to have your Apps Data(Core Data Models) Synchronize remotely. I think we iOS+Ruby Devs should focus more on collabarating on this project and make it a stable solution rather than creating our own APN Providers as it seems very promising and focuses on the issues we all suffer the most. Cheers. 

@@ -1,0 +1,86 @@
+---
+layout: post
+title: Hello Accelerometer
+category: iOS
+keywords: iphone accelerometer ios
+description: How to get data from iphone accelerometer, newbie tutorial.
+---
+The question new devs ask me the most is "How do we use the iPhone accelerometer?", so I have decided to write a post about how to get data from the iOS device's accelerometer.
+
+The accelerometer is a sensitive piece of hardware that can detect the changing position of the device, from translation motion to rotation; it has the capability to detect the changes using a 3D coordinate system. Using the accelerometer devs can enhance the UX of their apps considerably, similarly game developers can make their games more engaging with it. In this blog post I am gonna show you how to get the accelerometer coordinate values and display them inside a label. So lets get started.
+
+First lets create a simple UI in the interface builder:
+
+!(centreThis)/images/accell-ui.png!
+
+That's that a simple and clean UI. Now lets get to some action, lets write some code. First we create some IBOutlet properties in out interface file for our labels:
+
+{% highlight objc %}
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+@property(nonatomic, strong) IBOutlet UILabel *xLabel;
+@property(nonatomic, strong) IBOutlet UILabel *yLabel;
+@property(nonatomic, strong) IBOutlet UILabel *zLabel;
+
+@end
+{% endhighlight %}
+
+We are not done with the interface file yet, we need to implement the UIAccelerometer delegate and create a property to access its values. So after adding these our interface would look like this:
+
+{% highlight objc %}
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController <UIAccelerometerDelegate>
+
+
+
+@property(nonatomic, strong) IBOutlet UILabel *xLabel;
+@property(nonatomic, strong) IBOutlet UILabel *yLabel;
+@property(nonatomic, strong) IBOutlet UILabel *zLabel;
+
+@property(nonatomic, strong) UIAccelerometer *accelerometer;
+
+
+@end
+
+{% endhighlight %}
+
+So all that takes care of the interface. Now we need to setup the accelerometer object so it can actually be of use. We now move to the implementation file of our project and modify the viewDidLoad method as follows:
+
+{% highlight objc %}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	
+    self.accelerometer = [UIAccelerometer sharedAccelerometer];
+    self.accelerometer.updateInterval = .2;
+    self.accelerometer.delegate = self;
+    
+}
+{% endhighlight %}
+
+Important thing to note here is how we have initialized the accelerometer object, one should never initialize a new instance of this object as its a shared resource. This is the correct way to initialize it. The other two statements are how we setup the update interval of the accelerometer and tell it whose going to be its delegate(in this case its our viewcontroller). 
+
+We are almost done with this example, the final piece of the puzzle is UIAccelerometer's delegate method didAccelerate. We implement that this way:
+
+{% highlight objc %}
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
+    
+    self.xLabel.text = [NSString stringWithFormat:@"%f", acceleration.x];
+    self.yLabel.text = [NSString stringWithFormat:@"%f", acceleration.y];
+    self.zLabel.text = [NSString stringWithFormat:@"%f", acceleration.z];
+}
+{% endhighlight %}
+
+Trust me thats basically all you need to read data from the accelerometer. Our project is complete. Source files are available on "github":https://github.com/aliirz/AccelerometerDemo and here is a video showing the project in action:
+
+
+<div class="flex-video widescreen vimeo">
+<iframe src="http://player.vimeo.com/video/39893304?title=0&amp;byline=0&amp;portrait=0" width="500" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/39893304">ios accelerometer</a> from <a href="http://vimeo.com/user9937701">ali raza</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+</div>
+
+Thats it for now. I hope it proves helpful. 
