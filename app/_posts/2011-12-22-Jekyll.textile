@@ -4,8 +4,6 @@ title: Jekyll
 tagline: Simplyfying the Blog
 category: Jekyll
 ---
-
-
 There was a time when my blog used to run on Wordpress. I love Wordpress, its plugins, its themes and the overall simplicity but my problem is I am like a rolling stone I never settle for one thing, I keep on moving to better and better, no matter how complex things become. 
 
 Being a geek has taught me one thing, do not do what everybody else does. So following this thought i learned about Jekyll from <a href="http://www.destroytoday.com" target="blank">Johnny Hallman's Blog</a>. Instantly I knew I had to give this a try. With my new found love for Rails applications, this surely has proven to be a delight. So I am moving my blog from Wordpress CMS to plain HTML with the help of Jekyll. The thing is that any framework or tool that gives you complete control over your rendered HTML is super awesome in my opinion, which is another reason I love working with Asp.net mvc3 and Rails but with Jekyll my blog becomes HTML hence saving me a lot of time and effort, no complex logic involved. Give <a href="https://github.com/mojombo/jekyll">Jekyll</a> a try, trust me you will not regret it.

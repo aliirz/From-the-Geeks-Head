@@ -7,9 +7,11 @@ category: Thoughts
 ---
 Many of you do not know that my first smartphone was a Windows Mobile 6.5 based "i-Mate JasJam":http://www.gsmarena.com/i_mate_jasjam-1589.php . I loved that phone it was all one geek could ask for at that time, it had GPS, Google Maps, a powerful browser, a Qwerty keyboard and a stylus(trust me stylus' were cool  back then) I got this phone as a gift from my brother. Boy, Was I happy with it. After an year of usage the whole shashka(awesomeness) of the phone started to die, possibly because Microsoft stopped focusing on their Mobile OS side. So I sold the phone to a friend and bought an N900.
  
-Now the N900(I still own it btw) is different. It is actually the coolest phone I've ever come across. Why? Because its a pure hacker's device. !(right)/images/n900.png! Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely "community":http://www.maemo.org driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it. 
+!(centreThis)/images/n900.png! 
+Now the N900(I still own it btw) is different. It is actually the coolest phone I've ever come across. Why? Because its a pure hacker's device. Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely "community":http://www.maemo.org driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it. 
 
-!(left)/images/mango.png! But I am looking forward to get something else to use as a secondary phone and you might've guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:
+!(centreThis)/images/mango.png! 
+But I am looking forward to get something else to use as a secondary phone and you might've guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:
 
 <h3>Metro UI</h3>
 The new metro UI is awe-inspiring and to be honest I am bored by looking at the same UI of iOS and Android phones. So the UI is a welcome change.

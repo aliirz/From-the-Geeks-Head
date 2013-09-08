@@ -42,6 +42,7 @@ string path = "~/Countries.xml";
 
 Pretty simple stuff I am just loading the XML file inside a XDocument, using Linq to traverse and create an IEnumerable to hold all the countries in. Aftewards I create a SelecList(So that I can use the data inside a DropDownList) and pass it on to the super awesome dynamic ViewBag. The last piece of the puzzle is offcourse the razor view where I show this data from the XML file inside a dd, here is how that is implemented:
    
-   
-  <i>  @Html.DropDownListFor(model => model.Country, (IEnumerable<SelectListItem>)ViewBag.countries) </i><br /><br />
+{% highlight csharp %}
+  @Html.DropDownListFor(model => model.Country, (IEnumerable<SelectListItem>)ViewBag.countries) 
+{% endhighlight %}
 Thats it, a super simple quick hack to populate your dropdowns. Rock On!

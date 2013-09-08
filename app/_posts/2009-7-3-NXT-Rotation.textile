@@ -6,7 +6,7 @@ category: Misc
 ---
 My buddies are  working on Lego Mindstorms NXT this year. with a tougher floor plan than last time and an even tougher goal, I decided to help them out with a small program that proved to be very useful to me last year.
 
-<img class="size-full wp-image-124" title="Degree Measurer" src="http://dejavu87.wordpress.com/files/2009/07/measure.jpg" alt="NXT" width="454" height="259" />
+<img class="alignCentre img-responsive" title="Degree Measurer" src="http://dejavu87.wordpress.com/files/2009/07/measure.jpg" alt="NXT" />
 
 This program actually measures the rotations of a motor. all the user has to do is hold the NXT in one hand and a motor connected to it in the other. Running the motor by hand on the floor plan shows the degrees of rotation on the NXT's Screen.
 

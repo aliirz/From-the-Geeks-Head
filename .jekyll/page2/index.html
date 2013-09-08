@@ -20,7 +20,7 @@
     <link href="/_bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="/css/socialicons.css" rel="stylesheet">
     <link href="/css/template.css" rel="stylesheet">
-    <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss">
+    <!-- <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss"> -->
     <link href="/css/geekshead.css" rel="stylesheet">
     <link href="/css/syntax.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
@@ -34,21 +34,24 @@
     <!--[if lt IE 9]>
       <script src="/_bower_components/html5shiv/src/html5shiv.js"></script>
       <![endif]-->
-
-    </head>
-    <body>
-      <nav class="navbar-fixed-top clearfix">
-        <ul class="clearfix">
-          <li><a href="/">Blog</a></li>
-          <li><a href="/aboutme">About</a></li>
-          <li><a href="/folio">Work</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="/contactme">Contact</a></li>
-        </ul>
-        <a href="#" id="pull">Menu</a>
-      </nav>
-      <div class="container">
+      <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+        typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+        b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+        mixpanel.init("fd678c0a5f6e2a445a7f1cb63f565da6");</script><!-- end Mixpanel -->
+      </head>
+      <body>
+        <nav class="navbar-fixed-top clearfix">
+          <ul class="clearfix">
+            <li><a href="/">Blog</a></li>
+            <li><a href="/aboutme">About</a></li>
+            <li><a href="/folio">Work</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a href="/contactme">Contact</a></li>
+          </ul>
+          <a href="#" id="pull"><img src="/images/logo-without-text.png" width"50px" height="50px" alt="Navigation"/></a>
+        </nav>
+        <div class="container">
 <!--         <div class="row clearfix">
           <div class="col-md-3">
             <img src="/images/logo-without-text.png" width="150px" height="150px" class="img-responsive"/>
@@ -66,7 +69,7 @@
         <hr> 
 
         <div class="row main-content">
-          <div class="col-md-9">
+          <div class="col-md-12">
 	<ul class="blog-posts">
 	
 	<li>
@@ -81,8 +84,6 @@
 				<p>I have been working with MVC3 for over two months now and I needed a distraction. I have noticed that I get bored with one technology stack when I reach some considerable level of experience on it and that is exactly what I am feeling towards .net these days.</p>
 <p>So this weekend out of boredom I decided to create something in rails, just for fun and some learning experience. I came up with this little web app that creates and sends Digital Coupons. Its a pretty basic actionmailer based app but I plan to add some more features over the coming weekend.</p>
 <p>Its a fun way to tell your friends, you care or give them a free pass on something. Give it shot: <a href="http://www.couponificapp.com">Couponific</a> Let me know what you think. Rock On!</p>
-				
-					Send and receive digital coupons.<br> <a class="button-link" href="/rails/2012/08/12/Couponific/">Read it</a>
 				
 			</p>
 			<p class="tags">
@@ -127,36 +128,12 @@
             <span class="n">SelectList</span> <span class="n">selectList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SelectList</span><span class="p">(</span><span class="n">listItems</span><span class="p">,</span> <span class="s">&quot;Value&quot;</span><span class="p">,</span> <span class="s">&quot;Text&quot;</span><span class="p">);</span>
             <span class="n">ViewBag</span><span class="p">.</span><span class="n">countries</span> <span class="p">=</span> <span class="n">selectList</span><span class="p">;</span>
 </code></pre></div><p>Pretty simple stuff I am just loading the <span class="caps">XML</span> file inside a XDocument, using Linq to traverse and create an IEnumerable to hold all the countries in. Aftewards I create a SelecList(So that I can use the data inside a DropDownList) and pass it on to the super awesome dynamic ViewBag. The last piece of the puzzle is offcourse the razor view where I show this data from the <span class="caps">XML</span> file inside a dd, here is how that is implemented:</p>
-
-<i>  @Html.DropDownListFor(model =&gt; model.Country, (IEnumerable<SelectListItem>)ViewBag.countries) </i><br /><br />
-<p>Thats it, a super simple quick hack to populate your dropdowns. Rock On!</p>
-				
-					A quick hack to populate Drop Down lists using a XML file in Asp.Net MVC3<br> <a class="button-link" href="/.net/2012/07/16/Quick-xml-hack-drop-down-list/">Read it</a>
+<div class="highlight"><pre><code class="csharp">  <span class="n">@Html</span><span class="p">.</span><span class="n">DropDownListFor</span><span class="p">(</span><span class="n">model</span> <span class="p">=&gt;</span> <span class="n">model</span><span class="p">.</span><span class="n">Country</span><span class="p">,</span> <span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">SelectListItem</span><span class="p">&gt;)</span><span class="n">ViewBag</span><span class="p">.</span><span class="n">countries</span><span class="p">)</span> 
+</code></pre></div><p>Thats it, a super simple quick hack to populate your dropdowns. Rock On!</p>
 				
 			</p>
 			<p class="tags">
 				Posted under <a href="/categories/.net/">.net</a>
-			</p>
-		</article>
-	</li>
-	
-	<li>
-		<article class="blog-post">
-			<div class="published">
-				06 Jul 2012
-			</div>
-			<h1>
-				<a href="/thoughts/2012/07/06/The-Journey-that-is-life/">The Journey that is life</a>
-			</h1>
-			<p>
-				<p><img src="http://fuuu.us/389.png" class="right" alt="" /> There was a time some 3-4 years back when I never blogged about tech. That was a time I just blogged whatever went through my head. This blog post is kind sorta typa(I know one of the readers who will say &#8220;There is no such word as typa&#8221;) like that. I see we live in strange times where humor is found in Internet Memes or TV Shows which have laugh tracks to tell us when to explode into laughter. Today you may have a thousand friends on Facebook but none in real life, today you know where your friends check-in to eat, but you forget where they used to live. Today its easy to hold a grudge and extremely difficult to forgive(I prefer the later though).</p>
-<p>I have seen things and people change in front of my eyes, for better and for worse. The ones you mostly expect to have your back are usually the ones who stab you first and vice versa. But thats not my point. Imagine you fall upon a time machine that allows you to go back in time to the one cherished memory you have that seems to give you hope all the time. Some would prefer to use it to take revenge, while some like me would prefer to spend a few moments with our parents back in time. Now thats the problem! We dont see life as a journey we think of it as a phase, a collection of memories and a never-ending fear of uncertainity. Wake up people life is just a journey, things and people are suppose to change, move on and if possible dont ever change(for worse) beacause its you who will make a difference in the end for yourself. Rock on!</p>
-				
-					A totally non-geek blog post from the geek's head.<br> <a class="button-link" href="/thoughts/2012/07/06/The-Journey-that-is-life/">Read it</a>
-				
-			</p>
-			<p class="tags">
-				Posted under <a href="/categories/thoughts/">thoughts</a>
 			</p>
 		</article>
 	</li>
@@ -171,29 +148,10 @@
 			</h1>
 			<p>
 				<p>It&#8217;s been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:</p>
-<h3><span class="caps">ASP</span>.<span class="caps">NET</span> Web <span class="caps">API</span></h3>
-<p>Sounds cool doesn&#8217;t it. A framework that can create <span class="caps">HTTP</span> Services that work on any client, be it mobile or web browser. It also makes it dead simple to write <span class="caps">REST</span> Service. Do give this one a try, you will be making web services better than you grandpa ever could. Some of it&#8217;s features are:</p>
-<ul>
-	<li>Modern <span class="caps">HTTP</span> Programming Model.</li>
-	<li>Full Support for Routes(Yes works pretty much like Rails now).</li>
-	<li>Content Negotiation(This is smart, the client and server are now able to determine the data type being returned. You can also add your own formats.)</li>
-	<li>Self Host(You can host a  Web <span class="caps">API</span> inside your own process or <span class="caps">IIS</span> and can still use routes etc.)</li>
-</ul>
-<p>Click <a href="http://www.asp.net/web-api">here</a> for more information on the <span class="caps">ASP</span>.<span class="caps">NET</span> Web <span class="caps">API</span></p>
-<h3>Single Page Applications</h3>
-<p>This one is my favourite. You can now create a Single Page Application with rich client functionality using the built-in scaffoldings. You single page application will have a very small footprint yet having all you need. Need a <span class="caps">DAL</span>? No Problemo! Thats supported too. Click <a href="http://www.asp.net/single-page-application">here</a> for more information on single page applications.</p>
-<h3>Enhanced Default Project Templates</h3>
-<p>Looks like MS finally understands that nobody likes the default project template that comes with MVC3 and Web Forms. So they have shashkafied the default project template(See images below). It not only looks better, it&#8217;s responsive too. Yes! Out of the box Responsiveness. Progressive Enhancement Extraordinare MS! Bravo!</p>
-<p><img src="http://i1.asp.net/common/www-css/i/mvc4/image001.png" alt="" /><br />
-<img src="http://i1.asp.net/common/www-css/i/mvc4/image002.png" alt="" /><br />
-<img src="http://i1.asp.net/common/www-css/i/mvc4/image003.png" alt="" /></p>
-<h3>Mobile Project Template</h3>
-<p>You can now create web apps for mobile using builtin templates too. The Views are based on jQuery Mobile while all the other code(Controllers) is exactly the same as the normal Template. To me this is a much needed feature. I am not a very good designer and often the need arises to create a Mobile Optimized one or two page App to use in my iOS Apps&#8217; Web Views. This makes things fast for me.</p>
-<p><img src="http://i1.asp.net/common/www-css/i/mvc4/image004.png" alt="" /></p>
-<h3>Final Words</h3>
-<p>My experience with MVC4 is going great. I am developging an OAuth based Web App just to master it and I will share my experience once I am done. All I can say for now is that MVC4 makes me feel like a happy developer. There are a lot of other neat features like Recipe&#8217;s which allow you to generate template based code(Custom or 3rd Party), Browser Overriding, View Switching etc. etc. IF you want to read up a full list of features then please check out the <a href="www.asp.net/whitepapers/mvc4-release-notes">Release Notes</a> . This is all from me for now. Rock on!</p>
+<p>
 				
-					My breakdown of MVC4's new features<br> <a class="button-link" href="/.net/2012/05/17/Whats-new-in-MVC4/">Read it</a>
+					<br />
+					<a class="button-link" href="/.net/2012/05/17/Whats-new-in-MVC4/">Read More...</a>
 				
 			</p>
 			<p class="tags">
@@ -236,7 +194,40 @@ WordPress.com | Automattic</p>
 </blockquote>
 <p>Folks! Thats the kind of customer service that makes you smile. I love you wordpress! :)</p>
 				
-					My Encounter with Wordpress Customer Service.<br> <a class="button-link" href="/thoughts/2012/05/03/Customer-Service/">Read it</a>
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/thoughts/">thoughts</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				09 Apr 2012
+			</div>
+			<h1>
+				<a href="/thoughts/2012/04/09/Windows-Phone-thoughts/">To Windows Phone or Not</a>
+			</h1>
+			<p>
+				<p>Many of you do not know that my first smartphone was a Windows Mobile 6.5 based <a href="http://www.gsmarena.com/i_mate_jasjam-1589.php">i-Mate JasJam</a> . I loved that phone it was all one geek could ask for at that time, it had <span class="caps">GPS</span>, Google Maps, a powerful browser, a Qwerty keyboard and a stylus(trust me stylus&#8217; were cool  back then) I got this phone as a gift from my brother. Boy, Was I happy with it. After an year of usage the whole shashka(awesomeness) of the phone started to die, possibly because Microsoft stopped focusing on their Mobile OS side. So I sold the phone to a friend and bought an N900.</p>
+<p><img src="/images/n900.png" class="centreThis" alt="" /> <br />
+Now the <acronym title="I still own it btw"><span class="caps">N900</span></acronym> is different. It is actually the coolest phone I&#8217;ve ever come across. Why? Because its a pure hacker&#8217;s device. Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely <a href="http://www.maemo.org">community</a> driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it.</p>
+<p><img src="/images/mango.png" class="centreThis" alt="" /> <br />
+But I am looking forward to get something else to use as a secondary phone and you might&#8217;ve guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:</p>
+<h3>Metro UI</h3>
+<p>The new metro UI is awe-inspiring and to be honest I am bored by looking at the same UI of iOS and Android phones. So the UI is a welcome change.</p>
+<h3>Live Tiles</h3>
+<p>One of the best features are the live tiles, they are like widgets but only better. They work in real-time and show you live information such as messages, <span class="caps">GPS</span> location, Email etc. The new UI makes everything very accessible from the Home screen.</p>
+<h3>Integrated Social Layer</h3>
+<p>iOS 5 came with an integrated Twitter Layer for apps to utilize. Windows Phone 7.5 does the same, only it does it better. It has a complete social network layer and the people app. This brings your contacts and your social networks at one place. Your contacts&#8217; social network profiles are automatically synced with other information you have about them on your phone.</p>
+<h3>Not a Battery Muncher</h3>
+<p>Now this is way to good. All current phones running WP7 are not battery munchers like other smartphones. WP7 has a battery-saver function that saves up juice for when needed.</p>
+<h3>Office Mobile</h3>
+<p>With office mobile WP7 gives you the complete MS Office experience on your phone, now no other smartphone out there gives you this facility.</p>
+<h3>Linked Inboxes</h3>
+<p>No more people have to struggle between multiple inboxes. You can link them into one so that they become easily manageable.</p>
+<p>So these are some of the reasons I am considering a Windows Phone. I would really appreciate if you could help me decide. Do leave me a comment. Rock n Roll!</p>
 				
 			</p>
 			<p class="tags">
@@ -248,21 +239,68 @@ WordPress.com | Automattic</p>
 	<li>
 		<article class="blog-post">
 			<div class="published">
-				28 Apr 2012
+				06 Apr 2012
 			</div>
 			<h1>
-				<a href="/family/2012/04/28/Nephews-and-Hotwheels/">My nephews and their HotWheels Collection</a>
+				<a href="/ios/2012/04/06/iOS-Accelerometer/">Hello Accelerometer</a>
 			</h1>
 			<p>
-				<p>Today was my nephew Hassan Raza&#8217;s Birthday. The young man was quite happy as he got six hotwheels as a gift just like he had wished. Which resulted in making his collection reach twenty cars. Hassan and his brother Momin Raza share and play with these hotwheels for hours but today they asked me a very creative thing. They&#8217;ve always wanted to show their collection to their friends but have never really got the chance so they asked me to make a photo gallery of their hotwheels, so here it is to you too my nephews. A little image slider showing off your hotwheels collection so that you may share it with your friends:<br />
-<br />
-<object width="640" height="480"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to="></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&page_show_back_url=%2Fphotos%2F78170796%40N05%2F&user_id=78170796@N05&jump_to=" width="400" height="300"></embed></object></p>
-				
-					My nephews show off their hotwheels collection.<br> <a class="button-link" href="/family/2012/04/28/Nephews-and-Hotwheels/">Read it</a>
+				<p>The question new devs ask me the most is &#8220;How do we use the iPhone accelerometer?&#8221;, so I have decided to write a post about how to get data from the iOS device&#8217;s accelerometer.</p>
+<p>The accelerometer is a sensitive piece of hardware that can detect the changing position of the device, from translation motion to rotation; it has the capability to detect the changes using a 3D coordinate system. Using the accelerometer devs can enhance the UX of their apps considerably, similarly game developers can make their games more engaging with it. In this blog post I am gonna show you how to get the accelerometer coordinate values and display them inside a label. So lets get started.</p>
+<p>First lets create a simple UI in the interface builder:</p>
+<p><img src="/images/accell-ui.png" class="centreThis" alt="" /></p>
+<p>That&#8217;s that a simple and clean UI. Now lets get to some action, lets write some code. First we create some IBOutlet properties in out interface file for our labels:</p>
+<div class="highlight"><pre><code class="objc"><span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+
+<span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span>
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">xLabel</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">yLabel</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">zLabel</span><span class="p">;</span>
+
+<span class="k">@end</span>
+</code></pre></div><p>We are not done with the interface file yet, we need to implement the UIAccelerometer delegate and create a property to access its values. So after adding these our interface would look like this:</p>
+<div class="highlight"><pre><code class="objc"><span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+
+<span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span> <span class="o">&lt;</span><span class="n">UIAccelerometerDelegate</span><span class="o">&gt;</span>
+
+
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">xLabel</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">yLabel</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">zLabel</span><span class="p">;</span>
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIAccelerometer</span> <span class="o">*</span><span class="n">accelerometer</span><span class="p">;</span>
+
+
+<span class="k">@end</span>
+</code></pre></div><p>So all that takes care of the interface. Now we need to setup the accelerometer object so it can actually be of use. We now move to the implementation file of our project and modify the viewDidLoad method as follows:</p>
+<div class="highlight"><pre><code class="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+	
+    <span class="n">self</span><span class="p">.</span><span class="n">accelerometer</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIAccelerometer</span> <span class="n">sharedAccelerometer</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">accelerometer</span><span class="p">.</span><span class="n">updateInterval</span> <span class="o">=</span> <span class="mf">.2</span><span class="p">;</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">accelerometer</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+    
+<span class="p">}</span>
+</code></pre></div><p>Important thing to note here is how we have initialized the accelerometer object, one should never initialize a new instance of this object as its a shared resource. This is the correct way to initialize it. The other two statements are how we setup the update interval of the accelerometer and tell it whose going to be its delegate(in this case its our viewcontroller).</p>
+<p>We are almost done with this example, the final piece of the puzzle is UIAccelerometer&#8217;s delegate method didAccelerate. We implement that this way:</p>
+<div class="highlight"><pre><code class="objc"><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">accelerometer:</span><span class="p">(</span><span class="n">UIAccelerometer</span> <span class="o">*</span><span class="p">)</span><span class="nv">accelerometer</span> <span class="nf">didAccelerate:</span><span class="p">(</span><span class="n">UIAcceleration</span> <span class="o">*</span><span class="p">)</span><span class="nv">acceleration</span><span class="p">{</span>
+    
+    <span class="n">self</span><span class="p">.</span><span class="n">xLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@&quot;%f&quot;</span><span class="p">,</span> <span class="n">acceleration</span><span class="p">.</span><span class="n">x</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">yLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@&quot;%f&quot;</span><span class="p">,</span> <span class="n">acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">zLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@&quot;%f&quot;</span><span class="p">,</span> <span class="n">acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div><p>Trust me thats basically all you need to read data from the accelerometer. Our project is complete. Source files are available on <a href="https://github.com/aliirz/AccelerometerDemo">github</a> and here is a video showing the project in action:</p>
+<div class="flex-video widescreen vimeo">
+<p><iframe src="http://player.vimeo.com/video/39893304?title=0&amp;byline=0&amp;portrait=0" width="500" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/39893304">ios accelerometer</a> from <a href="http://vimeo.com/user9937701">ali raza</a> on <a href="http://vimeo.com">Vimeo</a>.</p></p>
+</div>
+<p>Thats it for now. I hope it proves helpful.</p>
 				
 			</p>
 			<p class="tags">
-				Posted under <a href="/categories/family/">family</a>
+				Posted under <a href="/categories/ios/">ios</a>
 			</p>
 		</article>
 	</li>
@@ -283,16 +321,6 @@ WordPress.com | Automattic</p>
 	</div>
 </div>
 </div>
-<aside class="col-md-3">
-	<div class="well">
-		<img src="/images/ali.jpg" class="img-circle img-responsive centreThis"/>
-		<h2>Ali Raza</h2>
-		<p>
-			Tech. Entrepreneur <br/>Loves to Develop All things Ruby, MVC, Obj-C and Javascript<br/>
-			<a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a>
-		</p>
-	</div>
-</aside>
 
 
         </div>
@@ -304,38 +332,38 @@ WordPress.com | Automattic</p>
           <div class="zone zone-triple-first">
            <article class="widget-triple-first widget-html-widget widget">
             <header>
-          
-           </header>
-           <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
-         </article>
-       </div>
-     </div>
+              
+            </header>
+            <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+          </article>
+        </div>
+      </div>
 
-     <div id="triple-second" class="col-md-4 triple">
-      <div class="zone zone-triple-second">
-       <article class="widget-triple-second widget-html-widget widget">
-        <header>
+      <div id="triple-second" class="col-md-4 triple">
+        <div class="zone zone-triple-second">
+         <article class="widget-triple-second widget-html-widget widget">
+          <header>
             <h1>From the Geek's Head</h1>
+          </header>
+          <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+        </article>
+      </div>
+    </div>
+
+    <div id="triple-third" class="col-md-4 triple">
+      <div class="zone zone-triple-third">
+       <article class="widget-triple-third widget-html-widget widget">
+        <header>
+         <h1>Get Connected</h1>
        </header>
-           <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+       <p id="social">
+         <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
+         <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
+         <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
+       </p>
      </article>
    </div>
  </div>
-
- <div id="triple-third" class="col-md-4 triple">
-  <div class="zone zone-triple-third">
-   <article class="widget-triple-third widget-html-widget widget">
-    <header>
-     <h1>Get Connected</h1>
-   </header>
-   <p id="social">
-     <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
-     <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
-     <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
-   </p>
- </article>
-</div>
-</div>
 </div>
 
 <hr>

@@ -22,7 +22,7 @@
     <link href="/_bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="/css/socialicons.css" rel="stylesheet">
     <link href="/css/template.css" rel="stylesheet">
-    <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss">
+    <!-- <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss"> -->
     <link href="/css/geekshead.css" rel="stylesheet">
     <link href="/css/syntax.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
@@ -36,21 +36,24 @@
     <!--[if lt IE 9]>
       <script src="/_bower_components/html5shiv/src/html5shiv.js"></script>
       <![endif]-->
-
-    </head>
-    <body>
-      <nav class="navbar-fixed-top clearfix">
-        <ul class="clearfix">
-          <li><a href="/">Blog</a></li>
-          <li><a href="/aboutme">About</a></li>
-          <li><a href="/folio">Work</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="/contactme">Contact</a></li>
-        </ul>
-        <a href="#" id="pull">Menu</a>
-      </nav>
-      <div class="container">
+      <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+        typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+        b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+        mixpanel.init("fd678c0a5f6e2a445a7f1cb63f565da6");</script><!-- end Mixpanel -->
+      </head>
+      <body>
+        <nav class="navbar-fixed-top clearfix">
+          <ul class="clearfix">
+            <li><a href="/">Blog</a></li>
+            <li><a href="/aboutme">About</a></li>
+            <li><a href="/folio">Work</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a href="/contactme">Contact</a></li>
+          </ul>
+          <a href="#" id="pull"><img src="/images/logo-without-text.png" width"50px" height="50px" alt="Navigation"/></a>
+        </nav>
+        <div class="container">
 <!--         <div class="row clearfix">
           <div class="col-md-3">
             <img src="/images/logo-without-text.png" width="150px" height="150px" class="img-responsive"/>
@@ -70,14 +73,14 @@
         <div class="row main-content">
           <div class="col-md-3">
 	
-	<a id="leftChev" class="pull-left" href="/thoughts/2012/07/06/The-Journey-that-is-life/" title="Previous Post:
-	The Journey that is life"><span class="icon icon-4x icon-chevron-left"></span></a>
+	<a id="leftChev" class="pull-left" href="/.net/2012/05/17/Whats-new-in-MVC4/" title="Previous Post:
+	Whats new in MVC4"><span class="icon icon-4x icon-chevron-left"></span></a>
 	
 </div>
 <div class="col-md-6 zone-content">
 	<article>
 		<h1 class="animated bounceInUp">Drop Down List XML hack in MVC</h1>
-		<p><small class="centreThis"><a href="/thoughts/2012/07/06/The-Journey-that-is-life/" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>  16 Jul 2012  <a href="/rails/2012/08/12/Couponific/" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a></small></p>
+		<p><small class="centreThis"><a href="/.net/2012/05/17/Whats-new-in-MVC4/" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>  16 Jul 2012  <a href="/rails/2012/08/12/Couponific/" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a></small></p>
 		<p>Today I ran into a situation where I had to populate a drop down list inside a razor view with some data. I did not want to get the data from the database, I wanted a simpler approach so I decided to use an <span class="caps">XML</span> file to populate my dropdown list. Here&#8217;s how I did it:</p>
 <p>First I created an <span class="caps">XML</span> file:</p>
 <div class="highlight"><pre><code class="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
@@ -105,9 +108,8 @@
             <span class="n">SelectList</span> <span class="n">selectList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SelectList</span><span class="p">(</span><span class="n">listItems</span><span class="p">,</span> <span class="s">&quot;Value&quot;</span><span class="p">,</span> <span class="s">&quot;Text&quot;</span><span class="p">);</span>
             <span class="n">ViewBag</span><span class="p">.</span><span class="n">countries</span> <span class="p">=</span> <span class="n">selectList</span><span class="p">;</span>
 </code></pre></div><p>Pretty simple stuff I am just loading the <span class="caps">XML</span> file inside a XDocument, using Linq to traverse and create an IEnumerable to hold all the countries in. Aftewards I create a SelecList(So that I can use the data inside a DropDownList) and pass it on to the super awesome dynamic ViewBag. The last piece of the puzzle is offcourse the razor view where I show this data from the <span class="caps">XML</span> file inside a dd, here is how that is implemented:</p>
-
-<i>  @Html.DropDownListFor(model =&gt; model.Country, (IEnumerable<SelectListItem>)ViewBag.countries) </i><br /><br />
-<p>Thats it, a super simple quick hack to populate your dropdowns. Rock On!</p>
+<div class="highlight"><pre><code class="csharp">  <span class="n">@Html</span><span class="p">.</span><span class="n">DropDownListFor</span><span class="p">(</span><span class="n">model</span> <span class="p">=&gt;</span> <span class="n">model</span><span class="p">.</span><span class="n">Country</span><span class="p">,</span> <span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">SelectListItem</span><span class="p">&gt;)</span><span class="n">ViewBag</span><span class="p">.</span><span class="n">countries</span><span class="p">)</span> 
+</code></pre></div><p>Thats it, a super simple quick hack to populate your dropdowns. Rock On!</p>
 	</article>
 	<div class="row" id="disqus_thread"></div>
 	<script type="text/javascript">
@@ -141,38 +143,38 @@
           <div class="zone zone-triple-first">
            <article class="widget-triple-first widget-html-widget widget">
             <header>
-          
-           </header>
-           <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
-         </article>
-       </div>
-     </div>
+              
+            </header>
+            <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+          </article>
+        </div>
+      </div>
 
-     <div id="triple-second" class="col-md-4 triple">
-      <div class="zone zone-triple-second">
-       <article class="widget-triple-second widget-html-widget widget">
-        <header>
+      <div id="triple-second" class="col-md-4 triple">
+        <div class="zone zone-triple-second">
+         <article class="widget-triple-second widget-html-widget widget">
+          <header>
             <h1>From the Geek's Head</h1>
+          </header>
+          <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+        </article>
+      </div>
+    </div>
+
+    <div id="triple-third" class="col-md-4 triple">
+      <div class="zone zone-triple-third">
+       <article class="widget-triple-third widget-html-widget widget">
+        <header>
+         <h1>Get Connected</h1>
        </header>
-           <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+       <p id="social">
+         <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
+         <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
+         <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
+       </p>
      </article>
    </div>
  </div>
-
- <div id="triple-third" class="col-md-4 triple">
-  <div class="zone zone-triple-third">
-   <article class="widget-triple-third widget-html-widget widget">
-    <header>
-     <h1>Get Connected</h1>
-   </header>
-   <p id="social">
-     <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
-     <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
-     <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
-   </p>
- </article>
-</div>
-</div>
 </div>
 
 <hr>

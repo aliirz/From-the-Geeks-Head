@@ -27,7 +27,8 @@
 		
 			<item>
 				<title>Helios</title>
-				<description>&lt;p&gt;I have been working on one of the client apps enabling it to support push notifications. The huge question was what should I use as a suitable backend to serve as my &lt;span class=&quot;caps&quot;&gt;APN&lt;/span&gt; Provider? After a lot of digging I settled for apn_on_rails a great gem, has been around from a long time and it seems a lot of people are using it. However, after stumbling upon &lt;a href=&quot;http://helios.io&quot;&gt;Helios&lt;/a&gt; I completely changed my mind. Helios is a wonderful little framework written by &lt;a href=&quot;https://github.com/mattt&quot;&gt;Matt Thompson&lt;/a&gt; which provides out of the box push notification, passbook, in-app purchase and remote data synchronization. This means that the developer&amp;#8217;s job got a whole lot less as most of the heavy-lifting backend technology is already crafted into this wonderful little solution.&lt;/p&gt;
+				<description>&lt;p&gt;&lt;img src=&quot;/images/helios-img.png&quot; class=&quot;img-responsive centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+I have been working on one of the client apps enabling it to support push notifications. The huge question was what should I use as a suitable backend to serve as my &lt;span class=&quot;caps&quot;&gt;APN&lt;/span&gt; Provider? After a lot of digging I settled for apn_on_rails a great gem, has been around from a long time and it seems a lot of people are using it. However, after stumbling upon &lt;a href=&quot;http://helios.io&quot;&gt;Helios&lt;/a&gt; I completely changed my mind. Helios is a wonderful little framework written by &lt;a href=&quot;https://github.com/mattt&quot;&gt;Matt Thompson&lt;/a&gt; which provides out of the box push notification, passbook, in-app purchase and remote data synchronization. This means that the developer&amp;#8217;s job got a whole lot less as most of the heavy-lifting backend technology is already crafted into this wonderful little solution.&lt;/p&gt;
 &lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
 &lt;p&gt;I would totally advise to anyone struggling with Backends for their iOS Apps to give Helios a try. It can very easily be integrated with a Rack/Sinatra or Rails app. The few things to keep in mind is to install the edge version of the gem. A very special thanks to &lt;a href=&quot;https://github.com/gregplumbly&quot;&gt;Greg&lt;/a&gt; for pointing this out. I struggled a lot with this issue at first. The push message feature of the current gem is broken so in your Gemfile specify the Helios gem like this:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;helios&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:git&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/helios-framework/helios.git&amp;quot;&lt;/span&gt;
@@ -185,24 +186,16 @@ Yes I know this post has been long overdue since I came back from the event last
             &lt;span class=&quot;n&quot;&gt;SelectList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;selectList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SelectList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Text&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;ViewBag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countries&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;selectList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pretty simple stuff I am just loading the &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; file inside a XDocument, using Linq to traverse and create an IEnumerable to hold all the countries in. Aftewards I create a SelecList(So that I can use the data inside a DropDownList) and pass it on to the super awesome dynamic ViewBag. The last piece of the puzzle is offcourse the razor view where I show this data from the &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; file inside a dd, here is how that is implemented:&lt;/p&gt;
-
-&lt;i&gt;  @Html.DropDownListFor(model =&amp;gt; model.Country, (IEnumerable&lt;SelectListItem&gt;)ViewBag.countries) &lt;/i&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;p&gt;Thats it, a super simple quick hack to populate your dropdowns. Rock On!&lt;/p&gt;</description>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;csharp&quot;&gt;  &lt;span class=&quot;n&quot;&gt;@Html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DropDownListFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Country&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IEnumerable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SelectListItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ViewBag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thats it, a super simple quick hack to populate your dropdowns. Rock On!&lt;/p&gt;</description>
 				<published>2012-07-16 00:00:00 +0500</published>
 				<link>/.net/2012/07/16/Quick-xml-hack-drop-down-list/</link>
 			</item>
 		
 			<item>
-				<title>The Journey that is life</title>
-				<description>&lt;p&gt;&lt;img src=&quot;http://fuuu.us/389.png&quot; class=&quot;right&quot; alt=&quot;&quot; /&gt; There was a time some 3-4 years back when I never blogged about tech. That was a time I just blogged whatever went through my head. This blog post is kind sorta typa(I know one of the readers who will say &amp;#8220;There is no such word as typa&amp;#8221;) like that. I see we live in strange times where humor is found in Internet Memes or TV Shows which have laugh tracks to tell us when to explode into laughter. Today you may have a thousand friends on Facebook but none in real life, today you know where your friends check-in to eat, but you forget where they used to live. Today its easy to hold a grudge and extremely difficult to forgive(I prefer the later though).&lt;/p&gt;
-&lt;p&gt;I have seen things and people change in front of my eyes, for better and for worse. The ones you mostly expect to have your back are usually the ones who stab you first and vice versa. But thats not my point. Imagine you fall upon a time machine that allows you to go back in time to the one cherished memory you have that seems to give you hope all the time. Some would prefer to use it to take revenge, while some like me would prefer to spend a few moments with our parents back in time. Now thats the problem! We dont see life as a journey we think of it as a phase, a collection of memories and a never-ending fear of uncertainity. Wake up people life is just a journey, things and people are suppose to change, move on and if possible dont ever change(for worse) beacause its you who will make a difference in the end for yourself. Rock on!&lt;/p&gt;</description>
-				<published>2012-07-06 00:00:00 +0500</published>
-				<link>/thoughts/2012/07/06/The-Journey-that-is-life/</link>
-			</item>
-		
-			<item>
 				<title>Whats new in MVC4</title>
 				<description>&lt;p&gt;It&amp;#8217;s been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:&lt;/p&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;span class=&quot;caps&quot;&gt;ASP&lt;/span&gt;.&lt;span class=&quot;caps&quot;&gt;NET&lt;/span&gt; Web &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;Sounds cool doesn&amp;#8217;t it. A framework that can create &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; Services that work on any client, be it mobile or web browser. It also makes it dead simple to write &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; Service. Do give this one a try, you will be making web services better than you grandpa ever could. Some of it&amp;#8217;s features are:&lt;/p&gt;
 &lt;ul&gt;
@@ -216,12 +209,12 @@ Yes I know this post has been long overdue since I came back from the event last
 &lt;p&gt;This one is my favourite. You can now create a Single Page Application with rich client functionality using the built-in scaffoldings. You single page application will have a very small footprint yet having all you need. Need a &lt;span class=&quot;caps&quot;&gt;DAL&lt;/span&gt;? No Problemo! Thats supported too. Click &lt;a href=&quot;http://www.asp.net/single-page-application&quot;&gt;here&lt;/a&gt; for more information on single page applications.&lt;/p&gt;
 &lt;h3&gt;Enhanced Default Project Templates&lt;/h3&gt;
 &lt;p&gt;Looks like MS finally understands that nobody likes the default project template that comes with MVC3 and Web Forms. So they have shashkafied the default project template(See images below). It not only looks better, it&amp;#8217;s responsive too. Yes! Out of the box Responsiveness. Progressive Enhancement Extraordinare MS! Bravo!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image001.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image002.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image003.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image001.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image002.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image003.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;Mobile Project Template&lt;/h3&gt;
 &lt;p&gt;You can now create web apps for mobile using builtin templates too. The Views are based on jQuery Mobile while all the other code(Controllers) is exactly the same as the normal Template. To me this is a much needed feature. I am not a very good designer and often the need arises to create a Mobile Optimized one or two page App to use in my iOS Apps&amp;#8217; Web Views. This makes things fast for me.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image004.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i1.asp.net/common/www-css/i/mvc4/image004.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;Final Words&lt;/h3&gt;
 &lt;p&gt;My experience with MVC4 is going great. I am developging an OAuth based Web App just to master it and I will share my experience once I am done. All I can say for now is that MVC4 makes me feel like a happy developer. There are a lot of other neat features like Recipe&amp;#8217;s which allow you to generate template based code(Custom or 3rd Party), Browser Overriding, View Switching etc. etc. IF you want to read up a full list of features then please check out the &lt;a href=&quot;www.asp.net/whitepapers/mvc4-release-notes&quot;&gt;Release Notes&lt;/a&gt; . This is all from me for now. Rock on!&lt;/p&gt;</description>
 				<published>2012-05-17 00:00:00 +0500</published>
@@ -259,27 +252,12 @@ WordPress.com | Automattic&lt;/p&gt;
 			</item>
 		
 			<item>
-				<title>My nephews and their HotWheels Collection</title>
-				<description>&lt;p&gt;Today was my nephew Hassan Raza&amp;#8217;s Birthday. The young man was quite happy as he got six hotwheels as a gift just like he had wished. Which resulted in making his collection reach twenty cars. Hassan and his brother Momin Raza share and play with these hotwheels for hours but today they asked me a very creative thing. They&amp;#8217;ve always wanted to show their collection to their friends but have never really got the chance so they asked me to make a photo gallery of their hotwheels, so here it is to you too my nephews. A little image slider showing off your hotwheels collection so that you may share it with your friends:&lt;br /&gt;
-&lt;br /&gt;
-&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt; &lt;param name=&quot;flashvars&quot; value=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F78170796%40N05%2F&amp;user_id=78170796@N05&amp;jump_to=&quot;&gt;&lt;/param&gt; &lt;param name=&quot;movie&quot; value=&quot;http://www.flickr.com/apps/slideshow/show.swf?v=109615&quot;&gt;&lt;/param&gt; &lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;/param&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.flickr.com/apps/slideshow/show.swf?v=109615&quot; allowFullScreen=&quot;true&quot; flashvars=&quot;offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F78170796%40N05%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F78170796%40N05%2F&amp;user_id=78170796@N05&amp;jump_to=&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/p&gt;</description>
-				<published>2012-04-28 00:00:00 +0500</published>
-				<link>/family/2012/04/28/Nephews-and-Hotwheels/</link>
-			</item>
-		
-			<item>
-				<title>Silver Jubilee of My Life</title>
-				<description>&lt;p&gt;&lt;img src=&quot;/images/the_cake_is_a_lie_515.jpg&quot; class=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;strong&gt;Happy Birthday&lt;/strong&gt; Ali old boy. Yes, today is my 25th Birthday. I have been looking back at the time and my achievements. I have been thinking, Am I really happy with all this? The answer is a bit confusing but I can see that today I have come to the point where I am forced to think over all my priorities and what I want to do. I want to do something big, I want to do something that makes me happy. Its time I start re-thinking life and start doing what I want rather than letting events or people drive me.&lt;/p&gt;
-&lt;p&gt;I cannot share anymore thoughts on this at the moment but All I know for now is that I just want to be happy :)&lt;/p&gt;</description>
-				<published>2012-04-18 00:00:00 +0500</published>
-				<link>/thoughts/2012/04/18/twenty-fifth-birthday/</link>
-			</item>
-		
-			<item>
 				<title>To Windows Phone or Not</title>
 				<description>&lt;p&gt;Many of you do not know that my first smartphone was a Windows Mobile 6.5 based &lt;a href=&quot;http://www.gsmarena.com/i_mate_jasjam-1589.php&quot;&gt;i-Mate JasJam&lt;/a&gt; . I loved that phone it was all one geek could ask for at that time, it had &lt;span class=&quot;caps&quot;&gt;GPS&lt;/span&gt;, Google Maps, a powerful browser, a Qwerty keyboard and a stylus(trust me stylus&amp;#8217; were cool  back then) I got this phone as a gift from my brother. Boy, Was I happy with it. After an year of usage the whole shashka(awesomeness) of the phone started to die, possibly because Microsoft stopped focusing on their Mobile OS side. So I sold the phone to a friend and bought an N900.&lt;/p&gt;
-&lt;p&gt;Now the &lt;acronym title=&quot;I still own it btw&quot;&gt;&lt;span class=&quot;caps&quot;&gt;N900&lt;/span&gt;&lt;/acronym&gt; is different. It is actually the coolest phone I&amp;#8217;ve ever come across. Why? Because its a pure hacker&amp;#8217;s device. &lt;img src=&quot;/images/n900.png&quot; class=&quot;right&quot; alt=&quot;&quot; /&gt; Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely &lt;a href=&quot;http://www.maemo.org&quot;&gt;community&lt;/a&gt; driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/mango.png&quot; class=&quot;left&quot; alt=&quot;&quot; /&gt; But I am looking forward to get something else to use as a secondary phone and you might&amp;#8217;ve guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/n900.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+Now the &lt;acronym title=&quot;I still own it btw&quot;&gt;&lt;span class=&quot;caps&quot;&gt;N900&lt;/span&gt;&lt;/acronym&gt; is different. It is actually the coolest phone I&amp;#8217;ve ever come across. Why? Because its a pure hacker&amp;#8217;s device. Based on a Linux Distribution called Maemo, it totally packs a punch. It has a terminal, you can sudo like any other Linux Distro and best of all its a completely &lt;a href=&quot;http://www.maemo.org&quot;&gt;community&lt;/a&gt; driven effort. I am not selling this device, I have decided to keep it for as long as it functions. Nokia does not manufacture or support this device anymore, but the powerful user-driven community does and I am proud to be a part of it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mango.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+But I am looking forward to get something else to use as a secondary phone and you might&amp;#8217;ve guessed it. Yes, the new windows phone based devices are among my list. I am a bit confused in what to get, but this post is about the Windows Phone and why it attracts me today. So lets bring in the reasons:&lt;/p&gt;
 &lt;h3&gt;Metro UI&lt;/h3&gt;
 &lt;p&gt;The new metro UI is awe-inspiring and to be honest I am bored by looking at the same UI of iOS and Android phones. So the UI is a welcome change.&lt;/p&gt;
 &lt;h3&gt;Live Tiles&lt;/h3&gt;
@@ -302,7 +280,7 @@ WordPress.com | Automattic&lt;/p&gt;
 				<description>&lt;p&gt;The question new devs ask me the most is &amp;#8220;How do we use the iPhone accelerometer?&amp;#8221;, so I have decided to write a post about how to get data from the iOS device&amp;#8217;s accelerometer.&lt;/p&gt;
 &lt;p&gt;The accelerometer is a sensitive piece of hardware that can detect the changing position of the device, from translation motion to rotation; it has the capability to detect the changes using a 3D coordinate system. Using the accelerometer devs can enhance the UX of their apps considerably, similarly game developers can make their games more engaging with it. In this blog post I am gonna show you how to get the accelerometer coordinate values and display them inside a label. So lets get started.&lt;/p&gt;
 &lt;p&gt;First lets create a simple UI in the interface builder:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/accell-ui.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/accell-ui.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;#8217;s that a simple and clean UI. Now lets get to some action, lets write some code. First we create some IBOutlet properties in out interface file for our labels:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;objc&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/span&gt;
 
@@ -356,32 +334,6 @@ WordPress.com | Automattic&lt;/p&gt;
 			</item>
 		
 			<item>
-				<title>Android Development Training Course</title>
-				<description>&lt;p&gt;&lt;img src=&quot;/images/android.png&quot; class=&quot;right&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-Triple-I international is offering an Android development course starting from 31st March to 22nd April in Islamabad. I recommend all to take advantage of this great opportunity.&lt;/p&gt;
-&lt;p&gt;Register &lt;a href=&quot;http://www.kophes.com/android-training&quot;&gt;here&lt;/a&gt; and for more information please contact:&lt;/p&gt;
-&lt;ul class=&quot;vcard&quot;&gt;
-&lt;li class=&quot;fn&quot;&gt;
-&lt;p&gt;Arifa Gulzar&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class=&quot;org&quot;&gt;
-&lt;p&gt;Triple I International&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class=&quot;tel&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;tel:+92-051-5493264&quot;&gt;+92-051-5493264&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class=&quot;url&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;mailto:arifa@kophes.com&quot;&gt;arifa@kophes.com&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class=&quot;url&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.kophes.com/&quot;&gt;http://www.kophes.com/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-				<published>2012-03-20 00:00:00 +0500</published>
-				<link>/android/2012/03/20/Android-Development-Course/</link>
-			</item>
-		
-			<item>
 				<title>Free CDN - Put your static resources in the cloud</title>
 				<description>&lt;p&gt;Recently I noticed that &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; and Javascript files in my website were creating a massive overhead. I did a little research about hosting content on &lt;span class=&quot;caps&quot;&gt;CDN&lt;/span&gt; to improve page load times and ultimately made my own free little &lt;span class=&quot;caps&quot;&gt;CDN&lt;/span&gt; using &lt;a href=&quot;https://appengine.google.com/&quot;&gt;Google AppEngine&lt;/a&gt; under an hour. So all my &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;, Image and Javascript files are now loaded from the cloud hence the website loads faster than ever. Diagramatically it all looks something like this(click for larger size):&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://aliirzdotcom.appspot.com/images/free-cdn.png&quot;&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/free-cdn.png&quot; class=&quot;right&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -431,7 +383,7 @@ handlers:
 		
 			<item>
 				<title>Hello Core Animation</title>
-				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/core-animation.png&quot; class=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/core-animation.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 I was working on an App for a client, careful planning, proper branding, good color schemes it all was there. What was &lt;br /&gt;
 missing was a little bit of jazz(As our Head of Operations pointed out). So instantly I jumped on the bandwagon to add a splash animation at the app&amp;#8217;s start. Have worked with Core Animation had been a long time for me, but I remembered the basics so I decided to make a Hello Core Animation post which might be helpful for someone somewhere.&lt;/p&gt;
 &lt;p&gt;What I am going to do here is explain the different blocks of Core Animation and how can one add a bit of jazz to a the app&amp;#8217;s screen when its launched for the first time.&lt;/p&gt;
@@ -472,7 +424,7 @@ Phew!!! Finally I am happy with the redesign. Yes, aliirz.com has been going thr
 		
 			<item>
 				<title>Startup Weekend Lahore</title>
-				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/startup-weekend.png&quot; class=&quot;aligncenter&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/startup-weekend.png&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 I have never seen so many entrepreneurs under one roof ever in my life. I always wanted to to go to one of them techcrunch&amp;#8217;s disrupts to meet with others like me and network. I never imagined I would get the chance to attend an even more awesome event in my own country.&lt;/p&gt;
 &lt;p&gt;It was a last minute decision to attend this amazing event in Lahore. What I hadthought to be a simple participation turned into an energy-filled, nerve wrenching hackathon 54-hours straight. I will be very honest I had never thought of writing so much code in a day and that too in a simple text editor.&lt;/p&gt;
 &lt;p&gt;Launching a startup was not the only reason we attended the event. The other reason was networking and getting the chance to meet big names from the Industry in Pakistan. All those seniors became mentors and helped each and every participant build the best project. I too became acquaninted to very inspirtation people like Afaque Ahmed from Breezecom, Raza Saeed from Confez Solutions and Saj Khan from Scrybe. Not only that but I found good friends as well like Junaid Atique, Kamil Waheed and Jaiser Abbas.&lt;/p&gt;
@@ -502,9 +454,8 @@ I have never seen so many entrepreneurs under one roof ever in my life. I always
 			<item>
 				<title>Most Amazing Timelapse of the Universe ever</title>
 				<description>&lt;p&gt;I came across this beautiful timelapse video on vimeo. It has deeply inspired me. The way the original creator of the video has captured our universe is very unique. The way you can see the whole galaxy move is so soothing that its easy for the watcher to get deeply immersed in the experience. Boy, I am gonna buy a telescope for star gazing.&lt;/p&gt;
-&lt;p&gt;Here is the video:&lt;/p&gt;
-&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
-&lt;p&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/22439234&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;div class=&quot;centreThis&quot;&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/22439234&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;All credit goes to the original creator of this video. Enjoy!&lt;/p&gt;</description>
 				<published>2012-02-11 00:00:00 +0500</published>
@@ -513,7 +464,7 @@ I have never seen so many entrepreneurs under one roof ever in my life. I always
 		
 			<item>
 				<title>Timehop - Time travel made easy</title>
-				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/timehop.PNG&quot; class=&quot;aligncenter&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/timehop.PNG&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 I came across &lt;a href=&quot;http://www.timehop.com&quot;&gt;Timehop&lt;/a&gt; a week ago. The idea behind it was so simple and sounded way too fun that i signed up instantly, who would not want to be reminded of the past(except for the embarrasing moments)? Basically it sends you an email of all your social network(s) activity for the same date of the last year. So its like a time machine that reminds you what were you upto last year the very same day. It does not spam you(Thank God), one email a day is not overkill. As a matter of fact I find myself waiting for my morning&amp;#8217;s dose of Time Travel back to my facebook and twitter feeds from an year ago.&lt;/p&gt;
 &lt;p&gt;Its a great idea and I would really like to see it grow into Mobile Apps and a manual timeline browser someday. Still reading? go Timehop a little, jog your memory.&lt;/p&gt;</description>
 				<published>2012-01-27 00:00:00 +0500</published>
@@ -578,15 +529,6 @@ I came across &lt;a href=&quot;http://www.timehop.com&quot;&gt;Timehop&lt;/a&gt;
 			</item>
 		
 			<item>
-				<title>New year Happiness</title>
-				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/new_year.jpg&quot; alt=&quot;&quot; width=&quot;360&quot; height=&quot;640&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;As 2011 comes to an end, I look back at it while sipping my tea. I see a pattern, a path, a plan becoming clearer. All the awesome movies are coming out in 2012 you  now, The dark knight rises, Avengers and Spider-Man to name a few. They say the world might end as well, well if thats true I am gonna try to be sure to leave a mark behind or build a nuke proof bunker for shelter. It might not be useful but it will be worth a try. Enough with the textbook narcissm, this post is for my friends and family to wish them a very happy new year. I hope and I  pray that may all of you may succeed in whatever plans you have for this year. Have a great 2012. Live long and prosper. &lt;br /&gt;
-:)&lt;/p&gt;</description>
-				<published>2011-12-31 00:00:00 +0500</published>
-				<link>/thoughts/2011/12/31/Happy-New-Year/</link>
-			</item>
-		
-			<item>
 				<title>EXC_BAD_ACCESS Error...</title>
 				<description>&lt;p&gt;Getting that nasty EXC_BAD_ACCESS Exception and your app crashes? and let me guess you cannot detect the cause behind it? Fear not my ninja developer buddies. This exception occurs when a message is being sent to a deallocated or released object. To find the little culprit all we need is a little NSZombieEnabled Environment Variable. It keeps a copy of the deallocated object.&lt;/p&gt;
 &lt;p&gt;To make this work you need to do the following:&lt;/p&gt;
@@ -603,15 +545,6 @@ I came across &lt;a href=&quot;http://www.timehop.com&quot;&gt;Timehop&lt;/a&gt;
 			</item>
 		
 			<item>
-				<title>Inner Voices</title>
-				<description>&lt;p&gt;Research proves that people who have lesser choices have the most peace of mind.  On the other hand people who have lots of choices and find themselves confused within them, have more restless minds. However choices choices involved in creating computer software are a seperate story. There are a number of factors which have to be looked into before choosing the framework or language you will start coding in. I am not here to bore you with these factors, I am just trying to make a point about the restless/peaceful mind of the developer.&lt;/p&gt;
-&lt;p&gt;Developers who know how to create software using a number of platforms, are usually happy. They are sure that if one thing does not work they can try the other. These devs are jacks of all and masters of none. While devs who know only one platform are sometimes troubled by the limitations it has but it does not mean they are not happy. These people are uber devs in their platform of choice and if required functionality is not provided in it, they build it. Example? Cocoa&amp;#8217;s Async Socket library. Why? Because iOS did not have Socket Programming support by default.&lt;/p&gt;
-&lt;p&gt;My point? Doesn&amp;#8217;t matter if you know one or a bazzillion platforms, if you have the motivation and dedication you will make it work somehow. Devs Rule!&lt;/p&gt;</description>
-				<published>2011-12-24 00:00:00 +0500</published>
-				<link>/thoughts/2011/12/24/Inner-Voices/</link>
-			</item>
-		
-			<item>
 				<title>Jekyll</title>
 				<description>&lt;p&gt;There was a time when my blog used to run on Wordpress. I love Wordpress, its plugins, its themes and the overall simplicity but my problem is I am like a rolling stone I never settle for one thing, I keep on moving to better and better, no matter how complex things become.&lt;/p&gt;
 &lt;p&gt;Being a geek has taught me one thing, do not do what everybody else does. So following this thought i learned about Jekyll from &lt;a href=&quot;http://www.destroytoday.com&quot; target=&quot;blank&quot;&gt;Johnny Hallman&amp;#8217;s Blog&lt;/a&gt;. Instantly I knew I had to give this a try. With my new found love for Rails applications, this surely has proven to be a delight. So I am moving my blog from Wordpress &lt;span class=&quot;caps&quot;&gt;CMS&lt;/span&gt; to plain &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; with the help of Jekyll. The thing is that any framework or tool that gives you complete control over your rendered &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; is super awesome in my opinion, which is another reason I love working with Asp.net mvc3 and Rails but with Jekyll my blog becomes &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; hence saving me a lot of time and effort, no complex logic involved. Give &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt; a try, trust me you will not regret it.&lt;/p&gt;</description>
@@ -621,10 +554,168 @@ I came across &lt;a href=&quot;http://www.timehop.com&quot;&gt;Timehop&lt;/a&gt;
 		
 			<item>
 				<title>Fully Linoded</title>
-				<description>&lt;p&gt;Today I moved this blog to a personal &lt;span class=&quot;caps&quot;&gt;VPS&lt;/span&gt; at linode. I feel a significant performance increase. I have grown very fond of linode, it was I must say it was fun to configure a &lt;span class=&quot;caps&quot;&gt;LAMP&lt;/span&gt; stack, and then moving my blog here from wordpress.com. While I was at it I also installed the Rails framework(which I haven&amp;#8217;t tested yet). &lt;a href=&quot;http://www.linode.com&quot;&gt;&lt;img class=&quot;left&quot; title=&quot;linode&quot; src=&quot;http://www.linode.com/images/linode_logo_gray.png&quot; alt=&quot;&quot; width=&quot;288&quot; height=&quot;65&quot; /&gt;&lt;/a&gt;The overall experience has been very knowledgeable. I thought it will be a pain to set everything up but thanks to the extensive documentation and an amazing community it turned out to be a piece of cake. Also its &lt;span class=&quot;caps&quot;&gt;VPS&lt;/span&gt; so does not occupy space meaning cleaner greener environment. I would write more but I am too tired. I am happy and feel like a newly turned vegan so I am gonna leave you with a video I happen to like. Cheers&lt;/p&gt;
-&lt;p&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/32619522?color=E6B112&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;http://vimeo.com/32619522&quot;&gt;Be a Vegetarian&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/glossyrey&quot;&gt;&lt;span class=&quot;caps&quot;&gt;GLOSSYREY&lt;/span&gt;&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</description>
+				<description>&lt;p&gt;Today I moved this blog to a personal &lt;span class=&quot;caps&quot;&gt;VPS&lt;/span&gt; at linode. I feel a significant performance increase. I have grown very fond of linode, it was I must say it was fun to configure a &lt;span class=&quot;caps&quot;&gt;LAMP&lt;/span&gt; stack, and then moving my blog here from wordpress.com. While I was at it I also installed the Rails framework(which I haven&amp;#8217;t tested yet). &lt;a href=&quot;http://www.linode.com&quot;&gt;&lt;img class=&quot;centreThis&quot; title=&quot;linode&quot; src=&quot;http://www.linode.com/images/linode_logo_gray.png&quot; alt=&quot;&quot; width=&quot;288&quot; height=&quot;65&quot; /&gt;&lt;/a&gt;The overall experience has been very knowledgeable. I thought it will be a pain to set everything up but thanks to the extensive documentation and an amazing community it turned out to be a piece of cake. Also its &lt;span class=&quot;caps&quot;&gt;VPS&lt;/span&gt; so does not occupy space meaning cleaner greener environment. I would write more but I am too tired. I am happy and feel like a newly turned vegan so I am gonna leave you with a video I happen to like. Cheers&lt;/p&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/32619522?color=E6B112&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;http://vimeo.com/32619522&quot;&gt;Be a Vegetarian&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/glossyrey&quot;&gt;&lt;span class=&quot;caps&quot;&gt;GLOSSYREY&lt;/span&gt;&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</description>
 				<published>2011-12-06 00:00:00 +0500</published>
 				<link>/web/2011/12/06/Fully-Linoded/</link>
+			</item>
+		
+			<item>
+				<title>HTML5 and CSS3-getting on with it</title>
+				<description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img class=&quot;aligncenter&quot; title=&quot;html 5&quot; src=&quot;http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png&quot; alt=&quot;&quot; width=&quot;473&quot; height=&quot;473&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The world is changing and so is the Web. With &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 a lot of new elements have been added to the Markup.&lt;/p&gt;
+&lt;p&gt;This series of posts are here to help us get to know what changes does &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 bring to the game and how do we use and benefit from it. So lets get on with it. For part 1 of this series I am going to focus on the Semantic Tags which are absolutely basic parts of the &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; Document and explain the differences &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 has brought to them:&lt;br /&gt;
+&lt;h3&gt;The DocType Tag&lt;/h3&gt;&lt;br /&gt;
+Yes, its that strange piece of text on the top of a &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; Document and Developers like me have never been able to memorize it. We just copy paste it. This is what it looks like:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;!&lt;span class=&quot;caps&quot;&gt;DOCTYPE&lt;/span&gt; html &lt;span class=&quot;caps&quot;&gt;PUBLIC&lt;/span&gt; &amp;#8220;-//W3C//&lt;span class=&quot;caps&quot;&gt;DTD&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 4.01 Transitional//EN&amp;#8221; &amp;#8220;http://www.w3.org/TR/html4/loose.dtd&amp;#8221;&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+Now that&amp;#8217;s hard to remember i know, so html 5 has made it easy for us:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;!&lt;span class=&quot;caps&quot;&gt;DOCTYPE&lt;/span&gt; html&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;h3&gt;The Header Tag&lt;/h3&gt;&lt;br /&gt;
+Yes, its a new tag in &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5. The specification describes it as &amp;#8220;A group of introductory or navigational aid&amp;#8221;. Normally this is how we used to create a header section:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;div id=&amp;#8220;header&amp;#8221;&amp;gt;&lt;br /&gt;
+&amp;lt;h1&amp;gt;This is a header/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 has made this even simple, by introducing a header tag:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;header&amp;gt;&lt;br /&gt;
+&amp;lt;h1This is the new header&amp;lt;/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/header&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;h3&gt;The Nav Tag&lt;/h3&gt;&lt;br /&gt;
+Another new addition is a nav tag. This tag is described as &amp;#8220;A section of the page that links to other pages on the site or to other sections of that particular page&amp;#8221;. Now we all remember how we used to create a bunch of navigational links inside an unordered list:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;div id=&amp;#8220;navigation&amp;#8221;&amp;gt;&lt;br /&gt;
+&amp;lt;ul&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Home&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;About/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Work&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Shop&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Contact&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;/ul&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 introduces a nav tag to make this job more easier and html markup more readable:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;nav&amp;gt;&lt;br /&gt;
+&amp;lt;ul&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Home&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;About/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Work&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Shop&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;li&amp;gt;Contact&amp;lt;/li&amp;gt;&lt;br /&gt;
+&amp;lt;/ul&amp;gt;&lt;br /&gt;
+&amp;lt;/nav&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;h3&gt;The Section Tag&lt;/h3&gt;&lt;br /&gt;
+Just like the newly added nav and header tags, the section tag is used to divide the content into sections. It is described as &amp;#8220;A grouping of content based around a theme&amp;#8221;. Now sections are equivalent to what we would make from a div to represent different sections of our website for example:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;div id=&amp;#8220;acc-news&amp;#8221;&amp;gt;&lt;br /&gt;
+&amp;lt;h2&amp;gt;&lt;span class=&quot;caps&quot;&gt;ACC&lt;/span&gt; Basketball&lt;br /&gt;
+News&amp;lt;/h2&amp;gt;&lt;br /&gt;
+&amp;lt;h3&amp;gt;&lt;span class=&quot;caps&quot;&gt;UNC&lt;/span&gt; Beats Duke in&lt;br /&gt;
+Champsionship Game!&amp;lt;/h3&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;The Blue Devils are routed&lt;br /&gt;
+by the Tarheels at Cameron&lt;br /&gt;
+Indoor Stadium.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+So &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 gives us a new tag to more conveniently organize the above markup:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;section&amp;gt;&lt;br /&gt;
+&amp;lt;header&amp;gt;&lt;br /&gt;
+&amp;lt;h1&amp;gt;&lt;span class=&quot;caps&quot;&gt;ACC&lt;/span&gt; Basketball News&amp;lt;/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/header&amp;gt;&lt;br /&gt;
+&amp;lt;h2&amp;gt;&lt;span class=&quot;caps&quot;&gt;UNC&lt;/span&gt; Beats Duke in Championship Game!&lt;br /&gt;
+&amp;lt;/h2&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;The Blue Devils are routed by the Tarheels&lt;br /&gt;
+at Cameron Indoor Stadium.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/section&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;h3&gt;The Article Tag&lt;/h3&gt;&lt;br /&gt;
+The Article tag can be used to divide the contents of a section in &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5. It is defined as &amp;#8220;An independent, self-contained composition&amp;#8221;. For example the markup in the previous heading can be re-written as:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;section&amp;gt;&lt;br /&gt;
+&amp;lt;header&amp;gt;&lt;br /&gt;
+&amp;lt;h1&amp;gt;&lt;span class=&quot;caps&quot;&gt;ACC&lt;/span&gt; Basketball&lt;br /&gt;
+News&amp;lt;/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/header&amp;gt;&lt;br /&gt;
+&amp;lt;article&amp;gt;&lt;br /&gt;
+&amp;lt;header&amp;gt;&lt;br /&gt;
+&amp;lt;h1&amp;gt;&lt;span class=&quot;caps&quot;&gt;UNC&lt;/span&gt; Beats Duke In&lt;br /&gt;
+Championship Game!&lt;br /&gt;
+&amp;lt;/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/header&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;The Blue Devils are&lt;br /&gt;
+routed by the Tarheels at&lt;br /&gt;
+Cameron Indoor&lt;br /&gt;
+Stadium.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/article&amp;gt;&lt;br /&gt;
+&amp;lt;/section&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+Now there are some interesting things to note here. See how the header tag is inside a section. Yes, this means you can add as many header tags inside your markup as you like. As you can see we have the news inside an article. This gives you a rough idea about how the article tags are used.&lt;br /&gt;
+&lt;h3&gt;The Aside Tag&lt;/h3&gt;&lt;br /&gt;
+The aside tag is described as &amp;#8220;Content related to an article but not critical to its understanding&amp;#8221;. The content inside the aside tag could be just some meta-data, some text thats not really important enough, example:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;article&amp;gt;&lt;br /&gt;
+&amp;lt;header&amp;gt;&lt;br /&gt;
+&amp;lt;h1&amp;gt;&lt;span class=&quot;caps&quot;&gt;UNC&lt;/span&gt; Beats Duke In&lt;br /&gt;
+Championship Game&amp;lt;/h1&amp;gt;&lt;br /&gt;
+&amp;lt;/header&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;The Blue Devils are routed by&lt;br /&gt;
+the Tarheels at Cameron Indoor&lt;br /&gt;
+Stadium.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;aside&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;Former Duke Players Cry at&lt;br /&gt;
+Game’s End&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/aside&amp;gt;&lt;br /&gt;
+&amp;lt;/article&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+&lt;h3&gt;The Footer Tag&lt;/h3&gt;&lt;br /&gt;
+Just like the header tag, the footer tag is used at the end of a section. Its a special tag for what we would normally create from a div at the bottom of our web page. It is described as &amp;#8220;Includes information that closes out a particular section.&amp;#8221; We used to make a footer this way:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;div id=&amp;#8220;footer&amp;#8221;&amp;gt;&lt;br /&gt;
+&amp;lt;h3&amp;gt;Talk to Me Goose&amp;lt;/h3&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;&amp;amp;copy; 2011 Maverick &amp;amp;&lt;br /&gt;
+Goose Ventures.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+And now with &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5:&lt;br /&gt;
+&lt;blockquote&gt;&amp;lt;footer&amp;gt;&lt;br /&gt;
+&amp;lt;h3&amp;gt;Talk to Me Goose&amp;lt;/h3&amp;gt;&lt;br /&gt;
+&amp;lt;p&amp;gt;&amp;amp;copy; 2011 Maverick &amp;amp;&lt;br /&gt;
+Goose Ventures.&amp;lt;/p&amp;gt;&lt;br /&gt;
+&amp;lt;/footer&amp;gt;&lt;/blockquote&gt;&lt;br /&gt;
+You see, how easy and fun &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 is. Offcourse there are some compatibility issues(same old story) I will be back with more posts on that, we will look at the canvas tag and finally some CSS3. Until then take care y&amp;#8217;all I hope this post is helpful.&lt;/p&gt;</description>
+				<published>2011-09-09 00:00:00 +0500</published>
+				<link>/web/2011/09/09/HTML5-and-CSS3-part1/</link>
+			</item>
+		
+			<item>
+				<title>Two Years</title>
+				<description>&lt;p&gt;Its been 2 years today. I have come a long way since You left, I wish I could tell You, Show you My achievements, the fruits of my hardwork. Wish I could tell you&amp;#8230;how they all left me in one of the dark hours, the people you and I trusted the most.&lt;/p&gt;
+&lt;p&gt;I just wish wherever you are, you are happy&amp;#8230;I miss you&amp;#8230; thank you for everything&amp;#8230;Father&amp;#8230;&lt;/p&gt;</description>
+				<published>2011-07-11 00:00:00 +0500</published>
+				<link>/thoughts/2011/07/11/Two-Years/</link>
+			</item>
+		
+			<item>
+				<title>La Studio Coke...Rocking the world</title>
+				<description>&lt;p&gt;&lt;img src=&quot;http://www.cokestudio.com.pk/Images/general/large/004.jpg&quot; class=&quot;centreThis&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+Its not everyday you come across good projects promoting Pakistan in the world. Its no longer the era in which Junoon or the Vital Signs made Pakland famous all over the world, new blood has taken over and they are really rocking. We got Mauj a free-spirited fiery young band, the amazing Shafqat Amanat Ali whose voice works magic, Zeb and Haniya the talented duo,  the ever amazing Rahat Fateh Ali khan who has been tutored by the great Maestro of vocals himself and many more&amp;#8230;all of them represent Pakistan with their respective genres of music. every now and then some event or a project surfaces that brings these great artists  together on one platform&amp;#8230; &lt;br /&gt;
+One such project i really respect and salute is Coke Studio. A platform that truly shows harmony of our nation and the talent of our Artists. the brainchild of Rohail Hayat brings together multiple artists to perform live in groups or individually. Coke Studio like no other sets  a standard in music. with great artitst including Atif Aslam, Ali Azmat, Strings, Shafqat Amanat Ali, Saieen Zahoor just to name a few. this project promotes peace and harmony by combining the music of  artists of all genres be it folk, classical, pop or rock. it truly creates a space of peaceful, memorable bits of life once you listen to the music. With 5 episodes done till now Coke studio has a bright future ahead, and surely this platform is really necessary to show the real true-spirited Pakistanis we are. we love our culture and we know how to blend in. here is a short description from the studio&amp;#8217;s site:&lt;/p&gt;
+&lt;p&gt;Coke Studio embodies a musical fusion of exciting elements and diverse influences, ranging from traditional eastern, modern western and regionally inspired music. Bringing alive the magic of live recordings and performances, Coke Studio prides itself on providing a musical platform which bridges barriers, celebrates diversity, encourages unity and instils a sense of Pakistani pride. Coke Studio is an inspired step by Coca-Cola for having created a platform where renowned as well as upcoming and less mainstream musicians from various genres can collaborate musically.&lt;/p&gt;
+&lt;p&gt;Impressed? give it a try. i guarantee you will enjoy it.&lt;/p&gt;
+&lt;p&gt;http://www.cokestudio.com.pk&lt;/p&gt;
+&lt;p&gt;towards glory :)&lt;/p&gt;</description>
+				<published>2010-03-09 00:00:00 +0500</published>
+				<link>/thoughts/2010/03/09/La-Studio-Coke-Rocking-the-World/</link>
+			</item>
+		
+			<item>
+				<title>As the wind blows...</title>
+				<description>&lt;p&gt;&lt;img src=&quot;http://aliirzdotcom.appspot.com/images/abu-grave.jpg&quot; class=&quot;img-responsive alignCentre&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+I sit near your final resting place. trying to remember everything you said, you did, your smiles, the way you were…even your last days…i look upon my life and the way it connected with you. i remember the time you used to come back from work and the way i used to hug you, the way you took me in your arms when i was a little boy. the way you used to tell me right and wrong, the things i learnt from your wisdom. the way you always appeared a king to me.&lt;/p&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
+&lt;p&gt;I miss everything about you…not a single moment of my life is spent without me thinking about you…feeling the physical hole left in my life never filling up…just like the hole in my heart…i wish i was stronger in emotions like you…i wish i was a better son too…i really miss you…&lt;/p&gt;
+&lt;p&gt;Then in the silence, all of a sudden a cool breeze touches me…I feel it filled with your love and affection, it feels like a gentle touch on my shoulders…whispering to me that all is not lost and i get to see that you still live in me dad, you left your soul in us…you might not have a physical existence around me dad but i know you are there watching, listening and smiling&amp;#8230;i am proud to be your son…&lt;br /&gt;
+&lt;p align=&quot;right&quot;&gt;&lt;em&gt;Dedicated to my father &lt;strong&gt;Shabir Ahmed Raza&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&lt;/p&gt;</description>
+				<published>2009-10-23 00:00:00 +0600</published>
+				<link>/thoughts/2009/10/23/As-the-Wind-Blows/</link>
+			</item>
+		
+			<item>
+				<title>NXT Rotation Sensor Program</title>
+				<description>&lt;p&gt;My buddies are  working on Lego Mindstorms &lt;span class=&quot;caps&quot;&gt;NXT&lt;/span&gt; this year. with a tougher floor plan than last time and an even tougher goal, I decided to help them out with a small program that proved to be very useful to me last year.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignCentre img-responsive&quot; title=&quot;Degree Measurer&quot; src=&quot;http://dejavu87.wordpress.com/files/2009/07/measure.jpg&quot; alt=&quot;NXT&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This program actually measures the rotations of a motor. all the user has to do is hold the &lt;span class=&quot;caps&quot;&gt;NXT&lt;/span&gt; in one hand and a motor connected to it in the other. Running the motor by hand on the floor plan shows the degrees of rotation on the NXT&amp;#8217;s Screen.&lt;/p&gt;
+&lt;p&gt;So here it is guys. May this help you with all the NERC&amp;#8217;s. and may we Win this year. Amen.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://bit.ly/k0sbl&quot;&gt;http://bit.ly/k0sbl&lt;/a&gt;&lt;/p&gt;</description>
+				<published>2009-07-03 00:00:00 +0600</published>
+				<link>/misc/2009/07/03/NXT-Rotation/</link>
 			</item>
 		
 	</channel>

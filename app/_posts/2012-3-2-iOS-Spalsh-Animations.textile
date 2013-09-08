@@ -5,7 +5,7 @@ category: iOS
 description: How to use core animation in your iOS apps
 keywords: animation ios core animation splash
 ---
-!(left)http://aliirzdotcom.appspot.com/images/core-animation.png!
+!(centreThis)http://aliirzdotcom.appspot.com/images/core-animation.png!
 I was working on an App for a client, careful planning, proper branding, good color schemes it all was there. What was 
 missing was a little bit of jazz(As our Head of Operations pointed out). So instantly I jumped on the bandwagon to add a splash animation at the app's start. Have worked with Core Animation had been a long time for me, but I remembered the basics so I decided to make a Hello Core Animation post which might be helpful for someone somewhere.
 

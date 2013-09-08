@@ -14,6 +14,7 @@ GEM
       parslet (~> 1.5)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
+    growl (1.0.3)
     highline (1.6.19)
     jekyll (1.1.2)
       classifier (~> 1.3)
@@ -47,5 +48,6 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   csscss (~> 1.3.1)
+  growl
   jekyll (~> 1.0)
   redcarpet

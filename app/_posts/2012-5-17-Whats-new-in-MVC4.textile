@@ -9,6 +9,8 @@ class: post40
 ---
 It's been a couple of days that I am playing with MVC4 in my free time. I installed Visual Studio 11 Beta for the Web as soon as it came out, but never really got the chance to check it out properly. We had a power outage today for like 7 hours which and I had no Internets(yes I like to call it Internets, its not a Typo) which gave me time to check out MVC4 and I have one word for it, Cheese Omellete. Ok thats two words but thats how MVC4 made me feel, a healthy and delicious breakfast recipe. So here is a little breakdown of the new features of MVC4:
 
+<!--break-->
+
 h3. ASP.NET Web API
 
 Sounds cool doesn't it. A framework that can create HTTP Services that work on any client, be it mobile or web browser. It also makes it dead simple to write REST Service. Do give this one a try, you will be making web services better than you grandpa ever could. Some of it's features are:
@@ -28,15 +30,15 @@ h3. Enhanced Default Project Templates
 
 Looks like MS finally understands that nobody likes the default project template that comes with MVC3 and Web Forms. So they have shashkafied the default project template(See images below). It not only looks better, it's responsive too. Yes! Out of the box Responsiveness. Progressive Enhancement Extraordinare MS! Bravo!
 
-!http://i1.asp.net/common/www-css/i/mvc4/image001.png!
-!http://i1.asp.net/common/www-css/i/mvc4/image002.png!
-!http://i1.asp.net/common/www-css/i/mvc4/image003.png!
+!(centreThis)http://i1.asp.net/common/www-css/i/mvc4/image001.png!
+!(centreThis)http://i1.asp.net/common/www-css/i/mvc4/image002.png!
+!(centreThis)http://i1.asp.net/common/www-css/i/mvc4/image003.png!
 
 h3. Mobile Project Template
 
 You can now create web apps for mobile using builtin templates too. The Views are based on jQuery Mobile while all the other code(Controllers) is exactly the same as the normal Template. To me this is a much needed feature. I am not a very good designer and often the need arises to create a Mobile Optimized one or two page App to use in my iOS Apps' Web Views. This makes things fast for me.
 
-!http://i1.asp.net/common/www-css/i/mvc4/image004.png!
+!(centreThis)http://i1.asp.net/common/www-css/i/mvc4/image004.png!
 
 h3. Final Words
 

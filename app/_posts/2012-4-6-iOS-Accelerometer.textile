@@ -11,7 +11,7 @@ The accelerometer is a sensitive piece of hardware that can detect the changing 
 
 First lets create a simple UI in the interface builder:
 
-!/images/accell-ui.png!
+!(centreThis)/images/accell-ui.png!
 
 That's that a simple and clean UI. Now lets get to some action, lets write some code. First we create some IBOutlet properties in out interface file for our labels:
 
@@ -68,7 +68,6 @@ Important thing to note here is how we have initialized the accelerometer object
 We are almost done with this example, the final piece of the puzzle is UIAccelerometer's delegate method didAccelerate. We implement that this way:
 
 {% highlight objc %}
-
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
     
     self.xLabel.text = [NSString stringWithFormat:@"%f", acceleration.x];
