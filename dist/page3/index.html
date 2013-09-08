@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>From The Geek's Head</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="author" content="Ali Raza" />
+  
+
+  
+  <meta name="keywords" content="geek blog head technology rails google microsoft nokia samsung apple iphone ipad retina bower yo grunt yeoman jekyll plugins wordpress thoughts android"/>
+  
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One%7CPT+Serif%7COpen+Sans:400,300' rel='stylesheet' type='text/css'>
+
+      <!-- build:css(app) /css/main.css -->
+    <link href="/_bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/socialicons.css" rel="stylesheet">
+    <link href="/css/template.css" rel="stylesheet">
+    <link href="/css/colors/color-blue.css" rel="stylesheet" id="colorcss">
+    <link href="/css/geekshead.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <!-- endbuild -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.js"></script>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/_bower_components/html5shiv/src/html5shiv.js"></script>
+      <![endif]-->
+
+    </head>
+    <body>
+      <nav class="navbar-fixed-top clearfix">
+        <ul class="clearfix">
+          <li><a href="/">Blog</a></li>
+          <li><a href="/aboutme">About</a></li>
+          <li><a href="/folio">Work</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/contactme">Contact</a></li>
+        </ul>
+        <a href="#" id="pull">Navigation</a>
+      </nav>
+      <div class="container">
+<!--         <div class="row clearfix">
+          <div class="col-md-3">
+            <img src="/images/logo-without-text.png" width="150px" height="150px" class="img-responsive"/>
+          </div>
+          <div class="col-md-6">
+            <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
+          </div>
+        </div> -->
+        <div class="masthead clearfix">
+<!--           <a id="logoimg" href="/">
+            <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+          </a> -->
+          <h1 class="logo">From the <span class="geek">Geek's</span> <span class="head">Head</span></h1>
+        </div>
+        <hr> 
+
+        <div class="row main-content">
+          <div class="col-md-9">
+	<ul class="blog-posts">
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				06 Mar 2012
+			</div>
+			<h1>
+				<a href="/web/2012/03/06/Free-CDN/">Free CDN - Put your static resources in the cloud</a>
+			</h1>
+			<p>
+				<p>Recently I noticed that <span class="caps">CSS</span> and Javascript files in my website were creating a massive overhead. I did a little research about hosting content on <span class="caps">CDN</span> to improve page load times and ultimately made my own free little <span class="caps">CDN</span> using <a href="https://appengine.google.com/">Google AppEngine</a> under an hour. So all my <span class="caps">CSS</span>, Image and Javascript files are now loaded from the cloud hence the website loads faster than ever. Diagramatically it all looks something like this(click for larger size):</p>
+<p><a href="http://aliirzdotcom.appspot.com/images/free-cdn.png"><img src="http://aliirzdotcom.appspot.com/images/free-cdn.png" class="right" alt="" /></a></p>
+<p>CDN&#8217;s are not something new but I was surprised to see that there are not many tutorials to make one if the need arises, so I am sharing my experience and steps to create a free <span class="caps">CDN</span> with Google&#8217;s AppEngine.</p>
+<p>First thing&#8217;s first, you need to download and install Google App Engine&#8217;s <span class="caps">SDK</span> from <a href="http://code.google.com/appengine/downloads.html">here</a> I am using a Linux based system so I downloaded the python <span class="caps">SDK</span> for Linux. It did not require any installation I just extracted the contents into a Folder inside my Home Folder. Make sure you have python installed on your system, the <span class="caps">SDK</span> requires python in order to function(You can use Java or Go SDKs if you wish). Then  I added the google app engine folder in my path so that I could easily access the commands:</p>
+<div class="highlight"><pre><code class="bash"> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/ali/appEngine/google_appengine/ 
+</code></pre></div><p>With that done now it was time to upload my files to the cloud server. I created a new application from my Google AppEngine Dashboard:</p>
+<p><img src="http://aliirzdotcom.appspot.com/images/appengine-apps.png" class="left" alt="" /></p>
+<p>Then i created a new folder on my system having the same name as my application and copied my css, javascript and image folders inside it. Now the main piece of the puzzle is the app.yaml file without it the AppEngine will never identify your application as it contains all the necessary stuff. So I created an app.yaml file inside the root of the folder. My app.yaml(do mind the indentation) looks like this:</p>
+<div class="highlight"><pre><code class="bash">application: aliirzdotcom
+version: 1
+runtime: python
+api_version: 1
+handlers:
+- url: /images
+  static_dir: images
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /fonts
+  static_dir: fonts
+ 
+</code></pre></div><p>Basically its telling appengine the following things:</p>
+<ul>
+	<li>The name of the application.</li>
+	<li>The version of the application</li>
+	<li>Application runtime i.e Python</li>
+	<li>The AppEngine <span class="caps">API</span> version</li>
+	<li>Url handlers to the folders i.e mapping urls to specific folders that contain the resources.</li>
+</ul>
+<p>Once the app.yaml file is in place then its time to launch. Since I added the appengine <span class="caps">SDK</span> to my path I can access the commands and files of the <span class="caps">SDK</span> without having to type long and awkward paths in the Terminal. So with all my static content in place and the app.yaml as well, I type the following command to upload the app to AppEngine in the cloud:</p>
+<div class="highlight"><pre><code class="bash"> appcfg.py update apps/aliirzdotcom/ _
+</code></pre></div><p>If ran the first time it will ask your email and password to access the AppEngine. It will deploy all your files and give you a success message. The output might look something like this:</p>
+<div class="highlight"><pre><code class="bash">	Checking <span class="k">if </span>deployment succeeded.
+	Deployment successful.
+	Checking <span class="k">if </span>updated app version is serving.
+	Will check again in 1 seconds.
+	Checking <span class="k">if </span>updated app version is serving.
+	Completed update of app: aliirzdotcom, version: 1
+</code></pre></div><p>In case you wish to debug before you deploy you can use the following command:</p>
+<div class="highlight"><pre><code class="bash">dev_appserver.py apps/aliirzdotcom/ 
+</code></pre></div><p>Boom! your resources are now in the cloud and can be accessed via the url of the appenengine app in my case it is aliirzdotcom.appspot.com. So all thats left to do is to load your resources from the url. I replaced all the script sources, css and image references to be loaded from the url and whoala! Instant Content Delivery Network in the cloud, making the website faster than ever.</p>
+				
+					How to create a free content delivery network to speed up your website<br> <a class="button-link" href="/web/2012/03/06/Free-CDN/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/web/">web</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				02 Mar 2012
+			</div>
+			<h1>
+				<a href="/ios/2012/03/02/iOS-Spalsh-Animations/">Hello Core Animation</a>
+			</h1>
+			<p>
+				<p><img src="http://aliirzdotcom.appspot.com/images/core-animation.png" class="left" alt="" /><br />
+I was working on an App for a client, careful planning, proper branding, good color schemes it all was there. What was <br />
+missing was a little bit of jazz(As our Head of Operations pointed out). So instantly I jumped on the bandwagon to add a splash animation at the app&#8217;s start. Have worked with Core Animation had been a long time for me, but I remembered the basics so I decided to make a Hello Core Animation post which might be helpful for someone somewhere.</p>
+<p>What I am going to do here is explain the different blocks of Core Animation and how can one add a bit of jazz to a the app&#8217;s screen when its launched for the first time.</p>
+<p>First step, begin writing the animation block in the AppDelegate&#8217;s applicationDidFinishLaunching method or if your animation is a view controller specific add it to the viewDidLoad method:</p>
+<div class="highlight"><pre><code class="objc"><span class="p">[</span><span class="n">UIView</span> <span class="n">beginAnimations</span><span class="o">:</span><span class="nb">nil</span>  <span class="n">context</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>	<span class="c1">//Begin animations </span>
+</code></pre></div><p>Whatever follows after this statement is considerd to be a core animation action. Be it a size transition of a label, color change of a button or a shiny graphic/image you want to fly in from the right of the screen etc. you add it after this statement. In this example however we would be doing something very simple, we would just make the view that is being loaded flip from right. So the next thing we do is add a tranisition duration:</p>
+<div class="highlight"><pre><code class="objc"><span class="p">[</span><span class="n">UIView</span> <span class="n">setAnimationDuration</span><span class="o">:</span> <span class="mf">0.50</span><span class="p">];</span> 
+</code></pre></div><p>Then we add the transition style:</p>
+<div class="highlight"><pre><code class="objc"><span class="p">[</span><span class="n">UIView</span> <span class="n">setAnimationTransition</span><span class="o">:</span><span class="n">UIViewAnimationTransitionFlipFromRight</span> <span class="n">forView</span><span class="o">:</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">.</span><span class="n">view</span> <span class="n">cache</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+</code></pre></div><p>This will make the view that is being pushed on the navigation controller to flip from right like a page instead of the the standard transition. Finally to make it work:</p>
+<div class="highlight"><pre><code class="objc"><span class="p">[</span><span class="n">UIView</span> <span class="n">commitAnimations</span><span class="p">];</span>	<span class="c1">//Commit animations do the dance. </span>
+</code></pre></div><p>This will as the name suggests commit the animations. So whatever you have between these two lines of code will get executed as an animation.</p>
+				
+					How to use core animation in your iOS apps<br> <a class="button-link" href="/ios/2012/03/02/iOS-Spalsh-Animations/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/ios/">ios</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				01 Mar 2012
+			</div>
+			<h1>
+				<a href="/2012/03/01/Blog-Redesign/">Blog Redesign...Welcome to the Grid</a>
+			</h1>
+			<p>
+				<p><img src="http://aliirzdotcom.appspot.com/images/yeti.png" class="right" alt="" /><br />
+Phew!!! Finally I am happy with the redesign. Yes, aliirz.com has been going through a major redesign phase from the past few weeks and now finally its complete(I think so). So (clears throat) lets talk about what&#8217;s new.</p>
+<p>The website now uses the <a href="http://foundation.zurb.com">Foundation Framework</a> which has become my most favourite prototyping <span class="caps">CSS</span> framework since Startup Weekend Lahore. The most used and favourite feature of mine is the grid(not the one from Tron) as it allows creating a flexible, fully customizable layout in seconds. So bascially you can prototype anything be it a website for the web or mobile devices, foundation has all you need to go in uber prototyping mode. Also foundation has built-in support for creating responsive designs(Something I still need to hook up here).</p>
+<p>Some other things I have changed are a new header and footer section utilizing the power of Jekyll includes so I have more control over the <span class="caps">HTML</span>. You can see the main page has two columns now so that content is more properly arranged. I have a new <a href="/Folio">Folio</a> section which only lists a handful of my projects at the moment. The post headings have now got a CSS3 transition property to their background. The site background is now white to improve readability and now users can subscribe to <span class="caps">RSS</span> Feeds as well.</p>
+<p>Do leave your comments and feedback on how things look and what can be improved. I am re-learning the web and I am loving it. Cheers :)</p>
+				
+					aliirz.com has been redesigned using the Foundation framework<br> <a class="button-link" href="/2012/03/01/Blog-Redesign/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under 
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				24 Feb 2012
+			</div>
+			<h1>
+				<a href="/.net/2012/02/24/MVC3-Html-Attributes/">HTML and CSS Attributes in MVC3</a>
+			</h1>
+			<p>
+				<p>For those of you who use or are learning asp.Net MVC3 might know that it introduces some very useful <span class="caps">HTML</span> helpers with its razor view engine. Sometimes the need is to customize the rendered out <span class="caps">HTML</span> a little bit more with <span class="caps">CSS</span> or <span class="caps">HTML</span> attributes. So this small post shows how to do that. Imagine you are using a textbox <span class="caps">HTML</span> helper in your razor view to render a textbox but you want to use a custom <span class="caps">CSS</span> class as well as a placeholder to it so that it looks very very pretty. In order to do just that you need to declare your textbox <span class="caps">HTML</span> helper like:</p>
+<div class="highlight"><pre><code class="csharp"><span class="n">@HTML</span><span class="p">.</span><span class="n">Textbox</span><span class="p">(</span><span class="s">&quot;Searchbox&quot;</span><span class="p">,</span><span class="k">null</span><span class="p">,</span><span class="k">new</span> <span class="p">{</span> <span class="n">@class</span> <span class="p">=</span> <span class="s">&quot;prettyTextbox&quot;</span><span class="p">,</span> <span class="n">@placeholder</span> <span class="p">=</span> <span class="s">&quot;This is placeholder Text&quot;</span><span class="p">)</span> 
+</code></pre></div><p>Which will render out a textbox like:</p>
+<input type="text" placeholder="This is placeholder Text"/>
+<p>Similarly you can use other <span class="caps">HTML</span> attributes inside your helpers to render out the kind of <span class="caps">HTML</span> you want. You have full control over the rendered out <span class="caps">HTML</span>.</p>
+				
+					Here Ali demonstrates how to use HTML attributes in MVC 3 Razor Syntax.<br> <a class="button-link" href="/.net/2012/02/24/MVC3-Html-Attributes/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/.net/">.net</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				20 Feb 2012
+			</div>
+			<h1>
+				<a href="/events/2012/02/20/Startup-Weekend-Lahore/">Startup Weekend Lahore</a>
+			</h1>
+			<p>
+				<p><img src="http://aliirzdotcom.appspot.com/images/startup-weekend.png" class="centreThis" alt="" /><br />
+I have never seen so many entrepreneurs under one roof ever in my life. I always wanted to to go to one of them techcrunch&#8217;s disrupts to meet with others like me and network. I never imagined I would get the chance to attend an even more awesome event in my own country.</p>
+<p>It was a last minute decision to attend this amazing event in Lahore. What I hadthought to be a simple participation turned into an energy-filled, nerve wrenching hackathon 54-hours straight. I will be very honest I had never thought of writing so much code in a day and that too in a simple text editor.</p>
+<p>Launching a startup was not the only reason we attended the event. The other reason was networking and getting the chance to meet big names from the Industry in Pakistan. All those seniors became mentors and helped each and every participant build the best project. I too became acquaninted to very inspirtation people like Afaque Ahmed from Breezecom, Raza Saeed from Confez Solutions and Saj Khan from Scrybe. Not only that but I found good friends as well like Junaid Atique, Kamil Waheed and Jaiser Abbas.</p>
+<p>If there is a <a href="http://startupweekend.org/">startup weekend</a> coming up near where you live, I totally recommend checking it out. You will not be sorry!</p>
+<p>It was a very energetic event and it opened a whole new world for me. I am so looking forward to take over the world piece-by-piece ;)</p>
+				
+					<br> <a class="button-link" href="/events/2012/02/20/Startup-Weekend-Lahore/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/events/">events</a>
+			</p>
+		</article>
+	</li>
+	
+	<li>
+		<article class="blog-post">
+			<div class="published">
+				12 Feb 2012
+			</div>
+			<h1>
+				<a href="/git/2012/02/12/Push-Local-Git-Branch-to-Remote-Repo/">Push Local Git Branch To Remote Repo</a>
+			</h1>
+			<p>
+				<p>This post is for those who are new to the Git System. I am going to show how to create a new branch of a git repo, push it to remote repo and finally check it out on another machine.</p>
+<p>The first thing, create a new branch based on an existing branch with the following command:</p>
+<div class="highlight"><pre><code class="bash">git checkout - b <span class="s1">&#39;New-Branch&#39;</span> 
+</code></pre></div><p>The above command creates and switches to the newly created branch.</p>
+<p>Then this is how you push it to the remote repository:</p>
+<div class="highlight"><pre><code class="bash">git push origin New-Branch 
+</code></pre></div><p>All set, the newly created branch has been pushed to the remote repository. Now how will we access it on another System? Thats easy too, the first thing that needs to be done on the other system is:</p>
+<div class="highlight"><pre><code class="bash">git fetch origin 
+</code></pre></div><p>This will update the repo with the changes from remote repo. But wait this will not add the newly created branch yet, note that it has been fetched but is not being tracked yet. To do that we use the following command:</p>
+<div class="highlight"><pre><code class="bash">git checkout --track origin/New-Branch 
+</code></pre></div><p>Yes, thats it. Hope this post will help someone. Cheers.</p>
+				
+					<br> <a class="button-link" href="/git/2012/02/12/Push-Local-Git-Branch-to-Remote-Repo/">Read it</a>
+				
+			</p>
+			<p class="tags">
+				Posted under <a href="/categories/git/">git</a>
+			</p>
+		</article>
+	</li>
+	
+</ul>
+<div class="blog-pagination">
+	<div class="newer">
+		
+		
+		<a href="/page2/" >« Newer posts</a>
+		
+		
+	</div>
+	<div class="older">
+		 
+		<a href="/page4/">Older posts »</a>
+		 
+	</div>
+</div>
+</div>
+<aside class="col-md-3">
+	<div class="well">
+		<img src="/images/ali.jpg" class="img-circle img-responsive centreThis"/>
+		<h2>Ali Raza</h2>
+		<p>
+			Tech. Entrepreneur <br/>Loves to Develop All things Ruby, MVC, Obj-C and Javascript<br/>
+			<a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a>
+		</p>
+	</div>
+</aside>
+
+
+        </div>
+
+        <hr>
+
+        <div class="row triple-row">
+         <div id="triple-first" class="col-md-4 triple">
+          <div class="zone zone-triple-first">
+           <article class="widget-triple-first widget-html-widget widget">
+            <header>
+          
+           </header>
+           <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
+         </article>
+       </div>
+     </div>
+
+     <div id="triple-second" class="col-md-4 triple">
+      <div class="zone zone-triple-second">
+       <article class="widget-triple-second widget-html-widget widget">
+        <header>
+            <h1>From the Geek's Head</h1>
+       </header>
+           <p>A blog about technology, software development frameworks like rails, cocoa, asp.net mvc and anything that comes across <a href="/aboutme">this</a> geek's head.</p>
+     </article>
+   </div>
+ </div>
+
+ <div id="triple-third" class="col-md-4 triple">
+  <div class="zone zone-triple-third">
+   <article class="widget-triple-third widget-html-widget widget">
+    <header>
+     <h1>Get Connected</h1>
+   </header>
+   <p id="social">
+     <a href="http://twitter.com/aliirz"><i class="icon icon-twitter icon-2x"></i></a>
+     <a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-2x"></i></a>
+     <a href="http://github.com/aliirz"><i class="icon icon-github icon-2x"></i></a>
+   </p>
+ </article>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="copyright col-md-12">Copyright 2013 - <a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a></div>
+</div>
+
+</div>  <!-- End Container -->
+
+
+<!-- build:js(app) /js/script.js -->
+<script src="/_bower_components/jquery/jquery.js"></script>
+<script src="/_bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</script src="/js/geekshead.js"></script>
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
