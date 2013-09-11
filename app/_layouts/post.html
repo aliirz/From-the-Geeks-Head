@@ -13,6 +13,17 @@ layout: default
 		<p><small class="centreThis">{% if page.previous.url %}<a href="{{page.previous.url}}" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>{% endif %}  {{page.date | date_to_string}}  {% if page.next.url %}<a href="{{page.next.url}}" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a>{% endif %}</small></p>
 		{{ content }}
 	</article>
+	<div class="row">
+		<figure class="kudo kudoable" data-id="1">
+			<a class="kudobject">
+				<div class="opening"><div class="circle">&nbsp;</div></div>
+			</a>
+			<a href="#kudo" class="count">
+				<span class="num">0</span>
+				<span class="txt">Kudos</span>
+			</a>
+		</figure>
+	</div>
 	<div class="row" id="disqus_thread"></div>
 	<script type="text/javascript">
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -34,4 +45,22 @@ layout: default
 	{{page.next.title}}"><span class="icon icon-4x icon-chevron-right"></span></a>
 	{% endif %}
 </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Thanks for the Kudos!</h4>
+			</div>
+			<div class="modal-body">
+				<p>If you enjoyed this blog post then please consider sharing it with your friends:</p>
+				<p>Some social links here</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
