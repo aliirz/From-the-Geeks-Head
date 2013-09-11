@@ -1,18 +1,21 @@
 ---
 layout: default
 ---
-<div class="col-md-3">
+<div class="col-md-2">
 	{% if page.previous.url %}
 	<a id="leftChev" class="pull-left" href="{{page.previous.url}}" title="Previous Post:
 	{{page.previous.title}}"><span class="icon icon-4x icon-chevron-left"></span></a>
 	{% endif %}
 </div>
-<div class="col-md-6 zone-content">
+<div class="col-md-8 zone-content">
 	<article>
 		<h1 class="animated bounceInUp">{{ page.title }}</h1>
 		<p><small class="centreThis">{% if page.previous.url %}<a href="{{page.previous.url}}" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>{% endif %}  {{page.date | date_to_string}}  {% if page.next.url %}<a href="{{page.next.url}}" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a>{% endif %}</small></p>
 		{{ content }}
 	</article>
+	<div class="row">
+		{% include share.html %}
+	</div>
 	<div class="row" id="disqus_thread"></div>
 	<script type="text/javascript">
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -28,7 +31,7 @@ layout: default
   <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 </div>
-<div class="col-md-3">
+<div class="col-md-2">
 	{% if page.next.url %}
 	<a id="rightChev" class="pull-right" href="{{page.next.url}}" title="next Post:
 	{{page.next.title}}"><span class="icon icon-4x icon-chevron-right"></span></a>

@@ -8,6 +8,7 @@ drafts
 # Ignore for Yeoman-Jekyll projects #
 app/_bower_components
 dist
+.jekyll
 node_modules
 .tmp
 .ftppass
