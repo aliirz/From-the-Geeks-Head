@@ -13,9 +13,6 @@ layout: default
 		<p><small class="centreThis">{% if page.previous.url %}<a href="{{page.previous.url}}" id="leftChevResp"><span class="icon icon-2x icon-chevron-left"></span></a>{% endif %}  {{page.date | date_to_string}}  {% if page.next.url %}<a href="{{page.next.url}}" id="rightChevResp"><span class="icon icon-2x icon-chevron-right"></span></a>{% endif %}</small></p>
 		{{ content }}
 	</article>
-	<div class="row">
-		{% include share.html %}
-	</div>
 	<div class="row" id="disqus_thread"></div>
 	<script type="text/javascript">
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
