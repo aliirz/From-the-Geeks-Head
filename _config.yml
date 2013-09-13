@@ -37,7 +37,7 @@ future: true
 show_drafts: true
 
 # Split posts over multiple subdirectories called “page2”, “page3”, … “pageN”
-paginate: 6
+paginate: 4
 
 # Markdown library
 markdown: redcarpet

@@ -26,7 +26,6 @@
 }
 
 
-
 /*Custom Misc. Styles*/
 
 a.button-link{
@@ -90,7 +89,7 @@ a:hover{
 }
 
 body{
-	/*background-color: #f5f5f0;*/
+	background-color: none;
 }
 
 /*Chevrons*/
@@ -158,12 +157,13 @@ body{
 nav {
 	height: 40px;
 	width: 100%;
-	background: #bdc3c7;
+	background: #299ECB;
 	font-size: 11pt;
 	font-family: 'PT Sans', Arial, sans-serif;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	position: relative;
 	border-bottom: 2px solid #283744;
+	opacity: 0.92;
 }
 nav ul {
 	padding: 0;
@@ -210,7 +210,7 @@ nav li:last-child a {
 }  
 
 nav a:hover, nav a:active {  
-	background-color: #8c99a4;  
+	background-color: #2980b9;  
 }  
 nav a#pull {  
 	display: none;  
@@ -252,7 +252,7 @@ nav a#pull {
 	}  
 	nav a#pull {  
 		display: block;  
-		background-color: #bdc3c7;  
+		background-color: #299ECB;  
 		width: 100%;  
 		position: relative;  
 	}  
