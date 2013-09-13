@@ -31,7 +31,9 @@ The logo represents the intellectual nature of a geek's head. Wired up on techno
 
 h2. New Design
 
-The interface has been complete re-designed with "Bootstrap v3.0":http://getbootstrap.com . If you recall my earlier design used "Foundation":http://foundation.zurb.com which itself is a great CSS framework but working with bootstrap from a very long time now I feel accustomed to it's grid and other features so deciding on Bootstrap as the CSS framework to use was a no brainer at all. I also added some UI goodness via CSS3 transitions and animations.
+The interface has been complete re-designed with "Bootstrap v3.0":http://getbootstrap.com . If you recall my earlier design used "Foundation":http://foundation.zurb.com which itself is a great CSS framework but working with bootstrap from a very long time now I feel accustomed to it's grid and other features so deciding on Bootstrap as the CSS framework to use was a no brainer at all. I also added some UI goodness via CSS3 transitions and animations. Oh and its totally responsive:
+
+!(img-responsive centreThis)/images/aliirz-responsive.png!
 
 h2. Minimalism
 
