@@ -21,29 +21,41 @@ module.exports = function (grunt) {
   // Configuration
   grunt.initConfig({
     yeoman: yeomanConfig,
-
-    watch: {
-      jekyll: {
-        files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-        '_config.yml',
-        '!<%= yeoman.app %>/_bower_components'],
-        tasks: ['jekyll:server']
-      },
-      livereload: {
-        options: {
-          livereload: liveReloadPort
+    deploysite: {
+      build: {
+        auth: {
+          host: 'aliirz.com',
+          port: 22,
+          authKey: 'privateKey'
         },
-        files: [
-        '.jekyll/**/*.html',
-        '{.tmp,<%= yeoman.app %>}/css/**/*.css',
-        '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-        '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
-      }
-    },
-    connect: {
-      options: {
-        port: 9000,
+        src: '<%= yeoman.dist %>',
+        dest: '/var/wwww/betablog',
+          //exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
+          server_sep: '/'
+        }
+      },
+      watch: {
+        jekyll: {
+          files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+          '_config.yml',
+          '!<%= yeoman.app %>/_bower_components'],
+          tasks: ['jekyll:server']
+        },
+        livereload: {
+          options: {
+            livereload: liveReloadPort
+          },
+          files: [
+          '.jekyll/**/*.html',
+          '{.tmp,<%= yeoman.app %>}/css/**/*.css',
+          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
+          '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          ]
+        }
+      },
+      connect: {
+        options: {
+          port: 9000,
         // Change hostname to null to access the server from outside.
         hostname: 'localhost'
       },
@@ -267,19 +279,6 @@ module.exports = function (grunt) {
         dist: [
         'copy:dist'
         ]
-      },
-      sftpdeploy: {
-        build: {
-          auth: {
-            host: 'aliirz.com',
-            port: 22,
-            authKey: 'privateKey'
-          },
-          src: '<%= yeoman.dist %>',
-          dest: '/var/wwww/betablog',
-          //exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
-          server_sep: '/'
-        }
       }
     });
 
@@ -333,7 +332,7 @@ grunt.registerTask('build', [
 
 grunt.registerTask('deploy', [
   'build',
-  'sftpdeploy:build'
+  'deploysite'
   ]);
 
 grunt.registerTask('default', [
