@@ -28,6 +28,17 @@
 
 /*Custom Misc. Styles*/
 
+#sharelinks ul{
+	display: inline;
+	list-style: none;
+}
+
+#sharelinks li {
+	list-style: none;
+	display: inline;
+}
+
+
 a.button-link{
 	background-color: #ecf0f1;
 }

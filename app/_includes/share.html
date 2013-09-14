@@ -1,5 +1,17 @@
-<p id="social" class="centreThis">
-	<a href="http://twitter.com/home?status={{page.title}}+{{page.url}}" target="_blank"><i class="icon icon-twitter icon-3x"></i></a>
-	<a href="http://plus.google.com/aliirz"><i class="icon icon-google-plus icon-3x"></i></a>
-	<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{page.url}}"><i class="icon icon-facebook icon-3x"></i></a>
-</p>
+<ul id="sharelinks">
+	<li>
+		<a class="socialite twitter-share" href="http://twitter.com/share" data-url="http://{{site.host}}/{{ page.url }}">
+			<i class="icon icon-twitter"></i>
+		</a>
+	</li>
+	<li>
+		<a class="socialite facebook-like" data-url="http://{{site.host}}/{{ page.url }}">
+			<i class="icon icon-facebook"></i>
+		</a>
+	</li>
+	<li>
+		<a class="socialite googleplus-one" data-url="http://{{ site.host }}//{{ page.url }}">
+			<i class="icon icon-googleplus"></i>
+		</a>
+	</li>
+</ul>
