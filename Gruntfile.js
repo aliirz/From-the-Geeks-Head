@@ -20,42 +20,42 @@ module.exports = function (grunt) {
 
   // Configuration
   grunt.initConfig({
-    yeoman: yeomanConfig,
-    deploysite: {
-      build: {
+    'sftp-deploy': {
+      live: {
         auth: {
           host: 'aliirz.com',
           port: 22,
           authKey: 'privateKey'
         },
-        src: '<%= yeoman.dist %>',
-        dest: '/var/wwww/betablog',
-          //exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
-          server_sep: '/'
-        }
+        src: '<%= yeoman.dist %>/',
+        dest: '/var/www/betablog',
+        exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
+        server_sep: '/'
+      }
+    },
+    yeoman: yeomanConfig,
+    watch: {
+      jekyll: {
+        files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+        '_config.yml',
+        '!<%= yeoman.app %>/_bower_components'],
+        tasks: ['jekyll:server']
       },
-      watch: {
-        jekyll: {
-          files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-          '_config.yml',
-          '!<%= yeoman.app %>/_bower_components'],
-          tasks: ['jekyll:server']
-        },
-        livereload: {
-          options: {
-            livereload: liveReloadPort
-          },
-          files: [
-          '.jekyll/**/*.html',
-          '{.tmp,<%= yeoman.app %>}/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
-          ]
-        }
-      },
-      connect: {
+      livereload: {
         options: {
-          port: 9000,
+          livereload: liveReloadPort
+        },
+        files: [
+        '.jekyll/**/*.html',
+        '{.tmp,<%= yeoman.app %>}/css/**/*.css',
+        '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
+        '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+        ]
+      }
+    },
+    connect: {
+      options: {
+        port: 9000,
         // Change hostname to null to access the server from outside.
         hostname: 'localhost'
       },
@@ -330,9 +330,8 @@ grunt.registerTask('build', [
     'htmlmin'
     ]);
 
-grunt.registerTask('deploy', [
-  'build',
-  'deploysite'
+grunt.registerTask('makelive',[
+  'sftp-deploy:live'
   ]);
 
 grunt.registerTask('default', [
@@ -340,3 +339,4 @@ grunt.registerTask('default', [
   'build'
   ]);
 };
+
