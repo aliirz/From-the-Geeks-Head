@@ -207,7 +207,7 @@ nav a {
 	text-align: center;
 	text-decoration: none;
 	line-height: 40px;
-	text-shadow: 1px 1px 0px #283744;
+	/*text-shadow: 1px 1px 0px #283744;*/
 }
 
 nav li a {
