@@ -1,0 +1,63 @@
+---
+layout: post
+title: The Space Explorer in all of us
+category: Ruby
+description: A litle something on career choices, dreams and goals.
+keywords: space nasa shuttle explore milky way goole rails .net engineer international space station mass effect commander shephard voyager github bundler gem gemfile gempsec how to create a gem ruby
+---
+!(img-responsive centreThis img-rounded)/images/droids-looking-for.jpg!
+We would be lying if any of us said that we have never wondered what lies beyond the cosmos. We would be lying if we were to say that we have looked at the glistening stars in the dark of the night and never wondered if we could ever reach one. My dear readers admit it or not we all share the fascination with deep space. While the age old question "Are we alone?" remains unanswered, why is it that whenever we are under the open sky at night we "do" look up and wonder about the massive galaxy even if it is for a few seconds. 
+
+The answer is very simple, there is a space explorer in all of us. I have never met a soul who is not interested in learning or sharing knowledge about space. If I had received a little bit of guidance when I was a kid, I would've been a space explorer(or scientist) today at least. I am a huge admirer of NASA's work and closely follow the developments in their research and development from day to day. I wish I could for once just visit the International Space Station, it has been a dream too old of mine. Also, not to mention I am a huge Star Wars and Star Trek fan.
+
+<!--break-->
+
+ Today I am going to show you guys that you can always find a way to live up to your dream(to some extent). I am a software engineer, I code for a living(and for fun sometimes) and I build solutions to problems. So using this skill of mine I am going to build a ruby script that can interact with "Nasa's Data API":http://data.nasa.gov/ it will be reusable offcourse. So lets get started.
+
+If you visit the website above and read up the API documentation you will see that it gives us the following API methods:
+
+# get_recent_datasets 
+# get_dataset 
+# get_date_datasets 
+# get_category_datasets 
+# get_tag_datasets 
+# get_search_results 
+# get_date_index 
+# get_category_index 
+# get_tag_index 
+
+All of them return JSON by default, you can read up on what they do "here":http://data.nasa.gov/api-info/. Now lets write our Ruby Wrapper for some of these methods:
+
+{% highlight ruby %}
+require "json"
+require "mechanize"
+
+module NasaData
+	
+	def self.api_url
+		"http://data.nasa.gov/api/"
+	end
+
+	def self.recent_datasets(ds_count = 5)
+		JSON.parse( Mechanize.new.get(self.api_url+"get_recent_datasets?count=#{ds_count}").body)
+	end
+
+	def self.get_ds(ds_id)
+		JSON.parse(Mechanize.new.get(self.api_url+"get_dataset?id="+ds_id).body)
+	end
+
+	def self.get_ds_by_catalog_name(catalog_name)
+		JSON.parse( Mechanize.new.get( self.api_url + "get_dataset?slug=#{catalog_name}").body )
+	end
+
+	def self.get_tag_index
+		JSON.parse( Mechanize.new.get( self.api_url + "get_tag_index/").body )
+	end
+
+end
+{% endhighlight %}
+
+
+See, how I used by knowledge of Ruby to write down a quick and easy way to get data about all about space exploration. My point is no matter what your childhood dream has been, you can always find a way to live up to it with your set of skills. 
+
+

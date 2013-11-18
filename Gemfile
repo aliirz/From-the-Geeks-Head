@@ -5,4 +5,3 @@ gem 'redcarpet'
 gem 'csscss', '~>1.3.1'
 gem 'RedCloth'
 gem 'growl'
-

@@ -1,0 +1,90 @@
+---
+layout: post
+title: Realtime with Rails
+description: Building a web socket based realtime data driven application with mongo db, rails, backbone and highcharts
+keywords: d3 js rails ruby highcharts backbone websockets server sent events
+category: Rails
+---
+I absolutely love working with web sockets in HTML 5. Looking at your data being populated in realtime is completely a rad feeling. So in this post I am going to show how easy and fun it is to build a realtime dashboard application in Rails. We will be using "websocket-rails":https://github.com/websocket-rails/websocket-rails , Mongo DB and highcharts for this exercise. 
+
+So first thing is to create a rails application. If you are going to use Mongo in your rails app, this is how you create a new application in the command line:
+
+{% highlight bash %}
+rails new RailsRealtime --skip-active-record
+{% endhighlight %}
+
+The reason we skip active record is because we are not going to use it. We are going to use Mongo as a backend and activerecord by default adds some unnecessary files  that are incompatible with mongo. With that done lets add some gems we will be using in our app, so that our Gemfile looks like this:
+
+<!--break-->
+
+{% highlight ruby %}
+source 'https://rubygems.org'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.0'
+
+# using mondo db for data storage
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+gem 'bson_ext'
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+# using less stylesheets
+gem "less-rails"
+
+# bootstrap gem
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 1.2'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+
+# Use debugger
+# gem 'debugger', group: [:development, :test]
+{% endhighlight %}
+
+As you can see I have added the mongoid gem to make our application mongo compatible(we are not done yet), I have also added bootstrap and less gems because you know I like to create neat and tidy stuff. Now lets give some structure to our app, create a scaffold, test if everything is running and then proceed to the data visualization part.
+
+First lets hookup bootstrap:
+
+{% highlight bash %}
+rails g bootstrap:install less
+{% endhighlight %}
+
+Now lets setup our application layout:
+
+{% highlight bash %}
+rails g bootstrap:layout application fixed
+{% endhighlight %}
+
+With that set its time to move towards the next step, that is to create a scaffold to create our model. For the sake of simplicity I am going to create a scaffold for an entry that can be easily represented visually. So lets create a scaffold:
+
+{% highlight bash %}
+rails g scaffold Payment client:string made_on:date 
+{% endhighlight %}
