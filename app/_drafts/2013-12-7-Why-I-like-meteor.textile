@@ -1,0 +1,10 @@
+---
+layout: post
+title: What I like about Meteor framework
+description: My ramblings about why I enjoy working with Meteor
+keywords: meteor js realtime websockets
+category: javascript
+---
+!(img-responsive centreThis)/images/meteor.png!
+
+I came across meteor when it was on version 0.0.1. At that moment I knew its going to be a promising framework, call it a hunch or call it a developer's perception, I knew what I was looking at is going to be great. It pleases me to see that meteor has grown into a very robust efort with its applications in the "Enterprise":https://www.discovermeteor.com/2013/10/15/meteor-enterprise-scoutzie-dashboard/ as well

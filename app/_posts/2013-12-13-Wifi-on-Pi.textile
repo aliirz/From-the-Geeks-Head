@@ -1,0 +1,46 @@
+---
+layout: post
+title: Wifi Enable your Raspberry Pi
+category: Raspberry Pi
+keywords: raspberry pi, pi, , cloud, hack, wifi enable raspberry, npm, node, meteor
+description: How to configure your Raspberry pi to work with Wi-fi.
+---
+!(centreThis img-responsive)/images/Raspberry-Pi-Logo.jpg!
+
+I know it sucks that the Raspberry Pi does not come with a built-in wifi receiver.if you are like me and would like to be free from cables, then follow the instructions and this guide to quickly have your Pi over Wi-fi. You will need the following:
+
+!(centreThis img-responsive)/images/pipluswifi.JPG!
+
+Thats a Raspberry by in a very solid "casing":http://uniquegadgets.com.pk/Raspberry-Pi-Cyntech-Blackberry-Raspberry-Pi-Case-in-Pakistan and a TP-Link WN823N Mini Wireless USB Adapter which works out of the box with Raspberry Pi. The Pi is running Raspbian Wheezy installed on a 16GB SD Card. Now lets get to business. 
+
+h4. Connect your Pi to you A.P/Router via LAN Cable
+
+<img src="/images/poweredON.JPG" class="img-responsive centreThis" alt="Photo" data-echo="/images/poweredON.JPG"/>
+
+The image above pretty much sums it up doesn't it?
+
+h4. SSH into your Pi
+
+Now find out the IP of your Raspberry PI(Hint: DHCP table on your Router's configuration page) and SSH into it. If done right you will see the following screen:
+
+!(img-responsive centreThis)/images/SSHedIN.png!
+
+h4. Configuring Wifi
+
+Plugin the USB Wifi dongle into the Raspberry PI and edit the *wpa_supplicant.conf* file located at:
+{% highlight bash %}
+/etc/wpa_supplicant/wpa_supplicant.conf
+{% endhighlight %}
+
+You must add these lines to the file:
+
+{% highlight bash %}
+network={
+  ssid="YOUR_SSID"
+  psk="YOUR_WPA_KEY"
+}
+{% endhighlight %}
+
+That's it! Save the file, disconnect the LAN Cable, Restart your PI and enjoy the freedom you just obtained.
+
+For those of you interested, I got the raspberry pi and the casing from "Unique Gadgets":http://www.uniquegadgets.com.pk. Give them a shoutout so that they continue their amazing service.

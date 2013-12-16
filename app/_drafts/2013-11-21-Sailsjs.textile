@@ -1,0 +1,11 @@
+---
+title: Setting Sail with Sails.js
+description: Sails JS, getting started.
+category: Javascript
+keywords: Sails.js sails mvc realtime API scaffold javascript rails
+---
+<img src="/images/sailsjs.png" class="img-responsive" alt="Photo" data-echo="/images/sailsjs.png">
+
+I have decided to start writing some intro blog posts to famous js frameworks. Starting with Sails.JS, many more intros to come.
+
+"sails.js":http://sailsjs.org is a realtime MVC framework based on Node.js. Also it is very ORM agnoistic 

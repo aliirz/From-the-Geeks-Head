@@ -14,19 +14,23 @@ $(window).resize(function(){
 		menu.removeAttr('style');  
 	}  
 });
+
+
+
 $(document).ready(function() { 
 	
-	slidr.create('slidr-div', {
-		breadcrumbs: false,
-		controls: 'border',
-		direction: 'horizontal',
-		fade: false,
-		overflow: false,
-		theme: '#222',
-		timing: { 'cube': '0.5s ease-in' },
-		transition: 'cube'
-	}).start();
+	// slidr.create('slidr-div', {
+	// 	breadcrumbs: false,
+	// 	controls: 'border',
+	// 	direction: 'horizontal',
+	// 	fade: false,
+	// 	overflow: false,
+	// 	theme: '#222',
+	// 	timing: { 'cube': '0.5s ease-in' },
+	// 	transition: 'cube'
+	// }).start();
 
+	
 	//Socialite.load('#shareLinks');
 });
 

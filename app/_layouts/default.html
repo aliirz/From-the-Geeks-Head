@@ -56,7 +56,7 @@
           <div class="zone zone-triple-first">
            <article class="widget-triple-first widget-html-widget widget">
             <header>
-              
+
             </header>
             <img src="/images/logo-without-text.png" class="centreThis img-responsive"/>
           </article>
@@ -97,5 +97,12 @@
 </div>  <!-- End Container -->
 {% include scripts.html %}
 {% include googleanalytics.html %}
+<script>
+  Echo.init({
+    offset: 100,
+    throttle: 250
+  });
+  // Echo.render(); is also available for non-scroll callbacks
+</script>
 </body>
 </html>
