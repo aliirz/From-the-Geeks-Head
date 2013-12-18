@@ -13,6 +13,8 @@ I know it sucks that the Raspberry Pi does not come with a built-in wifi receive
 
 Thats a Raspberry by in a very solid "casing":http://uniquegadgets.com.pk/Raspberry-Pi-Cyntech-Blackberry-Raspberry-Pi-Case-in-Pakistan and a TP-Link WN823N Mini Wireless USB Adapter which works out of the box with Raspberry Pi. The Pi is running Raspbian Wheezy installed on a 16GB SD Card. Now lets get to business. 
 
+<!--break-->
+
 h4. Connect your Pi to you A.P/Router via LAN Cable
 
 <img src="/images/poweredON.JPG" class="img-responsive centreThis" alt="Photo" data-echo="/images/poweredON.JPG"/>
