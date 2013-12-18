@@ -1,0 +1,10 @@
+personal_vps:
+    host: "aliirz.com"
+    scheme: sftp
+    privateKey: ~/.ssh/id_rsa
+    publicKey: ~/.ssh/id_rsa.pub
+    slots: 4
+    path:
+        local: "dist/"
+        remote: "/var/www/betablog"
+    exclude: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp']

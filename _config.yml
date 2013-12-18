@@ -7,6 +7,7 @@
 name: FromTheGeeksHead
 description: A geek's blog about life and other things tech.
 host : aliirz.com
+url: http://aliirz.com
 
 author:
   name: aliirz
