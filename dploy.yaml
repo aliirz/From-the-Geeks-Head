@@ -1,6 +1,7 @@
 personal_vps:
     host: "aliirz.com"
     scheme: sftp
+    user: "deployer"
     privateKey: ~/.ssh/id_rsa
     publicKey: ~/.ssh/id_rsa.pub
     slots: 4
