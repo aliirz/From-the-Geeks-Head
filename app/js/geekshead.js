@@ -16,9 +16,39 @@ $(window).resize(function(){
 });
 
 
+$('#twitterLink').click(function(){
+	mixpanel.track("Twitter Link Clicked");
+});
 
-$(document).ready(function() { 
-	
+$('#gPlusLink').click(function(){
+	mixpanel.track("Google Plus Link Clicked");
+});
+
+$('#githubLink').click(function(){
+	mixpanel.track("Github Link Clicked");
+});
+
+$('#fbLink').click(function(){
+	mixpanel.track("Facebook Link Clicked");
+});
+
+$('#swLink').click(function(){
+	mixpanel.track("SweetPixel Studios Link Clicked");
+});
+
+$(document).ready(function(){
+
+	var id = mixpanel.get_distinct_id();
+
+
+	mixpanel.identify(id);
+
+	mixpanel.track(window.location.href +  'being read');
+	mixpanel.register_once({ 'landing page': window.location.href });
+
+	mixpanel.people.set({
+    		"$last_login": new Date()       // properties can be dates..
+    	});
 	// slidr.create('slidr-div', {
 	// 	breadcrumbs: false,
 	// 	controls: 'border',
@@ -30,7 +60,7 @@ $(document).ready(function() {
 	// 	transition: 'cube'
 	// }).start();
 
-	
+
 	//Socialite.load('#shareLinks');
 });
 
