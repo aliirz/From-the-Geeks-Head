@@ -36,7 +36,34 @@ $('#swLink').click(function(){
 	mixpanel.track("SweetPixel Studios Link Clicked");
 });
 
+
+
+
+
 $(document).ready(function(){
+
+
+// 	// grab an element
+// var myElement = document.querySelector("header");
+// // construct an instance of Headroom, passing the element
+// var headroom  = new Headroom(myElement);
+// // initialise
+// headroom.init();
+
+
+// var headroom = new Headroom("header", {
+//   "tolerance": 5,
+//   "offset": 205,
+//   "classes": {
+//     "initial": "animated",
+//     "pinned": "slideDown",
+//     "unpinned": "slideUp"
+//   }
+// });
+// headroom.init();
+
+// // to destroy
+// headroom.destroy();
 
 	var id = mixpanel.get_distinct_id();
 
