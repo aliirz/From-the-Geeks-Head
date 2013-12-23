@@ -9,5 +9,6 @@ drafts
 app/_bower_components
 .jekyll
 node_modules
+dist/
 .tmp
 .ftppass
