@@ -14,7 +14,7 @@ body{
   font-family: 'PT Serif', serif;
   font-size:18px;
   line-height: 30px;
-  background-color: #fefaed;
+  /*background-color: #fefaed;*/
 }
 
 blockquote {
@@ -79,7 +79,7 @@ p {
 /***** 2. Layout *****/
 
 body {
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   padding-bottom: 60px;
 }
 

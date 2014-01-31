@@ -1,8 +1,17 @@
+/*new nav*/
+nav ul li{
+	display: inline;
+	/*list-style-type: disc;*/
+	margin: 0.5em;
+	padding-bottom: 0.5em;
+	/*text-align: right;*/
+}
+
 /*Logo*/
 
 .logo{
 	font-family: 'Open Sans',sans-serif;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 200;
 	text-align: center;
 	color: #299ECB;
@@ -166,13 +175,13 @@ body{
 
 
 /*custom navbar*/
-nav {
+/*nav {
 	height: 40px;
 	width: 100%;
 	background: #299ECB;
 	font-size: 11pt;
 	font-family: 'PT Sans', Arial, sans-serif;
-	/*font-weight: bold;*/
+	/*font-weight: bold;
 	position: relative;
 	border-bottom: 2px solid #283744;
 	opacity: 0.92;
@@ -208,7 +217,7 @@ nav a {
 	text-align: center;
 	text-decoration: none;
 	line-height: 40px;
-	/*text-shadow: 1px 1px 0px #283744;*/
+	/*text-shadow: 1px 1px 0px #283744;
 }
 
 nav li a {
@@ -294,7 +303,7 @@ nav a:hover, nav a:focus{
 	text-decoration: none;
 	color: #ecf0f1;
 } 
-
+*/
 
 /*util classes*/
 .centreThis{
