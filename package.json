@@ -1,6 +1,7 @@
 {
   "name": "fromthegeekshead",
   "version": "0.0.1",
+  "license" : "MIT",
   "description": "Yeoman / Grunt workflow for FromTheGeeksHead",
   "dependencies": {},
   "devDependencies": {
